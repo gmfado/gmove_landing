@@ -1,0 +1,14 @@
+{
+  "name": "G-MOVE",
+  "short_name": "G-MOVE",
+  "description": "App de treino premium para quem quer entender sua evolução com método e progressão real.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#08090E",
+  "theme_color": "#08090E",
+  "lang": "pt-BR",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

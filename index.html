@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="G-MOVE — App de treino premium para quem quer entender sua evolução com método e progressão real. Acesso antecipado disponível." />
+  <meta name="theme-color" content="#08090E" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://gmove.app/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title"       content="G-MOVE — Evolução física com método." />
+  <meta property="og:description" content="Um app de treino para quem quer mais do que séries e repetições. Entenda sua evolução, não só acumule esforço." />
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://gmove.app/" />
+  <meta property="og:image"       content="https://gmove.app/icon-512.png" />
+  <meta property="og:locale"      content="pt_BR" />
+  <meta property="og:site_name"   content="G-MOVE" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="G-MOVE — Evolução física com método." />
+  <meta name="twitter:description" content="App de treino premium para quem quer entender sua evolução com método e progressão real." />
+  <meta name="twitter:image"       content="https://gmove.app/icon-512.png" />
+
+  <!-- Favicons -->
+  <link rel="icon"             type="image/x-icon"  href="favicon.ico" />
+  <link rel="icon"             type="image/png" sizes="32x32" href="favicon-32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="manifest"         href="site.webmanifest" />
+
+  <title>G-MOVE — Evolução física com método.</title>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://gmove.app/#organization",
+        "name": "G-MOVE",
+        "url": "https://gmove.app/",
+        "logo": "https://gmove.app/icon-512.png"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://gmove.app/#website",
+        "name": "G-MOVE",
+        "url": "https://gmove.app/",
+        "inLanguage": "pt-BR",
+        "publisher": { "@id": "https://gmove.app/#organization" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://gmove.app/#app",
+        "name": "G-MOVE",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "iOS, Android",
+        "description": "App de treino premium para quem quer entender sua evolução com método e progressão real.",
+        "url": "https://gmove.app/",
+        "offers": { "@type": "Offer", "availability": "https://schema.org/PreOrder" },
+        "publisher": { "@id": "https://gmove.app/#organization" }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/premium.css" />
+</head>
+<body>
+
+  <!-- ========================================================
+       NAVIGATION
+       ======================================================== -->
+  <nav class="nav" role="navigation" aria-label="Navegação principal">
+    <div class="nav__inner">
+
+      <a href="/" class="nav__logo" aria-label="G-MOVE — página inicial">
+        <img src="gmove_logo_web.png" alt="G-MOVE" class="nav__logo-img">
+      </a>
+
+      <ul class="nav__links">
+        <li><a href="#experiencia">O app</a></li>
+        <li><a href="manifesto.html">Manifesto</a></li>
+        <li><a href="conteudo/">Editorial</a></li>
+        <li class="nav__link--legal"><a href="privacidade.html">Privacidade</a></li>
+        <li class="nav__link--legal"><a href="termos.html">Termos</a></li>
+      </ul>
+
+
+      <button class="nav__menu-btn" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </nav>
+
+  <!-- Mobile overlay menu -->
+  <div class="nav__mobile" role="dialog" aria-modal="true" aria-label="Menu">
+    <button class="nav__mobile-close" aria-label="Fechar menu">×</button>
+    <a href="#experiencia">O app</a>
+    <a href="manifesto.html">Manifesto</a>
+    <a href="conteudo/">Editorial</a>
+    <div class="nav__mobile__divider" aria-hidden="true"></div>
+    <a href="privacidade.html" class="nav__mobile__link--secondary">Privacidade</a>
+    <a href="termos.html" class="nav__mobile__link--secondary">Termos</a>
+  </div>
+
+  <main>
+
+    <!-- ======================================================
+         HERO
+         ====================================================== -->
+    <section class="hero" id="hero" aria-labelledby="hero-headline">
+
+      <div class="hero__parallax-layer" aria-hidden="true"></div>
+
+      <div class="hero__content">
+
+        <h1 id="hero-headline" data-reveal data-delay="1">
+          <span class="line-1">Você já sabe o básico.</span>
+          <span class="line-2">O <mark>G-MOVE</mark> é o que vem depois.</span>
+        </h1>
+
+        <p class="hero__sub" data-reveal data-delay="2">
+          Um app de treino construído para quem quer entender sua evolução —
+          não só acumular horas de esforço.
+        </p>
+
+        <div class="hero__ctas" data-reveal data-delay="3">
+          <a href="#experiencia" class="btn btn--ghost">Ver como funciona ↓</a>
+          <a href="#cta-final" class="btn btn--primary btn--soft">Entrar na lista</a>
+        </div>
+
+      </div>
+
+      <div class="hero__scroll" aria-hidden="true">
+        <div class="hero__scroll-line"></div>
+        <span>scroll</span>
+      </div>
+
+    </section>
+
+    <!-- ======================================================
+         PONTO DE VISTA
+         ====================================================== -->
+    <section class="pov" id="ponto-de-vista" aria-labelledby="pov-headline">
+      <div class="pov__inner">
+
+        <span class="eyebrow" data-reveal data-reveal-dir="left">A premissa</span>
+
+        <h2 id="pov-headline" data-reveal data-delay="1">
+          A maioria das abordagens de treino resolve o problema errado.
+        </h2>
+
+        <div class="pov__body" data-reveal data-delay="2" data-reveal-dir="right">
+          <p>
+            Elas entregam exercícios quando o que falta é estrutura. Oferecem conteúdo
+            quando o que você precisa é de método. Mostram números quando o que importa
+            é compreensão do processo.
+          </p>
+          <p>
+            O G-MOVE parte de uma premissa diferente: evolução física não é uma questão
+            de volume. É uma questão de saber onde você está, para onde está indo, e o que
+            muda de uma semana para outra. Com clareza sobre isso, cada sessão tem peso.
+            Sem isso, é só movimento.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================
+         EXPERIÊNCIA — PHONE MOCKUPS
+         ====================================================== -->
+    <section class="experiencia" id="experiencia" aria-labelledby="exp-headline">
+
+      <div class="experiencia__header">
+        <span class="eyebrow" data-reveal data-reveal-dir="left">A experiência</span>
+        <h2 id="exp-headline" data-reveal data-delay="1">
+          Desde o primeiro uso,<br>você sabe para onde está indo.
+        </h2>
+        <p data-reveal data-delay="2" data-reveal-dir="right">O G-MOVE não começa com uma lista de treinos. Começa por você.</p>
+      </div>
+
+      <!-- Screenshot Carousel -->
+      <div class="screenshots-carousel" id="screenshotsCarousel" role="region" aria-label="Prints do app G-MOVE">
+
+        <div class="sc-overflow">
+          <div class="sc-stage" aria-live="polite">
+
+            <div class="sc-slide" data-index="0">
+              <div class="sc-frame">
+                <img src="print1.png" alt="G-MOVE — tela 1 do app" draggable="false">
+              </div>
+            </div>
+
+            <div class="sc-slide" data-index="1">
+              <div class="sc-frame">
+                <img src="print2.png" alt="G-MOVE — tela 2 do app" draggable="false">
+              </div>
+            </div>
+
+            <div class="sc-slide" data-index="2">
+              <div class="sc-frame">
+                <img src="print3.png" alt="G-MOVE — tela 3 do app" draggable="false">
+              </div>
+            </div>
+
+            <div class="sc-slide" data-index="3">
+              <div class="sc-frame">
+                <img src="print4.png" alt="G-MOVE — tela 4 do app" draggable="false">
+              </div>
+            </div>
+
+            <div class="sc-slide" data-index="4">
+              <div class="sc-frame">
+                <img src="print5.png" alt="G-MOVE — tela 5 do app" draggable="false">
+              </div>
+            </div>
+
+          </div><!-- /sc-stage -->
+        </div><!-- /sc-overflow -->
+
+        <!-- Controls -->
+        <div class="sc-controls">
+          <button class="sc-arrow sc-prev" aria-label="Print anterior">←</button>
+          <div class="sc-dots" role="tablist" aria-label="Navegação dos prints">
+            <button class="sc-dot" role="tab" aria-label="Print 1"></button>
+            <button class="sc-dot" role="tab" aria-label="Print 2"></button>
+            <button class="sc-dot" role="tab" aria-label="Print 3"></button>
+            <button class="sc-dot" role="tab" aria-label="Print 4"></button>
+            <button class="sc-dot" role="tab" aria-label="Print 5"></button>
+          </div>
+          <button class="sc-arrow sc-next" aria-label="Próximo print">→</button>
+        </div>
+
+        <!-- Captions -->
+        <div class="sc-captions">
+          <div class="sc-caption" data-index="0">
+            <h4>A entrada que faz sentido.</h4>
+            <p>Antes de te mandar treinar, o G-MOVE te entende.</p>
+          </div>
+          <div class="sc-caption" data-index="1">
+            <h4>Interface que não compete com o treino.</h4>
+            <p>Limpa, direta, sem ruído. A informação onde importa.</p>
+          </div>
+          <div class="sc-caption" data-index="2">
+            <h4>Treino com estrutura e intenção.</h4>
+            <p>Série, carga, progressão — tudo organizado para que o processo faça sentido.</p>
+          </div>
+          <div class="sc-caption" data-index="3">
+            <h4>Evolução que você consegue ler.</h4>
+            <p>Não dado bruto — narrativa do seu processo ao longo do tempo.</p>
+          </div>
+          <div class="sc-caption" data-index="4">
+            <h4>Cada detalhe tem intenção.</h4>
+            <p>A experiência foi construída para que o foco fique onde deve estar.</p>
+          </div>
+        </div>
+
+      </div><!-- /screenshots-carousel -->
+
+    </section>
+
+    <!-- ======================================================
+         FUNCIONALIDADES — O QUE JÁ EXISTE
+         ====================================================== -->
+    <section class="funcionalidades" id="funcionalidades" aria-labelledby="func-headline">
+
+      <div class="funcionalidades__header">
+        <span class="eyebrow" data-reveal data-reveal-dir="left">O que existe hoje</span>
+        <h2 id="func-headline" data-reveal data-delay="1">O G-MOVE já funciona.<br>E funciona bem.</h2>
+        <p data-reveal data-delay="2" data-reveal-dir="right">Estas são as capacidades que você vai encontrar desde o primeiro uso.</p>
+      </div>
+
+      <div class="feature-grid">
+
+        <div class="feature-card" data-reveal data-reveal-dir="left">
+          <div class="feature-card__num">01</div>
+          <h3>Você entra sabendo o que fazer.</h3>
+          <p>
+            A sua chegada ao G-MOVE não é um formulário de cadastro. É uma
+            entrada calibrada — que entende seu ponto de partida e constrói
+            o que vem depois com base nele. Em minutos, o app tem contexto
+            suficiente para ser útil de verdade.
+          </p>
+        </div>
+
+        <div class="feature-card" data-reveal data-delay="1">
+          <div class="feature-card__num">02</div>
+          <h3>Treino com estrutura e intenção.</h3>
+          <p>
+            Cada sessão tem propósito claro. Você sabe o que está fazendo e
+            por quê — não porque o app te explica por extenso, mas porque
+            a estrutura do treino deixa isso evidente. Série, carga, progressão:
+            tudo organizado para que o processo faça sentido.
+          </p>
+        </div>
+
+        <div class="feature-card" data-reveal data-delay="2" data-reveal-dir="right">
+          <div class="feature-card__num">03</div>
+          <h3>Registro que você vai usar.</h3>
+          <p>
+            O histórico de treino existe para ser consultado, não arquivado.
+            Acompanhar o que você fez é parte do método — e o G-MOVE mantém
+            isso acessível e compreensível, sem precisar navegar por abas
+            ou decifrar gráficos.
+          </p>
+        </div>
+
+      </div>
+
+      <p class="feature-note" data-reveal>
+        Algumas áreas do produto estão mais maduras do que outras. Estamos trabalhando
+        para que a experiência seja consistente em cada parte — não só nas que você vê primeiro.
+      </p>
+
+    </section>
+
+    <!-- ======================================================
+         EM CONSTRUÇÃO
+         ====================================================== -->
+    <section class="construcao" id="construcao" aria-labelledby="const-headline">
+      <div class="construcao__inner">
+
+        <div class="construcao__intro">
+          <span class="eyebrow eyebrow--yellow" data-reveal data-reveal-dir="left">Em construção</span>
+          <h2 id="const-headline" data-reveal data-delay="1">Produto honesto sobre onde está.</h2>
+          <p data-reveal data-delay="2" data-reveal-dir="right">
+            O G-MOVE tem funcionalidades sólidas hoje — e outras que estamos aprofundando
+            com critério. Não fingimos completude. Preferimos ser precisos sobre o que
+            existe e transparentes sobre o que está sendo construído.
+          </p>
+        </div>
+
+        <div class="build-list">
+
+          <div class="build-item" data-reveal data-reveal-dir="left">
+            <div class="build-item__dot"></div>
+            <div class="build-item__body">
+              <h4>Personalização que aprende com você</h4>
+              <p>
+                A entrada calibra o início. O que estamos construindo vai além: um sistema
+                que ajusta o que você faz com base no que você já fez. Progressão que evolui
+                junto com você, não só no começo.
+              </p>
+            </div>
+          </div>
+
+          <div class="build-item" data-reveal data-delay="2" data-reveal-dir="left">
+            <div class="build-item__dot"></div>
+            <div class="build-item__body">
+              <h4>Análise que interpreta, não só registra</h4>
+              <p>
+                Dados de treino são úteis quando geram compreensão. Estamos aprofundando
+                a camada de análise do G-MOVE para que você entenda seu processo — não
+                precise decodificar números.
+              </p>
+            </div>
+          </div>
+
+        </div><!-- /build-list -->
+
+        <div class="cta-bridge" data-reveal>
+          <h3>Quer acompanhar a construção?</h3>
+          <p>Quem está aqui desde o início tem acesso prioritário às próximas versões.</p>
+          <a href="#cta-final" class="btn btn--primary">Entrar na lista</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================
+         PARA QUEM É
+         ====================================================== -->
+    <section class="para-quem" id="para-quem" aria-labelledby="pq-headline">
+
+      <div class="para-quem__header">
+        <span class="eyebrow" data-reveal data-reveal-dir="left">Para quem é</span>
+        <h2 id="pq-headline" data-reveal data-delay="1">O G-MOVE não é para todos.<br>E está tudo bem.</h2>
+        <p data-reveal data-delay="2" data-reveal-dir="right">
+          É para quem treina com seriedade e sente que o processo
+          poderia ser mais inteligente do que tem sido.
+        </p>
+      </div>
+
+      <div class="profiles-grid">
+
+        <div class="profile-card" data-reveal data-reveal-dir="left">
+          <div class="profile-card__num">PERFIL 01</div>
+          <p>
+            Você já tem rotina de treino. Mas às vezes sente que o esforço não está
+            indo para um lugar específico — que você está movendo o corpo sem mover
+            o processo.
+          </p>
+        </div>
+
+        <div class="profile-card" data-reveal data-delay="1">
+          <div class="profile-card__num">PERFIL 02</div>
+          <p>
+            Você quer entender o que está fazendo — não só seguir instruções. Prefere
+            clareza a motivação, método a volume, progressão a variedade.
+          </p>
+        </div>
+
+        <div class="profile-card" data-reveal data-delay="2" data-reveal-dir="right">
+          <div class="profile-card__num">PERFIL 03</div>
+          <p>
+            Você já tentou outros apps e se sentiu subestimado. Notificações de conquista,
+            desafios de 7 dias, contagem genérica — não é o que você está procurando.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="para-quem__aside" data-reveal data-reveal-dir="left">
+        <p>
+          Se o que você quer é um app com trilhas de áudio motivacionais e ranking de amigos,
+          existem ótimas opções para isso. O G-MOVE é outra coisa.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- ======================================================
+         CTA FINAL
+         ====================================================== -->
+    <section class="cta-final" id="cta-final" aria-labelledby="cta-headline">
+      <div class="cta-final__inner">
+
+        <span class="eyebrow" style="justify-content: center;" data-reveal>Acesso antecipado</span>
+
+        <h2 id="cta-headline" data-reveal data-delay="1">
+          Chegou cedo.<br>Vale a pena.
+        </h2>
+
+        <p class="cta-final__sub" data-reveal data-delay="2">
+          O G-MOVE está em evolução ativa. Quem entra nesta fase acompanha
+          a construção — e tem acesso às primeiras versões de cada novo recurso.
+        </p>
+
+        <form class="email-form cta-final__form" novalidate data-reveal data-delay="3">
+          <input
+            type="email"
+            placeholder="Seu melhor email"
+            required
+            autocomplete="email"
+            aria-label="Seu melhor email"
+          />
+          <button type="submit">Entrar na lista</button>
+        </form>
+
+        <div class="email-success" role="status" aria-live="polite">
+          Pronto. Você vai saber quando evoluímos.
+        </div>
+
+        <p class="cta-final__note" data-reveal data-delay="4">Sem spam. Só o que for relevante.</p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================
+       FOOTER
+       ======================================================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__inner">
+
+      <div class="footer__brand">
+        <a href="/" class="footer__logo">
+          <img src="gmove_logo_web.png" alt="G-MOVE" class="footer__logo-img">
+        </a>
+        <span class="footer__tagline">Evolução física com método.</span>
+      </div>
+
+      <ul class="footer__links">
+        <li><a href="manifesto.html">Manifesto</a></li>
+        <li><a href="privacidade.html">Privacidade</a></li>
+        <li><a href="termos.html">Termos</a></li>
+      </ul>
+
+      <p class="footer__credit">
+        Construído com critério. Em evolução contínua.
+      </p>
+
+    </div>
+  </footer>
+
+  <!-- ========================================================
+       JOURNEY NAVIGATION
+       ======================================================== -->
+
+  <!-- Progress dots — left rail -->
+  <nav class="journey-dots" aria-label="Progresso da página">
+    <div class="journey-dots__rail" aria-hidden="true"></div>
+    <button class="journey-dot is-active" data-target="#hero"            title="Início"></button>
+    <button class="journey-dot"           data-target="#ponto-de-vista"  title="A premissa"></button>
+    <button class="journey-dot"           data-target="#experiencia"     title="A experiência"></button>
+    <button class="journey-dot"           data-target="#funcionalidades" title="O que existe"></button>
+    <button class="journey-dot"           data-target="#construcao"      title="Em construção"></button>
+    <button class="journey-dot"           data-target="#para-quem"       title="Para quem é"></button>
+    <button class="journey-dot"           data-target="#cta-final"       title="Acesso antecipado"></button>
+  </nav>
+
+  <!-- Next-section floating button — bottom center -->
+  <button class="journey-btn" aria-label="Ir para próxima seção">
+    <span class="journey-btn__arrow" aria-hidden="true">↓</span>
+    <span class="journey-btn__label">A premissa</span>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
