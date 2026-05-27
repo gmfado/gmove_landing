@@ -108,6 +108,14 @@ Antes de deploy:
 - `https://gmove.app/` validado com o CTA novo e sem o texto antigo.
 - Rotas verificadas com HTTP 200: `/`, `/conteudo/`, `/sitemap.xml` e `/robots.txt`.
 
+## Diagnostico WWW - 2026-05-27
+
+- `www.gmove.app` foi criado como Custom Domain no Firebase Hosting via REST API.
+- Configuracao desejada: redirect de `www.gmove.app` para `gmove.app`.
+- Estado Firebase apos criacao: `HOST_ACTIVE`, `OWNERSHIP_ACTIVE`, certificado em `CERT_PREPARING`.
+- Pendencia DNS no Hostinger: trocar CNAME `www -> gmove.app` para `www -> gmove-landing.web.app`.
+- Enquanto o DNS nao mudar e o certificado nao concluir, `https://www.gmove.app/` pode continuar falhando.
+
 ## SEO
 
 - Home com title, description, canonical, OG/Twitter e JSON-LD.

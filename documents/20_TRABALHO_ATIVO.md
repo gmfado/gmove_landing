@@ -103,3 +103,12 @@ Status: criados em 2026-05-27
 - `documents/12_INVENTARIO_ASSETS.md`;
 - `documents/13_GIT_LEGADOS_RELEASE.md`;
 - `documents/14_MELHORIAS_FEATURES_PESQUISA_2026.md`.
+
+## Infra - WWW
+
+Status: aguardando ajuste DNS externo
+
+- Custom Domain `www.gmove.app` criado no Firebase Hosting em 2026-05-27.
+- Firebase pediu CNAME `www -> gmove-landing.web.app`.
+- DNS atual ainda esta como `www -> gmove.app`.
+- Apos mudar no Hostinger, revalidar HTTPS e redirect para `gmove.app`.

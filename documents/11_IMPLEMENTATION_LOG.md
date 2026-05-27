@@ -134,3 +134,18 @@ Antes de deploy, revisar o diff final e decidir se arquivos antigos (`print1.png
 - `git diff --check` passou; apenas avisos LF/CRLF do Windows.
 - `https://gmove.app/` validado com o CTA novo e sem o texto antigo.
 - Rotas `/`, `/conteudo/`, `/sitemap.xml` e `/robots.txt` responderam HTTP 200 apos deploy.
+
+## 2026-05-27 - Diagnostico e configuracao inicial de www
+
+### Estado
+
+- DNS atual de `www.gmove.app`: CNAME para `gmove.app`.
+- `https://www.gmove.app/` ainda nao responde corretamente.
+- Custom Domain `www.gmove.app` criado no Firebase Hosting com `redirectTarget` para `gmove.app`.
+- Firebase reconheceu `HOST_ACTIVE` e `OWNERSHIP_ACTIVE`.
+- Certificado SSL ficou em `CERT_PREPARING`.
+
+### Pendencia
+
+- Atualizar DNS no Hostinger: CNAME `www` deve apontar para `gmove-landing.web.app`, conforme `requiredDnsUpdates` retornado pelo Firebase.
+- Revalidar `https://www.gmove.app/` apos propagacao DNS e emissao do certificado.

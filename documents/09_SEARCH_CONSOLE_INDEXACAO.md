@@ -113,7 +113,7 @@ Quando houver conta AdSense aprovada:
 ## Pendencias
 
 - Confirmar propriedade `gmove.app` no Search Console.
-- Resolver ou documentar decisao sobre `www.gmove.app`.
+- Resolver DNS de `www.gmove.app`: o dominio foi criado no Firebase Hosting em 2026-05-27 com redirect para `gmove.app`, mas o Firebase ainda pede trocar o CNAME de `www -> gmove.app` para `www -> gmove-landing.web.app`.
 - Enviar sitemap no Search Console depois do commit final.
 - Criar primeira rodada de URL Inspection para home, Editorial, hubs e artigos principais.
 - Definir se havera analytics antes de AdSense.
