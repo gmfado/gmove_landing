@@ -114,6 +114,8 @@ Antes de deploy:
 - Configuracao desejada: redirect de `www.gmove.app` para `gmove.app`.
 - Estado Firebase apos criacao: `HOST_ACTIVE`, `OWNERSHIP_ACTIVE`, certificado em `CERT_PREPARING`.
 - Pendencia DNS no Hostinger: trocar CNAME `www -> gmove.app` para `www -> gmove-landing.web.app`.
+- Estado posterior: certificado avancou para `CERT_VALIDATING` e o Firebase pediu TXT em `_acme-challenge.www.gmove.app`.
+- TXT solicitado: `rDJYrfPftE3tEqg9ad8cHwdqCXUFL8f9MGCTsltO75I`.
 - Enquanto o DNS nao mudar e o certificado nao concluir, `https://www.gmove.app/` pode continuar falhando.
 
 ## SEO

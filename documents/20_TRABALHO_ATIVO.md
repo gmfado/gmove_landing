@@ -110,5 +110,6 @@ Status: aguardando ajuste DNS externo
 
 - Custom Domain `www.gmove.app` criado no Firebase Hosting em 2026-05-27.
 - Firebase pediu CNAME `www -> gmove-landing.web.app`.
+- Firebase tambem pediu TXT `_acme-challenge.www.gmove.app` com valor `rDJYrfPftE3tEqg9ad8cHwdqCXUFL8f9MGCTsltO75I` enquanto o certificado esta em validacao.
 - DNS atual ainda esta como `www -> gmove.app`.
 - Apos mudar no Hostinger, revalidar HTTPS e redirect para `gmove.app`.

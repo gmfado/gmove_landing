@@ -143,9 +143,11 @@ Antes de deploy, revisar o diff final e decidir se arquivos antigos (`print1.png
 - `https://www.gmove.app/` ainda nao responde corretamente.
 - Custom Domain `www.gmove.app` criado no Firebase Hosting com `redirectTarget` para `gmove.app`.
 - Firebase reconheceu `HOST_ACTIVE` e `OWNERSHIP_ACTIVE`.
-- Certificado SSL ficou em `CERT_PREPARING`.
+- Certificado SSL ficou em `CERT_PREPARING` e depois avancou para `CERT_VALIDATING`.
+- Firebase solicitou TXT `_acme-challenge.www.gmove.app` com valor `rDJYrfPftE3tEqg9ad8cHwdqCXUFL8f9MGCTsltO75I`.
 
 ### Pendencia
 
 - Atualizar DNS no Hostinger: CNAME `www` deve apontar para `gmove-landing.web.app`, conforme `requiredDnsUpdates` retornado pelo Firebase.
+- Se o certificado nao emitir apos a troca de CNAME, adicionar o TXT ACME solicitado.
 - Revalidar `https://www.gmove.app/` apos propagacao DNS e emissao do certificado.
