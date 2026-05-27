@@ -1,4 +1,4 @@
-# Arquitetura do Site Institucional G-MOVE
+﻿# Arquitetura do Site Institucional GMOVE
 
 > Documento estratégico de estrutura — versão 1.0 · Abril 2026
 
@@ -6,13 +6,13 @@
 
 ## 1. Papel do Site
 
-O site não é uma vitrine de funcionalidades. É o **primeiro contato com a identidade do G-MOVE**.
+O site não é uma vitrine de funcionalidades. É o **primeiro contato com a identidade do GMOVE**.
 
 Seu papel é triplo:
 
 **Converter com honestidade.** Comunicar o produto real — o que já existe, o que está sendo construído — sem inflar expectativas. A credibilidade é parte do posicionamento premium.
 
-**Posicionar, não apenas descrever.** A maioria dos apps de treino se vende por features. O G-MOVE se posiciona por filosofia: evolução física como processo contínuo e personalizado. O site comunica esse ponto de vista antes de listar qualquer funcionalidade.
+**Posicionar, não apenas descrever.** A maioria dos apps de treino se vende por features. O GMOVE se posiciona por filosofia: evolução física como processo contínuo e personalizado. O site comunica esse ponto de vista antes de listar qualquer funcionalidade.
 
 **Criar senso de pertencimento antecipado.** O visitante não deve sair do site querendo testar um app. Deve sair querendo fazer parte de algo que ainda está sendo construído — e sentindo que chegou cedo.
 
@@ -32,7 +32,7 @@ A experiência de navegação deve ter ritmo: tensão → respiração → revel
 
 **Função:** Declarar posicionamento em 3 segundos. Criar tensão intelectual. Não explicar.
 
-- Headline que comunica filosofia, não categoria ("Mais um app de treino" é o que o G-MOVE não é)
+- Headline que comunica filosofia, não categoria ("Mais um app de treino" é o que o GMOVE não é)
 - Subheadline que conecta o conceito à pessoa — quem sente que treino deveria ser mais do que repetição de exercícios
 - Visual: movimento, precisão, minimalismo — não corpo perfeito nem academia genérica
 - CTA único e coerente com o estado atual do produto (ver seção 5)
@@ -44,7 +44,7 @@ A experiência de navegação deve ter ritmo: tensão → respiração → revel
 
 **Função:** Estabelecer a filosofia antes de mostrar o produto.
 
-O G-MOVE parte de uma premissa — o que está errado com a maioria das abordagens de treino, e qual é a alternativa. Esta seção não faz pitch. Ela articula um ponto de vista com o qual o visitante concorda antes mesmo de ver uma tela.
+O GMOVE parte de uma premissa — o que está errado com a maioria das abordagens de treino, e qual é a alternativa. Esta seção não faz pitch. Ela articula um ponto de vista com o qual o visitante concorda antes mesmo de ver uma tela.
 
 - 1 a 2 parágrafos curtos ou uma sequência de afirmações em contraste (o que existe × o que deveria existir)
 - Tom: seguro, direto, sem arrogância
@@ -80,7 +80,7 @@ Apresentação honesta e seletiva do que já funciona — não como lista de fea
 
 **Função:** Comunicar que o produto ainda está sendo desenvolvido — sem parecer beta descuidado.
 
-Esta é a seção que separa o G-MOVE de apps que fingem estar prontos. A evolução contínua é tratada como valor, não como desculpa.
+Esta é a seção que separa o GMOVE de apps que fingem estar prontos. A evolução contínua é tratada como valor, não como desculpa.
 
 - Mostrar 2 ou 3 direções de desenvolvimento próximo — com nível de comprometimento honesto
 - Linguagem: "estamos construindo" e "está chegando" têm pesos diferentes — usar com precisão
@@ -93,7 +93,7 @@ Esta é a seção que separa o G-MOVE de apps que fingem estar prontos. A evolu�
 
 **Função:** Fazer o visitante certo se identificar. Fazer o visitante errado desistir.
 
-O G-MOVE não é para todos. Isso é parte do posicionamento premium. Esta seção não exclui por elitismo — exclui por compatibilidade de mentalidade.
+O GMOVE não é para todos. Isso é parte do posicionamento premium. Esta seção não exclui por elitismo — exclui por compatibilidade de mentalidade.
 
 - Descrever perfil por atitude e contexto, não por dados demográficos
 - Exemplo: quem treina sem clareza sobre por que, quem sente que os apps existentes subestimam sua inteligência, quem quer evolução e não apenas movimentação
@@ -134,7 +134,7 @@ Nesta fase, páginas adicionais devem ser criadas apenas se cumprirem função c
 ### Essenciais agora
 
 **Manifesto (ou Sobre)**
-Versão expandida do ponto de vista. Para quem quer entender o "porquê" do G-MOVE em profundidade. Pode ser uma página simples, de leitura corrida, sem navegação complexa. Reforça credibilidade para quem investiga antes de decidir.
+Versão expandida do ponto de vista. Para quem quer entender o "porquê" do GMOVE em profundidade. Pode ser uma página simples, de leitura corrida, sem navegação complexa. Reforça credibilidade para quem investiga antes de decidir.
 
 **Política de Privacidade / Termos**
 Obrigatório para coleta de e-mail e uso do app. Sem opção.
@@ -164,7 +164,7 @@ Este é o ponto mais delicado da arquitetura. A comunicação desonesta — seja
 
 Apresentar as funcionalidades maduras como se fossem a totalidade do produto seria desonesto. Mas apresentá-las com insegurança ou excessiva ressalva também enfraquece o posicionamento.
 
-Abordagem: mostrar o que existe com plena confiança, sem expandir o escopo para cobrir o que não está pronto. "Isso é o que o G-MOVE faz hoje, e faz bem."
+Abordagem: mostrar o que existe com plena confiança, sem expandir o escopo para cobrir o que não está pronto. "Isso é o que o GMOVE faz hoje, e faz bem."
 
 ### O que está parcial → comunicar como processo, não como falha
 
@@ -176,7 +176,7 @@ Abordagem: frases como "estamos aprofundando X" ou "esta área está em refiname
 
 Funcionalidades futuras criam expectativa. Expectativa mal gerenciada gera frustração. O site pode comunicar direção sem se comprometer com entrega.
 
-Abordagem: apresentar como "onde o G-MOVE está indo" em vez de "o que o G-MOVE vai ter". A diferença é sutil na leitura, mas decisiva na responsabilidade assumida.
+Abordagem: apresentar como "onde o GMOVE está indo" em vez de "o que o GMOVE vai ter". A diferença é sutil na leitura, mas decisiva na responsabilidade assumida.
 
 ---
 
@@ -198,7 +198,7 @@ Datas não cumpridas destroem credibilidade. Comprometimento com direção é su
 Um site com 8 páginas vazias ou genéricas é pior do que uma landing page excelente. Profundidade > cobertura.
 
 **Usar imagens de banco de imagens.**
-Fotos genéricas de academia ou corpos perfeitos colocam o G-MOVE no mesmo visual de qualquer app de fitness. O visual deve ser proprietário ou cuidadosamente curado para refletir a identidade real do produto.
+Fotos genéricas de academia ou corpos perfeitos colocam o GMOVE no mesmo visual de qualquer app de fitness. O visual deve ser proprietário ou cuidadosamente curado para refletir a identidade real do produto.
 
 **Prometer datas de lançamento de features na landing.**
 A landing é um documento vivo — mas não um compromisso contratual. Evitar qualquer comunicação que force atualização urgente da página para não enganar o visitante.
@@ -208,4 +208,4 @@ Assim como o produto, o site deve evoluir. A arquitetura aqui definida é um pon
 
 ---
 
-*G-MOVE · Arquitetura de Site · Documento interno · Não publicar*
+*GMOVE · Arquitetura de Site · Documento interno · Não publicar*

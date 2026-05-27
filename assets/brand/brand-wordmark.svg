@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="128" viewBox="0 0 520 128" role="img" aria-labelledby="title desc">
+  <title id="title">GMOVE - Wordmark</title>
+  <desc id="desc">Wordmark textual GMOVE, usado de forma discreta e separado do símbolo de marca.</desc>
+  <defs>
+    <style>
+      .ink { fill: #f4faf7; }
+      text { font-family: Inter, Sora, Arial, sans-serif; }
+    </style>
+  </defs>
+  <text class="ink" x="0" y="88" font-size="86" font-weight="900" letter-spacing="0">GMOVE</text>
+</svg>

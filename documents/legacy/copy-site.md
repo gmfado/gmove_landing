@@ -1,4 +1,4 @@
-# Copy do Site Institucional G-MOVE
+﻿# Copy do Site Institucional GMOVE
 
 > Documento de conteúdo — versão 1.0 · Abril 2026
 > Baseado na Arquitetura v1.0
@@ -13,7 +13,7 @@ Este documento contém toda a copy do site organizada por seção e elemento. On
 
 ## Navegação (Header)
 
-**Logo:** G-MOVE
+**Logo:** GMOVE
 
 **Links:**
 - Manifesto
@@ -30,14 +30,14 @@ Este documento contém toda a copy do site organizada por seção e elemento. On
 ### Headline principal
 
 > **Você já sabe o básico.**
-> **O G-MOVE é o que vem depois.**
+> **O GMOVE é o que vem depois.**
 
 *Variante A (mais direta):*
 > **Treino com método. Evolução com clareza.**
 
 *Variante B (mais provocadora):*
 > **A maioria dos apps te diz o que fazer.**
-> **O G-MOVE te ajuda a entender por quê.**
+> **O GMOVE te ajuda a entender por quê.**
 
 ---
 
@@ -93,7 +93,7 @@ Este documento contém toda a copy do site organizada por seção e elemento. On
 
 > Elas entregam exercícios quando o que falta é estrutura. Oferecem conteúdo quando o que você precisa é de método. Mostram números quando o que importa é compreensão do processo.
 >
-> O G-MOVE parte de uma premissa diferente: evolução física não é uma questão de volume. É uma questão de saber onde você está, para onde está indo, e o que muda de uma semana para outra. Com clareza sobre isso, cada sessão tem peso. Sem isso, é só movimento.
+> O GMOVE parte de uma premissa diferente: evolução física não é uma questão de volume. É uma questão de saber onde você está, para onde está indo, e o que muda de uma semana para outra. Com clareza sobre isso, cada sessão tem peso. Sem isso, é só movimento.
 
 ---
 
@@ -113,7 +113,7 @@ Este documento contém toda a copy do site organizada por seção e elemento. On
 
 ### Subheadline
 
-> O G-MOVE não começa com uma lista de treinos. Começa por você.
+> O GMOVE não começa com uma lista de treinos. Começa por você.
 
 ---
 
@@ -123,7 +123,7 @@ Este documento contém toda a copy do site organizada por seção e elemento. On
 
 > **O onboarding que faz sentido.**
 >
-> Antes de te mandar treinar, o G-MOVE te entende. O fluxo de entrada mapeia seus objetivos, contexto e histórico — para que o que vem depois não seja genérico. É para você, com as especificidades que fazem diferença.
+> Antes de te mandar treinar, o GMOVE te entende. O fluxo de entrada mapeia seus objetivos, contexto e histórico — para que o que vem depois não seja genérico. É para você, com as especificidades que fazem diferença.
 
 ---
 
@@ -163,7 +163,7 @@ Este documento contém toda a copy do site organizada por seção e elemento. On
 
 ### Headline da seção
 
-> O G-MOVE já funciona. E funciona bem.
+> O GMOVE já funciona. E funciona bem.
 
 ---
 
@@ -177,7 +177,7 @@ Este documento contém toda a copy do site organizada por seção e elemento. On
 
 **Título:** Você entra sabendo o que fazer.
 
-> O onboarding do G-MOVE não é um formulário de cadastro. É uma entrada calibrada — que entende seu ponto de partida e constrói o que vem depois com base nele. Em minutos, o app tem contexto suficiente para ser útil de verdade.
+> O onboarding do GMOVE não é um formulário de cadastro. É uma entrada calibrada — que entende seu ponto de partida e constrói o que vem depois com base nele. Em minutos, o app tem contexto suficiente para ser útil de verdade.
 
 ---
 
@@ -195,7 +195,7 @@ Este documento contém toda a copy do site organizada por seção e elemento. On
 
 **Título:** Registro que você vai usar.
 
-> O histórico de treino existe para ser consultado, não arquivado. Acompanhar o que você fez é parte do método — e o G-MOVE mantém isso acessível e compreensível.
+> O histórico de treino existe para ser consultado, não arquivado. Acompanhar o que você fez é parte do método — e o GMOVE mantém isso acessível e compreensível.
 
 `[VALIDAR: confirmar que o histórico/registro de sessões existe e funciona bem.]`
 
@@ -226,7 +226,7 @@ Este documento contém toda a copy do site organizada por seção e elemento. On
 
 ### Parágrafo introdutório
 
-> O G-MOVE tem funcionalidades sólidas hoje — e outras que estamos aprofundando com critério. Não fingimos completude. Preferimos ser precisos sobre o que existe e transparentes sobre o que está sendo construído.
+> O GMOVE tem funcionalidades sólidas hoje — e outras que estamos aprofundando com critério. Não fingimos completude. Preferimos ser precisos sobre o que existe e transparentes sobre o que está sendo construído.
 
 ---
 
@@ -248,7 +248,7 @@ Este documento contém toda a copy do site organizada por seção e elemento. On
 **Item 2**
 **Análise que interpreta, não só registra**
 
-> Dados de treino são úteis quando geram compreensão. Estamos aprofundando a camada de análise do G-MOVE para que você entenda seu processo — não precise decodificar números.
+> Dados de treino são úteis quando geram compreensão. Estamos aprofundando a camada de análise do GMOVE para que você entenda seu processo — não precise decodificar números.
 
 `[VALIDAR se análise está em desenvolvimento ativo ou é futura]`
 
@@ -287,7 +287,7 @@ Este documento contém toda a copy do site organizada por seção e elemento. On
 
 ### Headline da seção
 
-> O G-MOVE não é para todos. E está tudo bem.
+> O GMOVE não é para todos. E está tudo bem.
 
 ---
 
@@ -312,7 +312,7 @@ Este documento contém toda a copy do site organizada por seção e elemento. On
 
 ### Frase de honestidade (opcional, tom leve)
 
-> Se o que você quer é um app com trilhas de áudio motivacionais e ranking de amigos, existem ótimas opções para isso. O G-MOVE é outra coisa.
+> Se o que você quer é um app com trilhas de áudio motivacionais e ranking de amigos, existem ótimas opções para isso. O GMOVE é outra coisa.
 
 ---
 
@@ -323,7 +323,7 @@ Este documento contém toda a copy do site organizada por seção e elemento. On
 > Chegou cedo. Vale a pena.
 
 *Variante mais direta:*
-> O G-MOVE está sendo construído agora. Faz sentido entrar agora.
+> O GMOVE está sendo construído agora. Faz sentido entrar agora.
 
 ---
 
@@ -362,7 +362,7 @@ Este documento contém toda a copy do site organizada por seção e elemento. On
 
 ### Tagline do footer
 
-> G-MOVE — Evolução física com método.
+> GMOVE — Evolução física com método.
 
 ---
 
@@ -388,7 +388,7 @@ Este documento contém toda a copy do site organizada por seção e elemento. On
 
 ### Título
 
-> Por que o G-MOVE existe.
+> Por que o GMOVE existe.
 
 ---
 
@@ -400,7 +400,7 @@ Este documento contém toda a copy do site organizada por seção e elemento. On
 >
 > A maioria das pessoas que treina sem evolução consistente não tem déficit de exercícios. Tem déficit de estrutura. Não sabe com clareza por que está fazendo o que está fazendo. Não vê a conexão entre uma semana e a próxima. Treina com esforço, mas sem direção.
 >
-> O G-MOVE foi construído para resolver esse problema.
+> O GMOVE foi construído para resolver esse problema.
 >
 > Não com mais conteúdo — com mais método. Não com motivação — com compreensão. Não com gamificação — com progressão real.
 >
@@ -408,7 +408,7 @@ Este documento contém toda a copy do site organizada por seção e elemento. On
 >
 > O app ainda está sendo construído. Há funcionalidades maduras e há áreas que estamos aprofundando. Escolhemos ser transparentes sobre isso porque a credibilidade não é negociável — é parte de quem somos.
 >
-> Se você chegou até aqui, provavelmente já sente que treino poderia ser mais do que tem sido. O G-MOVE é a resposta que estamos construindo para essa sensação.
+> Se você chegou até aqui, provavelmente já sente que treino poderia ser mais do que tem sido. O GMOVE é a resposta que estamos construindo para essa sensação.
 
 ---
 
@@ -442,7 +442,7 @@ Este documento contém toda a copy do site organizada por seção e elemento. On
 
 ## Palavras a Evitar
 
-*Lista de termos genéricos banidos da copy do G-MOVE.*
+*Lista de termos genéricos banidos da copy do GMOVE.*
 
 - transformação
 - potencial máximo / seu potencial
@@ -473,4 +473,4 @@ Toda a copy acima foi escrita para se adaptar ao estado real do produto. Os `[VA
 
 ---
 
-*G-MOVE · Copy do Site · Documento interno · Versão 1.0*
+*GMOVE · Copy do Site · Documento interno · Versão 1.0*

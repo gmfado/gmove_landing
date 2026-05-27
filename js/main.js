@@ -1,5 +1,5 @@
 /* ============================================================
-   G-MOVE — Main JS   version 3.0 · 2026
+   GMOVE — Main JS   version 3.0 · 2026
    ============================================================ */
 
 (function () {
@@ -108,89 +108,89 @@
     const articles = [
       {
         num: '01',
-        meta: 'Ensaio · 01',
-        href: '/conteudo/como-evoluir-no-treino-sem-motivacao/',
-        image: '/conteudo/como-evoluir-no-treino-sem-motivacao/preset-imagem-conteudo-1.jpg',
+        meta: 'Método · 01',
+        href: 'como-evoluir-no-treino-sem-motivacao/index.html',
+        image: '../conteudo/como-evoluir-no-treino-sem-motivacao/preset-imagem-conteudo-1.jpg',
         tag: 'Método',
         title: 'Como evoluir no treino sem motivação.',
-        excerpt: 'Motivação não é combustível de processo — é sintoma dele. Um ensaio sobre por que quem depende de estado emocional estagna, e por que estrutura supera inspiração em qualquer janela maior que uma semana.',
+        excerpt: 'A consistência começa quando a decisão deixa de ser tomada no cansaço do dia. Um ensaio sobre estrutura, repetição e por que motivação deve ser consequência, não combustível.',
         reading: '<b>Leitura</b> · 6 min &nbsp;·&nbsp; Abril de 2026',
         aria: 'Ler o ensaio: Como evoluir no treino sem motivação'
       },
       {
         num: '02',
-        meta: 'Ensaio · 02',
-        href: '/conteudo/por-que-voce-comeca-e-para-no-treino/',
-        image: '/conteudo/por-que-voce-comeca-e-para-no-treino/preset-imagem-conteudo-2.jpg',
+        meta: 'Continuidade · 02',
+        href: 'por-que-voce-comeca-e-para-no-treino/index.html',
+        image: '../conteudo/por-que-voce-comeca-e-para-no-treino/preset-imagem-conteudo-2.jpg',
         tag: 'Continuidade',
         title: 'Por que você começa e para no treino.',
-        excerpt: 'Começar bem não garante continuidade. O ciclo de impulso, abandono e recomeço quase sempre revela falta de sistema.',
+        excerpt: 'O abandono raramente nasce no treino em si. Ele aparece quando a rotina depende de impulso, não de um sistema mínimo de continuidade.',
         reading: '<b>Leitura</b> · 7 min &nbsp;·&nbsp; Abril de 2026',
         aria: 'Ler o ensaio: Por que você começa e para no treino'
       },
       {
         num: '03',
-        meta: 'Ensaio · 03',
-        href: '/conteudo/o-treino-perfeito-que-voce-nunca-consegue-seguir/',
-        image: '/conteudo/o-treino-perfeito-que-voce-nunca-consegue-seguir/preset-imagem-conteudo-3.jpg',
+        meta: 'Estrutura · 03',
+        href: 'o-treino-perfeito-que-voce-nunca-consegue-seguir/index.html',
+        image: '../conteudo/o-treino-perfeito-que-voce-nunca-consegue-seguir/preset-imagem-conteudo-3.jpg',
         tag: 'Estrutura',
         title: 'O treino perfeito que você nunca consegue seguir.',
-        excerpt: 'Um plano pode ser excelente no papel e ruim na semana real. Estrutura boa precisa caber na vida que existe.',
+        excerpt: 'Um plano pode ser bonito no papel e frágil na semana real. O melhor treino é o que mantém qualidade dentro da vida.',
         reading: '<b>Leitura</b> · 7 min &nbsp;·&nbsp; Abril de 2026',
         aria: 'Ler o ensaio: O treino perfeito que você nunca consegue seguir'
       },
       {
         num: '04',
-        meta: 'Ensaio · 04',
-        href: '/conteudo/treinar-cansado-funciona/',
-        image: '/conteudo/treinar-cansado-funciona/preset-imagem-conteudo-4.jpg',
+        meta: 'Adaptação · 04',
+        href: 'treinar-cansado-funciona/index.html',
+        image: '../conteudo/treinar-cansado-funciona/preset-imagem-conteudo-4.jpg',
         tag: 'Adaptação',
         title: 'Treinar cansado funciona?',
-        excerpt: 'Cansaço não pede sempre pausa nem sempre esforço. O método está em saber quando adaptar a sessão.',
+        excerpt: 'Cansaço não pede sempre pausa nem sempre heroísmo. O método está em saber quando ajustar a sessão com inteligência.',
         reading: '<b>Leitura</b> · 7 min &nbsp;·&nbsp; Abril de 2026',
         aria: 'Ler o ensaio: Treinar cansado funciona?'
       },
       {
         num: '05',
-        meta: 'Ensaio · 05',
-        href: '/conteudo/o-problema-nao-e-falta-de-disciplina-e-falta-de-estrutura/',
-        image: '/conteudo/o-problema-nao-e-falta-de-disciplina-e-falta-de-estrutura/preset-imagem-conteudo-5.jpg',
+        meta: 'Estrutura · 05',
+        href: 'o-problema-nao-e-falta-de-disciplina-e-falta-de-estrutura/index.html',
+        image: '../conteudo/o-problema-nao-e-falta-de-disciplina-e-falta-de-estrutura/preset-imagem-conteudo-5.jpg',
         tag: 'Estrutura',
         title: 'O problema não é falta de disciplina. É falta de estrutura.',
-        excerpt: 'Falta de disciplina para treinar muitas vezes revela ausência de estrutura, clareza e progressão, não falta de força de vontade.',
+        excerpt: 'A disciplina que parece pessoal costuma ser desenhada por fora: agenda, ambiente, treino definido e pouca negociação.',
         reading: '<b>Leitura</b> · 7 min &nbsp;·&nbsp; Abril de 2026',
         aria: 'Ler o ensaio: O problema não é falta de disciplina. É falta de estrutura'
       },
       {
         num: '06',
-        meta: 'Ensaio · 06',
-        href: '/conteudo/treinar-sem-registrar-e-repetir-sem-saber-se-esta-evoluindo/',
-        image: '/conteudo/treinar-sem-registrar-e-repetir-sem-saber-se-esta-evoluindo/preset-imagem-conteudo-6.jpg',
+        meta: 'Progressão · 06',
+        href: 'treinar-sem-registrar-e-repetir-sem-saber-se-esta-evoluindo/index.html',
+        image: '../conteudo/treinar-sem-registrar-e-repetir-sem-saber-se-esta-evoluindo/preset-imagem-conteudo-6.jpg',
         tag: 'Progressão',
         title: 'Treinar sem registrar é repetir sem saber se está evoluindo.',
-        excerpt: 'Sem registro, o treino não vira processo. Vira lembrança, sensação e improviso na próxima sessão.',
+        excerpt: 'Sem histórico, cada sessão depende de memória e sensação. Com registro, o treino passa a ter leitura, comparação e direção.',
         reading: '<b>Leitura</b> · 7 min &nbsp;·&nbsp; Abril de 2026',
         aria: 'Ler o ensaio: Treinar sem registrar é repetir sem saber se está evoluindo'
       },
       {
         num: '07',
-        meta: 'Ensaio · 07',
-        href: '/conteudo/por-que-trocar-de-treino-toda-hora-atrapalha-sua-evolucao/',
-        image: '/conteudo/por-que-trocar-de-treino-toda-hora-atrapalha-sua-evolucao/preset-imagem-conteudo-7.jpg',
+        meta: 'Clareza · 07',
+        href: 'por-que-trocar-de-treino-toda-hora-atrapalha-sua-evolucao/index.html',
+        image: '../conteudo/por-que-trocar-de-treino-toda-hora-atrapalha-sua-evolucao/preset-imagem-conteudo-7.jpg',
         tag: 'Clareza',
         title: 'Por que trocar de treino toda hora atrapalha sua evolução.',
-        excerpt: 'Trocar antes de ler o que o treino mostra destrói a referência que permite evoluir com critério.',
+        excerpt: 'Trocar cedo demais apaga a referência que permitiria entender se a mudança é evolução, fuga ou simples ansiedade.',
         reading: '<b>Leitura</b> · 7 min &nbsp;·&nbsp; Abril de 2026',
         aria: 'Ler o ensaio: Por que trocar de treino toda hora atrapalha sua evolução'
       },
       {
         num: '08',
-        meta: 'Ensaio · 08',
-        href: '/conteudo/o-treino-que-voce-consegue-repetir-vale-mais-do-que-o-treino-que-parece-perfeito/',
-        image: '/conteudo/o-treino-que-voce-consegue-repetir-vale-mais-do-que-o-treino-que-parece-perfeito/preset-imagem-conteudo-8.jpg',
+        meta: 'Consistência · 08',
+        href: 'o-treino-que-voce-consegue-repetir-vale-mais-do-que-o-treino-que-parece-perfeito/index.html',
+        image: '../conteudo/o-treino-que-voce-consegue-repetir-vale-mais-do-que-o-treino-que-parece-perfeito/preset-imagem-conteudo-8.jpg',
         tag: 'Consistência',
         title: 'O treino que você consegue repetir vale mais do que o treino que parece perfeito.',
-        excerpt: 'Um treino bonito, mas inviável, não é um plano. É decoração. O plano real sobrevive à semana.',
+        excerpt: 'Um treino sofisticado, mas inviável, não é plano. Plano de verdade sobrevive ao calendário, ao cansaço e à repetição.',
         reading: '<b>Leitura</b> · 7 min &nbsp;·&nbsp; Abril de 2026',
         aria: 'Ler o ensaio: O treino que você consegue repetir vale mais do que o treino que parece perfeito'
       }
@@ -295,7 +295,7 @@
           headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
           body: JSON.stringify({
             email,
-            _subject:  'G-MOVE — novo acesso antecipado',
+            _subject:  'GMOVE — novo acesso antecipado',
             _captcha:  'false',
             _template: 'table'
           })
@@ -308,6 +308,173 @@
   }
 
   /* ==========================================================
+     PRODUCT DECISION DEMO
+     ========================================================== */
+  const decisionDemo = qs('[data-decision-demo]');
+  if (decisionDemo) {
+    const decisionBoard = qs('.decision-board', decisionDemo);
+    let decisionPulseTimer = null;
+    const demoState = {
+      tempo: '50',
+      energia: 'normal',
+      equipamento: 'completo'
+    };
+
+    const demoEls = {
+      kicker: qs('[data-demo-kicker]', decisionDemo),
+      title: qs('[data-demo-title]', decisionDemo),
+      body: qs('[data-demo-body]', decisionDemo),
+      load: qs('[data-demo-load]', decisionDemo),
+      adjust: qs('[data-demo-adjust]', decisionDemo),
+      reason: qs('[data-demo-reason]', decisionDemo),
+      status: qs('[data-demo-status]', decisionDemo),
+      plan: qs('[data-demo-plan]', decisionDemo),
+      history: qs('[data-demo-history]', decisionDemo),
+      context: qs('[data-demo-context]', decisionDemo),
+      next: qs('[data-demo-next]', decisionDemo)
+    };
+
+    function getDemoDecision() {
+      const { tempo, energia, equipamento } = demoState;
+      const energiaLabel = { baixa: 'baixo', normal: 'normal', alta: 'alto' }[energia] || energia;
+      const equipamentoLabel = { completo: 'completo', limitado: 'limitado', casa: 'casa' }[equipamento] || equipamento;
+      const context = `${tempo} min · ${energiaLabel} · ${equipamentoLabel}`;
+
+      if (energia === 'baixa') {
+        return {
+          status: 'Reduzir sem perder continuidade',
+          plan: tempo === '35' ? 'Superior A essencial' : 'Superior A reduzido',
+          history: 'Carga recente preservada',
+          context,
+          kicker: 'Ajuste inteligente',
+          title: 'Sessão reduzida para preservar consistência',
+          body: 'Mantém o vínculo com o plano, corta volume acessório e evita transformar um dia ruim em abandono.',
+          load: 'Manter ou reduzir 5% nas séries principais.',
+          adjust: tempo === '35' ? 'Priorizar dois exercícios-base e encerrar com feedback.' : 'Reduzir volume e manter técnica controlada.',
+          reason: 'Estado baixo hoje; o objetivo é treinar o suficiente para continuar evoluindo.',
+          next: 'Se o feedback vier pesado, o próximo treino reduz volume antes de mexer no foco da semana.'
+        };
+      }
+
+      if (equipamento === 'casa') {
+        return {
+          status: 'Mesmo objetivo, outro ambiente',
+          plan: 'Superior adaptado',
+          history: 'Padrão de movimento mantido',
+          context,
+          kicker: 'Substituição de contexto',
+          title: 'Treino adaptado para casa sem quebrar o foco',
+          body: 'Preserva o grupo muscular planejado e troca exercícios por variações compatíveis com o equipamento disponível.',
+          load: 'Usar faixa de repetições mais alta e registrar esforço.',
+          adjust: tempo === '70' ? 'Adicionar bloco complementar se a execução permanecer estável.' : 'Manter sessão compacta e objetiva.',
+          reason: 'Equipamento mudou, mas o objetivo do dia continua válido.',
+          next: 'O app guarda a troca e evita comparar carga livre com máquina como se fossem o mesmo estímulo.'
+        };
+      }
+
+      if (equipamento === 'limitado') {
+        return {
+          status: 'Preservar foco com alternativa',
+          plan: 'Superior A resiliente',
+          history: 'Exercício equivalente disponível',
+          context,
+          kicker: 'Plano preservado',
+          title: 'Mesmo foco, exercícios mais resilientes',
+          body: 'A sessão troca movimentos dependentes de máquina por alternativas equivalentes e mantém a progressão possível.',
+          load: 'Usar a última carga válida quando o padrão de movimento for parecido.',
+          adjust: 'Trocar exercício sem trocar o propósito do treino.',
+          reason: 'Há restrição de equipamento; o app protege o objetivo antes de trocar tudo.',
+          next: 'Se a alternativa funcionar bem, ela fica disponível como substituição confiável no próximo cenário parecido.'
+        };
+      }
+
+      if (tempo === '35') {
+        return {
+          status: 'Cumprir o essencial',
+          plan: 'Superior A compacto',
+          history: 'Prioridade nas séries principais',
+          context,
+          kicker: 'Treino recomendado',
+          title: 'Sessão compacta com prioridade clara',
+          body: 'Escolhe o núcleo do treino e deixa acessórios para outro dia, sem apagar a progressão da semana.',
+          load: 'Manter carga principal se o aquecimento estiver sólido.',
+          adjust: 'Executar menos exercícios, com descanso mais controlado.',
+          reason: 'Tempo curto; melhor cumprir o essencial do que improvisar uma sessão longa.',
+          next: 'O volume não feito volta para a leitura da semana, sem duplicar tudo no treino seguinte.'
+        };
+      }
+
+      if (tempo === '70' && energia === 'alta') {
+        return {
+          status: 'Boa janela para avanço',
+          plan: 'Superior A completo',
+          history: 'Margem na última sessão',
+          context,
+          kicker: 'Oportunidade do dia',
+          title: 'Sessão completa com progressão agressiva, mas medida',
+          body: 'Aproveita condição favorável para buscar avanço nas séries principais e fechar com volume complementar.',
+          load: 'Subir 2,5% a 5% se a última sessão indicou margem.',
+          adjust: 'Adicionar bloco complementar apenas se a execução continuar limpa.',
+          reason: 'Histórico estável, energia alta e tempo suficiente para um estímulo maior.',
+          next: 'Se o avanço fechar limpo, a nova carga vira referência para a próxima recomendação.'
+        };
+      }
+
+      return {
+        status: 'Boa janela para progredir',
+        plan: 'Superior A',
+        history: 'Execução estável',
+        context,
+        kicker: 'Treino recomendado',
+        title: 'Força superior com progressão controlada',
+        body: 'Mantém o foco do plano, sugere carga próxima da última sessão válida e deixa a execução pronta para registrar feedback.',
+        load: 'Subir 2,5% se a última série fechar limpa.',
+        adjust: 'Manter volume planejado e observar esforço percebido.',
+        reason: 'Plano ativo, histórico consistente e condição normal para treinar.',
+        next: 'Se o feedback vier leve, a próxima sessão pode subir uma faixa de carga.'
+      };
+    }
+
+    function renderDemoDecision() {
+      const decision = getDemoDecision();
+      Object.entries(demoEls).forEach(([key, el]) => {
+        if (el && decision[key]) el.textContent = decision[key];
+      });
+    }
+
+    function pulseDecisionBoard() {
+      if (!decisionBoard) return;
+      decisionBoard.classList.remove('is-updating');
+      void decisionBoard.offsetWidth;
+      decisionBoard.classList.add('is-updating');
+      if (decisionPulseTimer) window.clearTimeout(decisionPulseTimer);
+      decisionPulseTimer = window.setTimeout(() => {
+        decisionBoard.classList.remove('is-updating');
+      }, 720);
+    }
+
+    qsa('[data-demo-group]', decisionDemo).forEach(button => {
+      const group = button.dataset.demoGroup;
+      const value = button.dataset.demoValue;
+      button.setAttribute('aria-pressed', String(button.classList.contains('is-active')));
+
+      button.addEventListener('click', () => {
+        if (!group || !value) return;
+        demoState[group] = value;
+        qsa(`[data-demo-group="${group}"]`, decisionDemo).forEach(item => {
+          const isActive = item === button;
+          item.classList.toggle('is-active', isActive);
+          item.setAttribute('aria-pressed', String(isActive));
+        });
+        renderDemoDecision();
+        pulseDecisionBoard();
+      });
+    });
+
+    renderDemoDecision();
+  }
+
+  /* ==========================================================
      JOURNEY NAVIGATION
      ========================================================== */
   const journeyDots  = qsa('.journey-dot');
@@ -315,16 +482,19 @@
   const journeyLabel = qs('.journey-btn__label');
 
   const SECTION_ORDER = [
-    'hero', 'ponto-de-vista', 'experiencia',
-    'funcionalidades', 'construcao', 'para-quem', 'cta-final'
+    'hero', 'ponto-de-vista', 'como-funciona', 'experiencia',
+    'funcionalidades', 'construcao', 'para-quem', 'seguranca', 'editorial', 'cta-final'
   ];
   const SECTION_LABELS = {
     'hero':            'Início',
     'ponto-de-vista':  'A premissa',
+    'como-funciona':   'Como funciona',
     'experiencia':     'A experiência',
     'funcionalidades': 'O que existe',
     'construcao':      'Em construção',
     'para-quem':       'Para quem é',
+    'seguranca':       'Confiança',
+    'editorial':       'Editorial',
     'cta-final':       'Acesso antecipado'
   };
 
@@ -515,6 +685,19 @@
       }
     });
   }
+
+  /* ==========================================================
+     SPOTLIGHT CARDS
+     ========================================================== */
+  qsa('[data-spotlight]').forEach(card => {
+    card.addEventListener('pointermove', event => {
+      const rect = card.getBoundingClientRect();
+      const x = ((event.clientX - rect.left) / rect.width) * 100;
+      const y = ((event.clientY - rect.top) / rect.height) * 100;
+      card.style.setProperty('--mx', `${x.toFixed(2)}%`);
+      card.style.setProperty('--my', `${y.toFixed(2)}%`);
+    });
+  });
 
   /* ==========================================================
      HERO PARALLAX — camada de profundidade responsiva ao mouse

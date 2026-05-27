@@ -1,0 +1,52 @@
+# 10 - Matriz de Paginas Publicas
+
+## Objetivo
+
+Manter uma visao unica das paginas publicas do GMOVE Website: objetivo, owner, status SEO e validacao.
+
+Atualizar este documento quando criar, remover, renomear ou mudar o papel de uma pagina.
+
+## Resumo
+
+- Dominio canonico: `https://gmove.app/`.
+- Total no sitemap: 18 URLs.
+- Ultimo deploy registrado: 2026-05-27.
+- Ultima validacao ao vivo registrada: 2026-05-27.
+- Fonte de URL canonica: `sitemap.xml`.
+
+## Owners
+
+- `landing`: home, produto, copy, experiencia e conversao.
+- `editorial`: `/conteudo/`, hubs, artigos, SEO editorial e imagens editoriais.
+- `legal`: termos, privacidade e consistencia institucional.
+- `infra`: sitemap, robots, Firebase, dominio, Search Console e headers.
+
+## Matriz
+
+| URL | Arquivo | Owner | Papel | Status SEO | Ultima validacao | Proxima acao |
+| --- | --- | --- | --- | --- | --- | --- |
+| `/` | `index.html` | landing | Explicar produto e converter para acesso antecipado | Completo: title, description, canonical, OG/Twitter e JSON-LD | Live 2026-05-27 | Monitorar conversao e performance |
+| `/manifesto.html` | `manifesto.html` | landing | Expandir ponto de vista e autoridade de marca | Basico completo | Local/live parcial 2026-05-27 | Revalidar mobile apos proximo ajuste de copy |
+| `/conteudo/` | `conteudo/index.html` | editorial | Hub editorial e distribuicao de artigos/hubs | Completo: CollectionPage, ItemList, metadados e imagens | Live mobile 2026-05-27 | Enviar no Search Console |
+| `/conteudo/treino-com-criterio/` | `conteudo/treino-com-criterio/index.html` | editorial | Hub pilar de metodo e criterio | Completo: CollectionPage, breadcrumb e metadados | Local 2026-05-27 | URL Inspection |
+| `/conteudo/progressao/` | `conteudo/progressao/index.html` | editorial | Hub pilar de progressao | Completo: CollectionPage, breadcrumb e metadados | Local 2026-05-27 | URL Inspection |
+| `/conteudo/consistencia/` | `conteudo/consistencia/index.html` | editorial | Hub pilar de consistencia | Completo: CollectionPage, breadcrumb e metadados | Local 2026-05-27 | URL Inspection |
+| `/conteudo/recuperacao/` | `conteudo/recuperacao/index.html` | editorial | Hub pilar de recuperacao/adaptacao | Completo: CollectionPage, breadcrumb e metadados | Local 2026-05-27 | URL Inspection |
+| `/conteudo/como-evoluir-no-treino-sem-motivacao/` | `conteudo/como-evoluir-no-treino-sem-motivacao/index.html` | editorial | Artigo 01, consistencia sem depender de motivacao | Completo: Article JSON-LD e metadados | Local 2026-05-27 | Revalidar Search Console |
+| `/conteudo/por-que-voce-comeca-e-para-no-treino/` | `conteudo/por-que-voce-comeca-e-para-no-treino/index.html` | editorial | Artigo 02, ciclo de abandono | Completo: Article JSON-LD e metadados | Local 2026-05-27 | Revalidar Search Console |
+| `/conteudo/o-treino-perfeito-que-voce-nunca-consegue-seguir/` | `conteudo/o-treino-perfeito-que-voce-nunca-consegue-seguir/index.html` | editorial | Artigo 03, plano perfeito vs plano possivel | Completo: Article JSON-LD e metadados | Local 2026-05-27 | Revalidar Search Console |
+| `/conteudo/treinar-cansado-funciona/` | `conteudo/treinar-cansado-funciona/index.html` | editorial | Artigo 04, treino cansado e adaptacao | Completo: Article JSON-LD e metadados | Local 2026-05-27 | Revalidar Search Console |
+| `/conteudo/o-problema-nao-e-falta-de-disciplina-e-falta-de-estrutura/` | `conteudo/o-problema-nao-e-falta-de-disciplina-e-falta-de-estrutura/index.html` | editorial | Artigo 05, estrutura acima de forca de vontade | Completo: Article JSON-LD e metadados | Local 2026-05-27 | Revalidar Search Console |
+| `/conteudo/treinar-sem-registrar-e-repetir-sem-saber-se-esta-evoluindo/` | `conteudo/treinar-sem-registrar-e-repetir-sem-saber-se-esta-evoluindo/index.html` | editorial | Artigo 06, registro e evolucao | Completo: Article JSON-LD e metadados | Local 2026-05-27 | Revalidar Search Console |
+| `/conteudo/por-que-trocar-de-treino-toda-hora-atrapalha-sua-evolucao/` | `conteudo/por-que-trocar-de-treino-toda-hora-atrapalha-sua-evolucao/index.html` | editorial | Artigo 07, troca excessiva de treino | Completo: Article JSON-LD e metadados | Local 2026-05-27 | Revalidar Search Console |
+| `/conteudo/o-treino-que-voce-consegue-repetir-vale-mais-do-que-o-treino-que-parece-perfeito/` | `conteudo/o-treino-que-voce-consegue-repetir-vale-mais-do-que-o-treino-que-parece-perfeito/index.html` | editorial | Artigo 08, repetibilidade e consistencia | Completo: Article JSON-LD e metadados | Local 2026-05-27 | Revalidar Search Console |
+| `/privacidade.html` | `privacidade.html` | legal | Politica de privacidade e LGPD | Basico completo | HTTP 200 live 2026-05-27 | Atualizar antes de analytics/ads |
+| `/seguranca.html` | `seguranca.html` | legal/landing | Explicar dados, limites e confianca | Completo com JSON-LD | Live/mobile 2026-05-27 | Enviar no Search Console |
+| `/termos.html` | `termos.html` | legal | Termos de uso | Basico completo | HTTP 200 live 2026-05-27 | Revisar antes de abertura publica ampla |
+
+## Regras De Atualizacao
+
+- Nova pagina publica deve entrar no sitemap e nesta matriz.
+- Pagina removida deve sair do sitemap e desta matriz no mesmo pacote.
+- Mudanca de canonical, title, description ou JSON-LD deve atualizar `documents/05_QA_RELEASE.md`.
+- Conteudo editorial novo tambem deve atualizar `documents/editorial/EDITORIAL_ESTADO_ATUAL.md` e `documents/editorial/EDITORIAL_SPRINTS.md`.

@@ -1,14 +1,25 @@
-{
+﻿{
   "hosting": {
     "public": ".",
     "cleanUrls": true,
-    "trailingSlash": false,
+    "trailingSlash": true,
     "ignore": [
       "firebase.json",
       ".firebaserc",
+      "README.md",
+      "CODEX.md",
+      "documents/**",
+      "assets/screenshots/*.xml",
       "arquitetura-site.md",
       "copy-site.md",
       "gmove_logo.png",
+      "gmove_logo_web.png",
+      "print1.png",
+      "print2.png",
+      "print3.png",
+      "print4.png",
+      "print5.png",
+      "video.mp4",
       ".firebase/**",
       ".tmp.driveupload/**",
       ".tmp.drivedownload/**",
@@ -51,7 +62,8 @@
     "rewrites": [
       { "source": "/privacidade", "destination": "/privacidade.html" },
       { "source": "/termos",      "destination": "/termos.html" },
-      { "source": "/manifesto",   "destination": "/manifesto.html" }
+      { "source": "/manifesto",   "destination": "/manifesto.html" },
+      { "source": "/seguranca",   "destination": "/seguranca.html" }
     ]
   }
 }

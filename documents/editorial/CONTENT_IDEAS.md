@@ -1,4 +1,4 @@
-# G-MOVE Content Ideas
+﻿# GMOVE Content Ideas
 
 > Banco inicial de pautas · Versão 1.0 · Abril de 2026  
 > Usar como fonte de planejamento, não como calendário obrigatório
@@ -11,7 +11,7 @@
 
 - Pilar: Consistência
 - Premissa: a falha de rotina começa antes da sessão, no custo de decisão repetida.
-- Ângulo G-MOVE: remover decisão é mais importante que buscar motivação.
+- Ângulo GMOVE: remover decisão é mais importante que buscar motivação.
 - Visual sugerido: fluxo decisão repetida versus semana pré-definida.
 - CTA: Entrar na lista para acompanhar um app construído em torno de método.
 
@@ -19,7 +19,7 @@
 
 - Pilar: Progressão
 - Premissa: pensar em treinos isolados distorce a leitura do processo.
-- Ângulo G-MOVE: sessão importa, mas a semana revela direção.
+- Ângulo GMOVE: sessão importa, mas a semana revela direção.
 - Visual sugerido: linha semanal com sessões como pontos, não eventos soltos.
 - CTA: Ler o manifesto ou entrar na lista.
 
@@ -27,23 +27,23 @@
 
 - Pilar: Método
 - Premissa: trocar estímulo toda hora cria sensação de novidade, mas reduz comparabilidade.
-- Ângulo G-MOVE: progressão precisa de repetição suficiente para ser lida.
+- Ângulo GMOVE: progressão precisa de repetição suficiente para ser lida.
 - Visual sugerido: comparação entre ruído de variação e trilho de progressão.
-- CTA: G-MOVE como treino com estrutura e intenção.
+- CTA: GMOVE como treino com estrutura e intenção.
 
 ### 04. Registro de treino não é arquivo. É instrumento.
 
 - Pilar: Clareza
 - Premissa: histórico só tem valor quando ajuda a decidir o próximo passo.
-- Ângulo G-MOVE: dado bruto não basta; evolução precisa ser legível.
+- Ângulo GMOVE: dado bruto não basta; evolução precisa ser legível.
 - Visual sugerido: lista morta versus narrativa de progresso.
 - CTA: Produto que trata histórico como parte do método.
 
-### 05. Por que o G-MOVE começa por você, não por uma lista de treinos.
+### 05. Por que o GMOVE começa por você, não por uma lista de treinos.
 
 - Pilar: Produto
 - Premissa: recomendar antes de entender é uma forma elegante de ser genérico.
-- Ângulo G-MOVE: onboarding como entrada calibrada, não formulário.
+- Ângulo GMOVE: onboarding como entrada calibrada, não formulário.
 - Visual sugerido: mapa de contexto inicial.
 - CTA: Entrar na lista.
 
@@ -74,7 +74,7 @@
 ### 10. O treino que funciona é o que você consegue entender.
 
 - Ideia: compreensão muda aderência e execução.
-- Conexão: G-MOVE ajuda o usuário a entender por quê.
+- Conexão: GMOVE ajuda o usuário a entender por quê.
 
 ---
 
@@ -117,7 +117,7 @@
 ### 17. O que muda de uma semana para outra?
 
 - Ideia: pergunta simples que separa treino repetido de processo.
-- Conexão: tese central do G-MOVE.
+- Conexão: tese central do GMOVE.
 
 ### 18. Progresso sem leitura vira sorte.
 
@@ -212,10 +212,10 @@
 
 ### Série: Produto com critério
 
-- Por que o G-MOVE começa por você.
+- Por que o GMOVE começa por você.
 - Interface que não compete com o treino.
 - Produto honesto sobre onde está.
-- Construído com critério. Em evolução contínua.
+- Construído com critério. Validado em campo antes de escalar.
 
 ---
 
@@ -223,7 +223,7 @@
 
 Priorizar uma pauta quando ela:
 
-- reforça uma tese central do G-MOVE;
+- reforça uma tese central do GMOVE;
 - tem tensão clara no título;
 - pode gerar um bloco visual forte;
 - conversa com uma parte real do produto;

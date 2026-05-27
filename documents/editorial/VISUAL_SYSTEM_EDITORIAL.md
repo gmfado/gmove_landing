@@ -1,4 +1,4 @@
-# G-MOVE Visual System Editorial
+﻿# GMOVE Visual System Editorial
 
 > Sistema visual editorial · Versão 1.0 · Abril de 2026  
 > Baseado em `css/style.css` e `css/editorial.css`
@@ -7,7 +7,7 @@
 
 ## 1. Princípio Visual
 
-O Editorial G-MOVE deve parecer uma extensão natural do produto, não uma área separada do site.
+O Editorial GMOVE deve parecer uma extensão natural do produto, não uma área separada do site.
 
 A experiência visual precisa comunicar:
 
@@ -26,9 +26,9 @@ O editorial deve ter ritmo de ensaio: abertura forte, respiro, blocos conceituai
 
 ### Base estrutural
 
-- Fundo principal: `#08090E`
-- Superfície: `#0D0F1C`
-- Superfície elevada: `#111320`
+- Fundo principal: `#090A0B`
+- Superfície: `#0F1113`
+- Superfície elevada: `#151719`
 - Borda: `rgba(255, 255, 255, 0.06)`
 
 Uso:
@@ -39,11 +39,11 @@ Uso:
 - áreas de CTA;
 - divisões sutis.
 
-### Azul G-MOVE
+### Informação GMOVE
 
-- Principal: `#2756E4`
-- Médio: `#1E46C8`
-- Dim: `rgba(39, 86, 228, 0.12)`
+- Principal: `#57C7FF`
+- Médio: `#2BA8E8`
+- Dim: `rgba(87, 199, 255, 0.12)`
 
 Uso:
 
@@ -53,10 +53,10 @@ Uso:
 - hover discreto;
 - sinal de estrutura e método.
 
-### Amarelo G-MOVE
+### Ação GMOVE
 
-- Principal: `#F4C430`
-- Glow: `rgba(244, 196, 48, 0.22)`
+- Principal: `#B8F24B`
+- Glow: `rgba(184, 242, 75, 0.22)`
 
 Uso:
 
@@ -66,13 +66,13 @@ Uso:
 - pontos de ênfase real;
 - marcação de frase importante.
 
-Regra: amarelo deve ser usado com parcimônia. Se tudo chama atenção, nada tem prioridade.
+Regra: a cor de ação deve ser usada com parcimônia. Se tudo chama atenção, nada tem prioridade.
 
 ### Texto
 
-- Texto principal: `#EEEEF4`
-- Texto secundário: `#9496B0`
-- Texto terciário: `#4E5068`
+- Texto principal: `#F4F6F5`
+- Texto secundário: `#ADB5B1`
+- Texto terciário: `#737D78`
 
 Uso:
 
@@ -118,10 +118,10 @@ Arquivo base:
 
 Deve conter:
 
-- eyebrow `Editorial G-MOVE`;
+- eyebrow `Editorial GMOVE`;
 - headline `Movimento Inteligente.`;
 - subtítulo com promessa editorial;
-- fundo escuro com grid sutil e glow azul.
+- fundo escuro com grid sutil e acento de informação.
 
 ### Card em destaque
 
@@ -177,7 +177,7 @@ Componentes:
 - subtítulo;
 - tempo de leitura;
 - mês e ano;
-- assinatura `Editorial G-MOVE`.
+- assinatura `Editorial GMOVE`.
 
 O hero deve comunicar leitura premium, não notícia.
 
@@ -247,7 +247,7 @@ Não usar citações externas sem fonte e revisão.
 Uso:
 
 - fechamento do artigo;
-- conexão natural com G-MOVE;
+- conexão natural com GMOVE;
 - ação para lista ou manifesto.
 
 ---
@@ -325,12 +325,12 @@ Não usar elementos visuais que comuniquem informação sem texto equivalente.
 - Não alterar tokens globais para resolver problema local.
 - Não usar estilos inline, exceto quando já existir padrão pontual validado.
 - Não criar componentes visuais que pareçam de outra marca.
-- Não usar amarelo como decoração.
+- Não usar a cor de ação como decoração.
 - Não publicar artigo sem revisar mobile.
 
 ---
 
 ## 11. Critério Final
 
-A página editorial deve parecer inevitável dentro do G-MOVE: mesma filosofia, mesma contenção visual, mesma precisão de linguagem.
+A página editorial deve parecer inevitável dentro do GMOVE: mesma filosofia, mesma contenção visual, mesma precisão de linguagem.
 

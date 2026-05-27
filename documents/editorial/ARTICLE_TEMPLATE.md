@@ -1,4 +1,4 @@
-# G-MOVE Article Template
+﻿# GMOVE Article Template
 
 > Template editorial interno · Versão 1.0 · Abril de 2026  
 > Usar para novos ensaios em `conteudo/<slug>/index.html`
@@ -41,7 +41,7 @@ Usar apenas uma categoria principal por artigo.
 Antes de escrever, responder:
 
 1. Qual crença comum sobre treino este artigo questiona?
-2. Qual é a alternativa proposta pelo G-MOVE?
+2. Qual é a alternativa proposta pelo GMOVE?
 3. O que o leitor deve entender de forma diferente ao terminar?
 4. Como isso conversa com método, progressão ou clareza?
 5. Qual conexão natural existe com o produto?
@@ -58,7 +58,7 @@ Se as respostas forem vagas, o artigo ainda não deve ser escrito.
 Categoria:
 Título:
 Subtítulo:
-Meta: Leitura · X min · Mês de 2026 · Editorial G-MOVE
+Meta: Leitura · X min · Mês de 2026 · Editorial GMOVE
 ```
 
 Diretriz:
@@ -145,7 +145,7 @@ Título:
 [Frase curta conectada ao tema.]
 
 Texto:
-[O G-MOVE organiza/ajuda/estrutura algo ligado ao artigo, sem exagerar.]
+[O GMOVE organiza/ajuda/estrutura algo ligado ao artigo, sem exagerar.]
 
 Ações:
 Entrar na lista
@@ -233,7 +233,7 @@ Usar o artigo existente como referência principal:
 ### Title tag
 
 ```md
-[Título do artigo] — G-MOVE
+[Título do artigo] — GMOVE
 ```
 
 ### Meta description

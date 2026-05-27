@@ -1,10 +1,10 @@
-# EDITORIAL_ESTADO_ATUAL
+﻿# EDITORIAL_ESTADO_ATUAL
 
 ## OBJETIVO
 
-Registrar o estado atual da área editorial do website G-MOVE.
+Registrar o estado atual da área editorial do website GMOVE.
 
-Este documento existe para manter a governança editorial separada da documentação do app G-MOVE.
+Este documento existe para manter a governança editorial separada da documentação do app GMOVE.
 
 ---
 
@@ -12,7 +12,7 @@ Este documento existe para manter a governança editorial separada da documenta�
 
 APP ≠ EDITORIAL.
 
-- App G-MOVE: produto Flutter/Firebase.
+- App GMOVE: produto Flutter/Firebase.
 - Editorial do website: conteúdo, artigos, SEO, sitemap e fluxo de publicação.
 
 Qualquer alteração em artigos, SEO editorial, listagem `/conteudo/` ou documentação editorial deve ser registrada aqui ou em `EDITORIAL_SPRINTS.md`, não nos documentos do app.
@@ -33,7 +33,7 @@ Não há CMS implementado nesta fase.
 
 ## ARTIGOS PUBLICADOS
 
-Total atual: **8 artigos publicados**.
+Total atual: **8 artigos publicados** e **4 hubs editoriais**.
 
 1. `conteudo/como-evoluir-no-treino-sem-motivacao/`
 2. `conteudo/por-que-voce-comeca-e-para-no-treino/`
@@ -43,6 +43,13 @@ Total atual: **8 artigos publicados**.
 6. `conteudo/treinar-sem-registrar-e-repetir-sem-saber-se-esta-evoluindo/`
 7. `conteudo/por-que-trocar-de-treino-toda-hora-atrapalha-sua-evolucao/`
 8. `conteudo/o-treino-que-voce-consegue-repetir-vale-mais-do-que-o-treino-que-parece-perfeito/`
+
+Hubs publicados:
+
+1. `conteudo/treino-com-criterio/`
+2. `conteudo/progressao/`
+3. `conteudo/consistencia/`
+4. `conteudo/recuperacao/`
 
 Cada artigo possui:
 - `index.html`;
@@ -59,6 +66,10 @@ Cada artigo possui:
 
 - `conteudo/index.html` → listagem editorial;
 - `conteudo/<slug>/index.html` → artigo publicado;
+- `conteudo/treino-com-criterio/index.html` → hub pilar;
+- `conteudo/progressao/index.html` → hub pilar;
+- `conteudo/consistencia/index.html` → hub pilar;
+- `conteudo/recuperacao/index.html` → hub pilar;
 - `conteudo/como-evoluir-no-treino-sem-motivacao/preset-imagem-conteudo-1.jpg` → imagem social/editorial do artigo 01;
 - `conteudo/por-que-voce-comeca-e-para-no-treino/preset-imagem-conteudo-2.jpg` → imagem social/editorial do artigo 02;
 - `conteudo/o-treino-perfeito-que-voce-nunca-consegue-seguir/preset-imagem-conteudo-3.jpg` → imagem social/editorial do artigo 03;
@@ -67,7 +78,7 @@ Cada artigo possui:
 - `conteudo/treinar-sem-registrar-e-repetir-sem-saber-se-esta-evoluindo/preset-imagem-conteudo-6.jpg` → imagem social/editorial do artigo 06;
 - `conteudo/por-que-trocar-de-treino-toda-hora-atrapalha-sua-evolucao/preset-imagem-conteudo-7.jpg` → imagem social/editorial do artigo 07;
 - `conteudo/o-treino-que-voce-consegue-repetir-vale-mais-do-que-o-treino-que-parece-perfeito/preset-imagem-conteudo-8.jpg` → imagem social/editorial do artigo 08;
-- `sitemap.xml` → inclui `/conteudo/` e os oito artigos publicados.
+- `sitemap.xml` → inclui `/conteudo/`, os quatro hubs e os oito artigos publicados.
 
 ### Documentação editorial
 
@@ -84,20 +95,22 @@ Cada artigo possui:
 
 ## STATUS DE SEO
 
-Status atual: **SEO estrutural completo nas páginas públicas principais e nos oito artigos publicados**.
+Status atual: **SEO estrutural completo nas páginas públicas principais, nos oito artigos publicados e nos quatro hubs editoriais**.
 
 Verificado:
-- `<title>` e meta description próprios na home, manifesto, listagem `/conteudo/` e oito artigos;
-- canonical correto nas páginas públicas principais;
-- Open Graph e Twitter Card coerentes na home, manifesto, listagem `/conteudo/` e oito artigos;
+- `<title>` e meta description próprios na home, manifesto, listagem `/conteudo/`, oito artigos e quatro hubs;
+- canonical correto nas páginas públicas principais, artigos e hubs;
+- Open Graph e Twitter Card coerentes na home, manifesto, listagem `/conteudo/`, artigos e hubs;
 - JSON-LD global `Organization`, `WebSite` e `SoftwareApplication` na home;
-- `<title>` individual por artigo;
+- `<title>` individual por artigo e hub;
 - meta description individual;
-- canonical por artigo;
+- canonical por artigo e hub;
 - Open Graph;
 - Twitter Card;
 - `og:image` apontando para asset real do slug;
 - JSON-LD `Article` nos oito artigos;
+- JSON-LD `CollectionPage` na listagem `/conteudo/` e nos hubs;
+- `datePublished` e `dateModified` normalizados nos oito artigos;
 - H1 único por artigo;
 - `lang="pt-BR"`, `charset UTF-8` e viewport nas páginas públicas principais;
 - alt em imagens relevantes;
@@ -105,6 +118,7 @@ Verificado:
 - URLs editoriais incluídas no `sitemap.xml`;
 - listagem `/conteudo/` com metadados próprios.
 - `robots.txt` presente, permitindo indexação e apontando para o sitemap público.
+- assets CSS/JS públicos versionados com `?v=20260527-site-growth` para evitar cache antigo após deploy.
 
 Ainda não registrado como concluído:
 - validação externa de indexação no Google Search Console;
@@ -115,10 +129,25 @@ Ainda não registrado como concluído:
 
 ## ÚLTIMA SPRINT EDITORIAL
 
+### ED-005 — Correção de abertura e refinamento premium da listagem editorial
+
+Resultado:
+- links públicos e internos do Editorial corrigidos para evitar abertura de diretórios sem CSS em previews locais;
+- `firebase.json` alinhado com `trailingSlash: true`;
+- listagem `/conteudo/` refinada com novo hero, guias de leitura por fricção, copy premium, bloco de padrão editorial e CTA conectado ao produto;
+- JSON-LD `CollectionPage` adicionado na listagem;
+- JSON-LD `Article` dos oito artigos normalizado com datas;
+- CSS/JS versionados com `?v=20260526-editorial-images`;
+- QA desktop e mobile executado com evidências em `documents/qa/`.
+
+Registro completo:
+
+`documents/editorial/EDITORIAL_SPRINTS.md`
+
 ### ED-004-R1 — Refinamento premium de copy e imagens dos artigos 06, 07 e 08
 
 Resultado:
-- artigos 06, 07 e 08 refinados em copy para reforçar teses proprietárias do G-MOVE;
+- artigos 06, 07 e 08 refinados em copy para reforçar teses proprietárias do GMOVE;
 - imagens sociais/editoriais dos artigos 06, 07 e 08 substituídas por composições premium com app/interface, musculação real, registro, progressão e rotina;
 - snippets de `/conteudo/` e destaque editorial dos artigos 06, 07 e 08 ajustados;
 - title, slug, canonical, sitemap e estrutura visual global preservados;
@@ -154,7 +183,7 @@ Registro completo:
 
 `documents/editorial/EDITORIAL_SPRINTS.md`
 
-### ED-002 — SEO estrutural do website G-MOVE
+### ED-002 — SEO estrutural do website GMOVE
 
 Resultado:
 - JSON-LD global da home passa a declarar `Organization`, `WebSite` e `SoftwareApplication`;
@@ -199,7 +228,7 @@ Registro completo:
 ## PRÓXIMOS PASSOS SUGERIDOS
 
 1. Fazer QA visual em desktop e mobile da listagem `/conteudo/` e dos oito artigos.
-2. Validar as URLs editoriais no Google Search Console após deploy.
+2. Validar as URLs editoriais, hubs e páginas principais no Google Search Console após deploy.
 3. Definir a próxima sprint editorial a partir de `CONTENT_IDEAS.md`.
 4. Criar rotina leve para revisar artigos antigos sem misturar com sprint do app.
 5. Considerar uma estrutura de dados simples para artigos somente quando a manutenção manual começar a gerar risco real.
@@ -210,13 +239,13 @@ Registro completo:
 
 Documentos do app:
 
-`C:\Users\gmfad\Documents\backupmestre\gmove\documents`
+`C:\Users\gmfad\Documents\Projetos\gmove-app-renew\documents`
 
 Uso: produto, Flutter, Firebase, arquitetura do app, estado técnico do app e sprints do app.
 
 Documentos editoriais:
 
-`C:\Users\gmfad\Documents\gmove-website-novo\G-MOVE Website\documents\editorial`
+`C:\Users\gmfad\Documents\Projetos\gmove-website\documents\editorial`
 
 Uso: conteúdo do website, artigos, SEO editorial, calendário editorial, fluxo de publicação e estado editorial.
 

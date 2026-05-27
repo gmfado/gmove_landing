@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320" role="img" aria-labelledby="title desc">
+  <title id="title">GMOVE - Símbolo</title>
+  <desc id="desc">Símbolo G minimalista, cheio e original, usado em miniaturas, perfil, ícones e favicons.</desc>
+  <defs>
+    <style>
+      .ink { fill: none; stroke: #f4faf7; stroke-width: 34; stroke-linecap: round; stroke-linejoin: round; }
+      .accent { fill: none; stroke: #35f2ad; stroke-width: 28; stroke-linecap: round; stroke-linejoin: round; }
+      .node { fill: #35f2ad; }
+    </style>
+  </defs>
+  <path class="ink" d="M215 86c-24-24-62-34-96-22-45 15-75 57-72 104 4 57 52 100 110 98 35-1 68-19 87-49" />
+  <path class="accent" d="M153 160h77" />
+  <circle class="node" cx="153" cy="160" r="14" />
+</svg>

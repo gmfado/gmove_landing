@@ -1,4 +1,4 @@
-# G-MOVE Content Strategy
+﻿# GMOVE Content Strategy
 
 > Estratégia editorial · Versão 1.0 · Abril de 2026  
 > Base para planejamento e priorização de conteúdo
@@ -7,12 +7,12 @@
 
 ## 1. Objetivo
 
-Construir uma base editorial consistente para o G-MOVE, capaz de:
+Construir uma base editorial consistente para o GMOVE, capaz de:
 
 - reforçar o posicionamento premium;
 - aprofundar a filosofia do produto;
 - educar o público certo;
-- diferenciar o G-MOVE de apps genéricos de treino;
+- diferenciar o GMOVE de apps genéricos de treino;
 - criar repertório reutilizável para site, app, email e redes;
 - converter sem depender de promessas ou urgência artificial.
 
@@ -22,7 +22,7 @@ O editorial deve funcionar como uma prova de critério.
 
 ## 2. Tese Central
 
-O G-MOVE defende que evolução física não vem de mais conteúdo, mais motivação ou mais variedade. Vem de método.
+O GMOVE defende que evolução física não vem de mais conteúdo, mais motivação ou mais variedade. Vem de método.
 
 Essa tese se desdobra em cinco ideias:
 
@@ -64,7 +64,7 @@ Conteúdos que conectam a filosofia ao produto.
 
 Exemplos:
 
-- por que o G-MOVE começa pelo onboarding;
+- por que o GMOVE começa pelo onboarding;
 - como o app trata progressão;
 - o que significa um produto honesto sobre onde está.
 
@@ -116,7 +116,7 @@ Pergunta editorial:
 
 ### 5. Produto em Construção
 
-Tema: transparência, critério, evolução ativa e bastidores do G-MOVE.
+Tema: transparência, critério, evolução ativa e bastidores do GMOVE.
 
 Pergunta editorial:
 
@@ -155,7 +155,7 @@ Tamanho recomendado:
 
 Uso:
 
-- explicar uma decisão do G-MOVE;
+- explicar uma decisão do GMOVE;
 - conectar experiência e filosofia.
 
 Tamanho recomendado:
@@ -166,7 +166,7 @@ Tamanho recomendado:
 
 Uso:
 
-- explicar um conceito recorrente do G-MOVE;
+- explicar um conceito recorrente do GMOVE;
 - servir como referência interna e pública.
 
 Tamanho recomendado:
@@ -200,11 +200,11 @@ O editorial deve vender por coerência.
 
 Em vez de dizer:
 
-> O G-MOVE é o melhor app para evoluir.
+> O GMOVE é o melhor app para evoluir.
 
 Dizer:
 
-> O G-MOVE parte da mesma premissa: treino precisa ser legível para virar processo.
+> O GMOVE parte da mesma premissa: treino precisa ser legível para virar processo.
 
 Conexões permitidas:
 
@@ -233,7 +233,7 @@ Fonte principal e permanente.
 
 ### Manifesto
 
-Destino secundário para leitores que querem entender o porquê do G-MOVE.
+Destino secundário para leitores que querem entender o porquê do GMOVE.
 
 ### Lista de espera
 
@@ -253,7 +253,7 @@ Reaproveitar artigos em:
 Reaproveitar sem diluir:
 
 - uma tese por post;
-- carrossel com contraste entre crença comum e alternativa G-MOVE;
+- carrossel com contraste entre crença comum e alternativa GMOVE;
 - trecho forte do artigo;
 - visual conceitual simples.
 
@@ -292,7 +292,7 @@ Priorizar conteúdos que consolidam os fundamentos:
 2. Treino como processo semanal.
 3. Progressão além de carga.
 4. Registro útil versus dado bruto.
-5. Por que o G-MOVE começa entendendo o usuário.
+5. Por que o GMOVE começa entendendo o usuário.
 
 Esses temas criam a base para todos os conteúdos futuros.
 

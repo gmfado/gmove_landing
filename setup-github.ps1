@@ -1,6 +1,6 @@
-# Script de inicializacao do repositorio Git e push para o GitHub
+﻿# Script de inicializacao do repositorio Git e push para o GitHub
 # Execute no PowerShell estando dentro da pasta do projeto:
-#   cd "C:\Users\gmfad\Documents\gmove-website-novo\G-MOVE Website"
+#   cd "C:\Users\gmfad\Documents\gmove-website-novo\GMOVE Website"
 #   .\setup-github.ps1
 
 $ErrorActionPreference = "Stop"
@@ -21,7 +21,7 @@ Write-Host "==> Adicionando arquivos..." -ForegroundColor Cyan
 git add -A
 
 Write-Host "==> Primeiro commit..." -ForegroundColor Cyan
-git commit -m "Initial commit: G-MOVE landing page"
+git commit -m "Initial commit: GMOVE landing page"
 
 Write-Host "==> Adicionando remote origin..." -ForegroundColor Cyan
 git remote add origin https://github.com/gmfado/gmove_landing.git

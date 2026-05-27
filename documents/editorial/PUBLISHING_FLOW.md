@@ -1,4 +1,4 @@
-# G-MOVE Editorial Publishing Flow
+﻿# GMOVE Editorial Publishing Flow
 
 > Fluxo de publicação editorial · Versão 1.0 · Abril de 2026  
 > Aplicável a novos artigos em `conteudo/`
@@ -7,13 +7,13 @@
 
 ## 1. Visão Geral
 
-O fluxo editorial do G-MOVE deve preservar três coisas:
+O fluxo editorial do GMOVE deve preservar três coisas:
 
 - qualidade de pensamento;
 - coerência com o produto;
 - precisão técnica na publicação.
 
-Nenhum artigo deve ser publicado apenas porque está escrito. Ele precisa estar certo para o G-MOVE.
+Nenhum artigo deve ser publicado apenas porque está escrito. Ele precisa estar certo para o GMOVE.
 
 ---
 
@@ -53,7 +53,7 @@ Critérios:
 
 - tem tensão clara;
 - reforça método, estrutura, progressão ou clareza;
-- conversa com o G-MOVE real;
+- conversa com o GMOVE real;
 - não depende de promessa futura;
 - não parece post genérico de treino.
 
@@ -81,7 +81,7 @@ Slug:
 Categoria:
 Ideia central:
 Crença comum questionada:
-Alternativa G-MOVE:
+Alternativa GMOVE:
 Blocos do artigo:
 Bloco visual principal:
 CTA final:
@@ -130,7 +130,7 @@ Revisar com base em:
 
 Verificar:
 
-- voz G-MOVE;
+- voz GMOVE;
 - ausência de clichês fitness;
 - precisão das promessas;
 - clareza dos conceitos;
@@ -172,7 +172,7 @@ Regras:
 - não usar imagem genérica de academia;
 - não criar componente novo se os atuais resolvem;
 - manter a linguagem visual escura, precisa e contida;
-- usar amarelo apenas para ação ou tese central.
+- usar a cor de ação apenas para ação ou tese central.
 
 ---
 
@@ -228,8 +228,8 @@ Verificar no artigo:
 - Twitter Card;
 - JSON-LD `Article`;
 - `inLanguage: pt-BR`;
-- author como `G-MOVE`;
-- publisher como `G-MOVE`;
+- author como `GMOVE`;
+- publisher como `GMOVE`;
 - imagem social correta.
 
 Regras:
@@ -260,7 +260,7 @@ Regras:
 - CTAs cabem na tela;
 - imagem carrega;
 - hover não é necessário para entender o conteúdo;
-- amarelo aparece apenas onde há prioridade real.
+- a cor de ação aparece apenas onde há prioridade real.
 
 ### QA textual
 
@@ -297,5 +297,5 @@ Depois de publicar:
 
 Se houver dúvida entre publicar agora ou revisar mais uma vez, revisar.
 
-O editorial do G-MOVE ganha valor por critério. Publicar pouco e bem é coerente com a marca. Publicar muito e genérico enfraquece o produto.
+O editorial do GMOVE ganha valor por critério. Publicar pouco e bem é coerente com a marca. Publicar muito e genérico enfraquece o produto.
 
