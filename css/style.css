@@ -1916,6 +1916,11 @@ section     { overflow-x: hidden; }
   image-rendering: -webkit-optimize-contrast;
 }
 
+.sc-frame picture {
+  display: block;
+  width: 100%;
+}
+
 /* Controls row */
 .sc-controls {
   display: flex;

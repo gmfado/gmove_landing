@@ -92,6 +92,14 @@ Antes de abrir uma nova conversa, escolher uma frente:
 - `infra`: domínio `www`, analytics, Search Console, Ads/AdSense e headers;
 - `assets`: inventário de imagens, peso, uso e substituições.
 
+### Atualizacao 2026-05-27 - prints otimizados
+
+- Prints do app ja possuem variantes `-720.webp` e `-720.avif`.
+- `index.html` usa `<picture>` com AVIF, WebP e PNG fallback.
+- QA visual desktop/mobile passou em Chrome local.
+- Deploy Firebase Hosting concluido e validado em `https://gmove.app/`.
+- Proximo passo desta frente: otimizar imagens editoriais quando houver novo lote ou crescimento de peso.
+
 Regra: uma conversa não deve editar arquivos da frente de outra sem revisar o diff atual e registrar o motivo no handoff.
 
 ## Documentos Operacionais Pos-Deploy

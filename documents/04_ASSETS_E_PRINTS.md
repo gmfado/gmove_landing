@@ -33,6 +33,12 @@ Arquivos:
 - `assets/screenshots/gmove-app-current-04-profile.png`: Perfil.
 - `assets/screenshots/gmove-app-current-05-execution.png`: Execução.
 
+Formatos publicados na landing:
+
+- PNG original: fallback e fonte de recorte.
+- `-720.webp`: fallback moderno leve.
+- `-720.avif`: formato preferencial para navegadores compatíveis.
+
 ## Regras
 
 - Não voltar a usar `print1.png` a `print5.png` na landing.
@@ -43,8 +49,7 @@ Arquivos:
 
 ## Pendências
 
-- Considerar exportar versões WebP para reduzir peso.
-- Se a landing ficar pesada em mobile, criar variantes menores em `assets/screenshots/responsive/`.
+- Regerar PNG, WebP e AVIF quando as telas do app mudarem.
 - Usar `documents/12_INVENTARIO_ASSETS.md` como controle de peso, uso e próximos lotes de otimização.
 
 ## Evidências de QA do Site

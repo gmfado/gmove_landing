@@ -151,3 +151,38 @@ Antes de deploy, revisar o diff final e decidir se arquivos antigos (`print1.png
 - Atualizar DNS no Hostinger: CNAME `www` deve apontar para `gmove-landing.web.app`, conforme `requiredDnsUpdates` retornado pelo Firebase.
 - Se o certificado nao emitir apos a troca de CNAME, adicionar o TXT ACME solicitado.
 - Revalidar `https://www.gmove.app/` apos propagacao DNS e emissao do certificado.
+
+## 2026-05-27 - Otimizacao de prints do app
+
+### Estado
+
+- Geradas variantes AVIF e WebP de 720px para os 5 prints atuais em `assets/screenshots/`.
+- `index.html` passou a servir os prints com `<picture>`: AVIF preferencial, WebP como fallback moderno e PNG original como fallback final.
+- Imagens do carrossel receberam `loading="lazy"`, `decoding="async"` e dimensoes declaradas.
+- PNGs originais foram mantidos como fonte e fallback.
+
+### Impacto
+
+- PNGs originais: aproximadamente 2.7 MB no lote.
+- WebP 720px: aproximadamente 207 KB no lote.
+- AVIF 720px: aproximadamente 141 KB no lote.
+
+### Validacao local
+
+- `node --check js/main.js` passou.
+- `git diff --check` passou; apenas avisos LF/CRLF do Windows.
+- Auditoria de `href`, `src`, `srcset` e JSON-LD passou em 19 arquivos HTML.
+- Chrome local em 1366px e 390px confirmou AVIF ativo, imagens carregadas e ausencia de overflow horizontal.
+- Evidencias: `documents/qa/gmove-optimized-home-desktop-2026-05-27.png`, `documents/qa/gmove-optimized-home-mobile-top-2026-05-27.png`, `documents/qa/gmove-optimized-home-mobile-carousel-2026-05-27.png`.
+
+### Pendencia
+
+- Monitorar comportamento real apos propagacao/cache do Firebase Hosting.
+
+### Publicacao
+
+- Deploy Firebase Hosting concluido no projeto `gmove-landing`.
+- Firebase encontrou 63 arquivos e enviou 13 novos.
+- `https://gmove.app/` validado com referencias AVIF/WebP no HTML.
+- Asset `assets/screenshots/gmove-app-current-01-720.avif` respondeu HTTP 200 em producao com `content-type=image/avif`.
+- Rotas `/`, `/conteudo/`, `/sitemap.xml` e `/robots.txt` responderam HTTP 200.

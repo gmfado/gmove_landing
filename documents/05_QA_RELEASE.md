@@ -118,6 +118,22 @@ Antes de deploy:
 - TXT solicitado: `rDJYrfPftE3tEqg9ad8cHwdqCXUFL8f9MGCTsltO75I`.
 - Enquanto o DNS nao mudar e o certificado nao concluir, `https://www.gmove.app/` pode continuar falhando.
 
+## Otimizacao De Prints - 2026-05-27
+
+- Gerados AVIF e WebP 720px para os 5 prints do app.
+- Home atualizada para servir AVIF/WebP via `<picture>`, mantendo PNG como fallback.
+- Carrossel usa lazy loading nos prints abaixo da dobra.
+- Reducao estimada: lote PNG original com aproximadamente 2.7 MB; lote AVIF com aproximadamente 141 KB e lote WebP com aproximadamente 207 KB.
+- `node --check js/main.js` passou.
+- `git diff --check` passou; apenas avisos LF/CRLF do Windows.
+- Auditoria local de `href`, `src`, `srcset` e JSON-LD passou em 19 arquivos HTML, sem referencias quebradas.
+- QA local com Chrome em 1366px e 390px confirmou AVIF ativo, imagens carregadas e sem overflow horizontal.
+- Evidencias locais: `documents/qa/gmove-optimized-home-desktop-2026-05-27.png`, `documents/qa/gmove-optimized-home-mobile-top-2026-05-27.png`, `documents/qa/gmove-optimized-home-mobile-carousel-2026-05-27.png`.
+- Deploy Firebase Hosting concluido no projeto `gmove-landing`; Firebase encontrou 63 arquivos e enviou 13 novos.
+- `https://gmove.app/` validado com referencias AVIF/WebP no HTML.
+- `https://gmove.app/assets/screenshots/gmove-app-current-01-720.avif` respondeu HTTP 200 com `content-type=image/avif`.
+- Rotas verificadas com HTTP 200: `/`, `/conteudo/`, `/sitemap.xml` e `/robots.txt`.
+
 ## SEO
 
 - Home com title, description, canonical, OG/Twitter e JSON-LD.

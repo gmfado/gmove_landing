@@ -14,15 +14,17 @@ Maiores arquivos detectados:
 
 | Asset | Peso aproximado | Uso atual | Status |
 | --- | ---: | --- | --- |
-| `assets/screenshots/gmove-app-current-01.png` | 1.3 MB | Hero/landing | Otimizar com WebP/AVIF e variante mobile |
-| `assets/screenshots/gmove-app-current-02-plan.png` | 562 KB | Landing | Otimizar com WebP/AVIF e variante mobile |
-| `assets/screenshots/gmove-app-current-05-execution.png` | 444 KB | Landing | Otimizar com WebP/AVIF e variante mobile |
-| `assets/screenshots/gmove-app-current-04-profile.png` | 242 KB | Landing | Otimizar com WebP/AVIF e variante mobile |
-| `assets/screenshots/gmove-app-current-03-evolution.png` | 112 KB | Landing | Ok, considerar WebP junto do lote |
+| `assets/screenshots/gmove-app-current-01-720.avif` | 31 KB | Hero/landing | Ativo via `<picture>` com WebP/PNG fallback |
+| `assets/screenshots/gmove-app-current-05-execution-720.avif` | 32 KB | Hero/landing | Ativo via `<picture>` com WebP/PNG fallback |
+| `assets/screenshots/gmove-app-current-02-plan-720.avif` | 23 KB | Hero/landing | Ativo via `<picture>` com WebP/PNG fallback |
+| `assets/screenshots/gmove-app-current-04-profile-720.avif` | 30 KB | Landing | Ativo via `<picture>` com WebP/PNG fallback |
+| `assets/screenshots/gmove-app-current-03-evolution-720.avif` | 22 KB | Landing | Ativo via `<picture>` com WebP/PNG fallback |
 | `css/style.css` | 61 KB | Global | Aceitavel, revisar crescimento periodicamente |
 | `css/premium.css` | 39 KB | Home premium | Aceitavel, revisar se efeitos aumentarem |
 | `css/editorial.css` | 34 KB | Editorial | Aceitavel |
 | `js/main.js` | 32 KB | Global | Aceitavel, manter `node --check` |
+
+Observacao: PNGs originais permanecem como fallback. O lote original de prints soma aproximadamente 2.7 MB; os WebP 720px somam aproximadamente 207 KB e os AVIF 720px somam aproximadamente 141 KB.
 
 ## Marca
 
@@ -41,11 +43,11 @@ Todos os prints atuais vieram do app em `C:\Users\gmfad\Documents\Projetos\gmove
 
 | Asset | Tela | Uso | Proxima acao |
 | --- | --- | --- | --- |
-| `assets/screenshots/gmove-app-current-01.png` | Hoje | Hero e narrativa | Gerar WebP/AVIF e versao menor |
-| `assets/screenshots/gmove-app-current-02-plan.png` | Plano | Hero/narrativa | Gerar WebP/AVIF e versao menor |
-| `assets/screenshots/gmove-app-current-03-evolution.png` | Evolucao | Narrativa | Gerar WebP/AVIF |
-| `assets/screenshots/gmove-app-current-04-profile.png` | Perfil | Narrativa | Gerar WebP/AVIF |
-| `assets/screenshots/gmove-app-current-05-execution.png` | Execucao | Hero/narrativa | Gerar WebP/AVIF e versao menor |
+| `assets/screenshots/gmove-app-current-01.png` + `-720.webp`/`-720.avif` | Hoje | Hero e narrativa | Regerar quando o app mudar |
+| `assets/screenshots/gmove-app-current-02-plan.png` + `-720.webp`/`-720.avif` | Plano | Hero/narrativa | Regerar quando o app mudar |
+| `assets/screenshots/gmove-app-current-03-evolution.png` + `-720.webp`/`-720.avif` | Evolucao | Narrativa | Regerar quando o app mudar |
+| `assets/screenshots/gmove-app-current-04-profile.png` + `-720.webp`/`-720.avif` | Perfil | Narrativa | Regerar quando o app mudar |
+| `assets/screenshots/gmove-app-current-05-execution.png` + `-720.webp`/`-720.avif` | Execucao | Hero/narrativa | Regerar quando o app mudar |
 
 ## Imagens Editoriais
 
@@ -75,11 +77,10 @@ Observacao: `video.mp4` foi removido do workspace em 2026-05-27 porque nao era n
 
 ## Plano De Otimizacao
 
-1. Gerar WebP/AVIF para prints do app.
-2. Usar `<picture>` ou CSS com fallback quando adicionar formatos modernos.
-3. Criar variantes menores para mobile em `assets/screenshots/responsive/`.
-4. Rodar QA visual desktop/mobile apos troca de formato.
-5. Atualizar esta matriz depois de cada lote.
+1. Gerar WebP/AVIF para imagens editoriais mantendo JPG fallback.
+2. Criar variantes menores para imagens editoriais em listagens, se o peso crescer.
+3. Rodar QA visual desktop/mobile apos cada troca de formato.
+4. Atualizar esta matriz depois de cada lote.
 
 ## Comandos Uteis
 
