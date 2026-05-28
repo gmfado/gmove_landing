@@ -134,6 +134,35 @@ Antes de deploy:
 - `https://gmove.app/assets/screenshots/gmove-app-current-01-720.avif` respondeu HTTP 200 com `content-type=image/avif`.
 - Rotas verificadas com HTTP 200: `/`, `/conteudo/`, `/sitemap.xml` e `/robots.txt`.
 
+## Pagina De Atualizacoes - 2026-05-27
+
+- Criada `atualizacoes.html` com historico publico de versoes.
+- Historico ampliado para 8 entradas: `v0.3.0`, `v0.2.5`, `v0.2.4`, `v0.2.3`, `v0.2.2`, `v0.2.1`, `v0.2.0` e `v0.1.0`.
+- Navegacao global, mobile menu e footer atualizados com link para `Atualizacoes`.
+- `node --check js/main.js` passou.
+- `git diff --check` passou; apenas avisos LF/CRLF do Windows.
+- Auditoria local de `href`, `src`, `srcset`, JSON-LD e `sitemap.xml` passou em 19 arquivos HTML.
+- Sitemap possui 19 URLs e inclui `https://gmove.app/atualizacoes.html`.
+- Browser local em 1366 x 900: pagina de updates sem overflow horizontal, card `v0.3.0` legivel e nav com espaco para o novo link.
+- Browser local em 390 x 844: pagina sem overflow horizontal, botoes cabem em 320px, menu mobile inclui `Atualizacoes` e historico rola corretamente.
+
+## Navegacao Desktop/Mobile - 2026-05-27
+
+- `atualizacoes.html` atualizado para `v0.3.1` com status `Publicado`.
+- Desktop 1366 x 900: menu superior reduzido para O app, Como funciona, Editorial, Atualizacoes e Sobre.
+- Dropdown `Sobre` validado com Manifesto, Seguranca, Privacidade e Termos.
+- Mobile 396px: barra inferior validada com Inicio, App, Editorial, Updates e Mais; hamburger oculto.
+- Interacao mobile: `Mais` abre o menu completo, o botao de fechar aparece, o menu fecha corretamente e nao deixa `body` travado.
+- Pagina de updates mobile marca `Updates` como item ativo e nao apresentou overflow horizontal.
+- Console do navegador sem erros.
+- Apos primeiro deploy, rota limpa `/atualizacoes/` revelou assets relativos quebrados; paginas raiz foram corrigidas para caminhos root-relative e republicadas.
+- Producao validada em `/`, `/atualizacoes.html`, `/atualizacoes/`, `/manifesto/`, `css/style.css?v=20260527-nav-v031` e `js/main.js?v=20260527-nav-v031`.
+- Chrome headless em producao confirmou desktop com dropdown `Sobre` e mobile em `/atualizacoes/` com barra inferior ativa, `v0.3.1` publicado e sem overflow horizontal.
+- `node --check js/main.js` passou.
+- `git diff --check` passou; apenas avisos LF/CRLF do Windows.
+- Auditoria local de `href`, `src`, `srcset`, JSON-LD, `ItemList` e `sitemap.xml` passou em 20 arquivos HTML.
+- Evidencias locais: `documents/qa/gmove-nav-desktop-2026-05-27.png`, `documents/qa/gmove-nav-mobile-updates-2026-05-27.png`.
+
 ## SEO
 
 - Home com title, description, canonical, OG/Twitter e JSON-LD.

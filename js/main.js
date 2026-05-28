@@ -25,19 +25,176 @@
   const menuBtn    = qs('.nav__menu-btn');
   const mobileMenu = qs('.nav__mobile');
   const closeBtn   = qs('.nav__mobile-close');
+  const setMobileMoreExpanded = expanded => {
+    qs('.mobile-tabbar__item--button')?.setAttribute('aria-expanded', String(expanded));
+  };
+
+  if (mobileMenu && !mobileMenu.id) mobileMenu.id = 'site-mobile-menu';
+  if (menuBtn && !menuBtn.hasAttribute('aria-expanded')) menuBtn.setAttribute('aria-expanded', 'false');
+  if (menuBtn && mobileMenu) menuBtn.setAttribute('aria-controls', mobileMenu.id);
 
   const openMenu  = () => {
     mobileMenu?.classList.add('is-open');
     menuBtn?.classList.add('is-open');
     menuBtn?.setAttribute('aria-expanded', 'true');
+    setMobileMoreExpanded(true);
+    document.body.classList.add('menu-open');
     document.body.style.overflow = 'hidden';
   };
   const closeMenu = () => {
     mobileMenu?.classList.remove('is-open');
     menuBtn?.classList.remove('is-open');
     menuBtn?.setAttribute('aria-expanded', 'false');
+    setMobileMoreExpanded(false);
+    document.body.classList.remove('menu-open');
     document.body.style.overflow = '';
   };
+
+  /* ==========================================================
+     NAV — compact desktop + app-like mobile bottom bar
+     ========================================================== */
+  const navLinks = qs('.nav__links');
+  const secondaryNavLabels = ['Manifesto', 'Segurança', 'Privacidade', 'Termos'];
+
+  function linkLabel(link) {
+    return link?.textContent?.replace(/\s+/g, ' ').trim() || '';
+  }
+
+  function iconSvg(name) {
+    const paths = {
+      home: '<path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M9.5 21v-6h5v6"/>',
+      app: '<rect x="7" y="3" width="10" height="18" rx="2"/><path d="M10 6h4"/><path d="M11 18h2"/>',
+      book: '<path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 1 4 16.5z"/><path d="M20 17H6.5A2.5 2.5 0 0 0 4 19.5"/><path d="M8 7h7"/><path d="M8 11h5"/>',
+      updates: '<path d="M4 12a8 8 0 0 1 13.7-5.6"/><path d="M18 3v4h-4"/><path d="M20 12a8 8 0 0 1-13.7 5.6"/><path d="M6 21v-4h4"/>',
+      more: '<path d="M5 12h.01"/><path d="M12 12h.01"/><path d="M19 12h.01"/>'
+    };
+    return `<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">${paths[name]}</svg>`;
+  }
+
+  if (navLinks) {
+    const desktopSecondary = qsa(':scope > li > a', navLinks)
+      .filter(link => secondaryNavLabels.includes(linkLabel(link)));
+
+    if (desktopSecondary.length) {
+      document.body.classList.add('nav-enhanced');
+
+      const moreItem = document.createElement('li');
+      moreItem.className = 'nav__more';
+      moreItem.innerHTML = `
+        <button class="nav__more-btn" type="button" aria-expanded="false" aria-haspopup="true">
+          Sobre
+          <span class="nav__more-chevron" aria-hidden="true"></span>
+        </button>
+        <div class="nav__more-menu" role="menu"></div>
+      `;
+
+      const moreButton = qs('.nav__more-btn', moreItem);
+      const moreMenu = qs('.nav__more-menu', moreItem);
+      const hasCurrentSecondary = desktopSecondary.some(link => link.hasAttribute('aria-current'));
+
+      desktopSecondary.forEach(link => {
+        const parent = link.closest('li');
+        parent?.classList.add('nav__item--desktop-secondary');
+
+        const clone = link.cloneNode(true);
+        clone.setAttribute('role', 'menuitem');
+        moreMenu.appendChild(clone);
+      });
+
+      if (hasCurrentSecondary) moreItem.classList.add('is-current');
+
+      const insertAfter = qsa(':scope > li > a', navLinks)
+        .find(link => linkLabel(link) === 'Atualizações')
+        ?.closest('li');
+      if (insertAfter?.nextSibling) {
+        navLinks.insertBefore(moreItem, insertAfter.nextSibling);
+      } else {
+        navLinks.appendChild(moreItem);
+      }
+
+      const closeMore = () => {
+        moreItem.classList.remove('is-open');
+        moreButton?.setAttribute('aria-expanded', 'false');
+      };
+      const toggleMore = () => {
+        const isOpen = moreItem.classList.toggle('is-open');
+        moreButton?.setAttribute('aria-expanded', String(isOpen));
+      };
+
+      moreButton?.addEventListener('click', event => {
+        event.stopPropagation();
+        toggleMore();
+      });
+      document.addEventListener('click', event => {
+        if (!moreItem.contains(event.target)) closeMore();
+      });
+      document.addEventListener('keydown', event => {
+        if (event.key === 'Escape') closeMore();
+      });
+      moreMenu?.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMore));
+    }
+  }
+
+  if (mobileMenu) {
+    const mobileLinks = qsa('a', mobileMenu);
+    const byLabel = label => mobileLinks.find(link => linkLabel(link) === label);
+    const homeLink = byLabel('Início') || qs('.nav__logo');
+    const tabItems = [
+      { label: 'Início', short: 'Início', icon: 'home', link: homeLink },
+      { label: 'O app', short: 'App', icon: 'app', link: byLabel('O app') },
+      { label: 'Editorial', short: 'Editorial', icon: 'book', link: byLabel('Editorial') },
+      { label: 'Atualizações', short: 'Updates', icon: 'updates', link: byLabel('Atualizações') }
+    ].filter(item => item.link);
+
+    const bottomNav = document.createElement('nav');
+    bottomNav.className = 'mobile-tabbar';
+    bottomNav.setAttribute('aria-label', 'Navegação rápida');
+
+    const currentPath = window.location.pathname.replace(/\/index\.html$/, '/');
+    const currentHash = window.location.hash;
+
+    tabItems.forEach(item => {
+      const href = item.link.getAttribute('href') || '#';
+      const tabLink = document.createElement('a');
+      tabLink.className = 'mobile-tabbar__item';
+      tabLink.href = href;
+      tabLink.innerHTML = `${iconSvg(item.icon)}<span>${item.short}</span>`;
+
+      const resolved = new URL(href, window.location.href);
+      const itemPath = resolved.pathname.replace(/\/index\.html$/, '/');
+      const isActive =
+        item.label === 'Editorial' ? currentPath.includes('/conteudo/') :
+        item.label === 'Atualizações' ? currentPath.endsWith('/atualizacoes.html') || currentPath.endsWith('/atualizacoes') || currentPath.endsWith('/atualizacoes/') :
+        item.label === 'Início' ? currentPath === '/' && !currentHash :
+        item.label === 'O app' ? currentPath === '/' && currentHash === '#experiencia' :
+        itemPath === currentPath;
+
+      if (isActive) tabLink.setAttribute('aria-current', 'page');
+      tabLink.addEventListener('click', closeMenu);
+      bottomNav.appendChild(tabLink);
+    });
+
+    const moreTab = document.createElement('button');
+    moreTab.type = 'button';
+    moreTab.className = 'mobile-tabbar__item mobile-tabbar__item--button';
+    moreTab.setAttribute('aria-label', 'Abrir mais opções');
+    moreTab.setAttribute('aria-expanded', 'false');
+    if (mobileMenu.id) moreTab.setAttribute('aria-controls', mobileMenu.id);
+    moreTab.innerHTML = `${iconSvg('more')}<span>Mais</span>`;
+
+    const hiddenCurrent = qsa('.nav__mobile__link--secondary[aria-current], .nav__mobile a[aria-current]', mobileMenu)
+      .some(link => !tabItems.some(item => item.link === link));
+    if (hiddenCurrent) moreTab.setAttribute('aria-current', 'page');
+
+    moreTab.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.contains('is-open');
+      isOpen ? closeMenu() : openMenu();
+      moreTab.setAttribute('aria-expanded', String(!isOpen));
+    });
+
+    bottomNav.appendChild(moreTab);
+    document.body.appendChild(bottomNav);
+  }
 
   menuBtn?.addEventListener('click', () => {
     mobileMenu?.classList.contains('is-open') ? closeMenu() : openMenu();

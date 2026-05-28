@@ -63,6 +63,7 @@
       { "source": "/privacidade", "destination": "/privacidade.html" },
       { "source": "/termos",      "destination": "/termos.html" },
       { "source": "/manifesto",   "destination": "/manifesto.html" },
+      { "source": "/atualizacoes", "destination": "/atualizacoes.html" },
       { "source": "/seguranca",   "destination": "/seguranca.html" }
     ]
   }

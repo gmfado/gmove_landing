@@ -19,11 +19,12 @@ Leia nesta ordem:
 11. `documents/12_INVENTARIO_ASSETS.md`
 12. `documents/13_GIT_LEGADOS_RELEASE.md`
 13. `documents/14_MELHORIAS_FEATURES_PESQUISA_2026.md`
+14. `documents/15_ATUALIZACOES_PUBLICAS.md`
 
 ## Estrutura
 
 - `index.html`: landing principal.
-- `manifesto.html`, `privacidade.html`, `termos.html`: páginas estáticas.
+- `manifesto.html`, `atualizacoes.html`, `seguranca.html`, `privacidade.html`, `termos.html`: páginas estáticas.
 - `conteudo/`: Editorial GMOVE.
 - `assets/brand/`: marca atual importada do app.
 - `assets/screenshots/`: prints atuais do app usados na landing.

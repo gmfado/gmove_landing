@@ -6,7 +6,7 @@ Evitar mistura entre mudanças do site, conteúdo editorial, assets e futuras fr
 
 ## 2026-05-25 - Atualização para app atual
 
-Status: publicado em produção e ainda não commitado
+Status: publicado em produção; consolidado no commit da release `v0.3.1`
 
 Escopo do pacote:
 
@@ -61,7 +61,7 @@ Validação prevista:
 
 ## 2026-05-27 - Pacote de crescimento do site
 
-Status: publicado em produção e ainda não commitado
+Status: publicado em produção; consolidado no commit da release `v0.3.1`
 
 Escopo:
 
@@ -99,6 +99,32 @@ Antes de abrir uma nova conversa, escolher uma frente:
 - QA visual desktop/mobile passou em Chrome local.
 - Deploy Firebase Hosting concluido e validado em `https://gmove.app/`.
 - Proximo passo desta frente: otimizar imagens editoriais quando houver novo lote ou crescimento de peso.
+
+### Atualizacao 2026-05-27 - pagina de updates
+
+- Criada `atualizacoes.html` para registrar updates publicos do GMOVE com versionamento.
+- Versao publica atual: `v0.3.1`.
+- Historico inicial ampliado para 8 entradas, cobrindo Renew, produto/seguranca/Editorial, deploy, documentacao, CTA, www, performance de prints e changelog publico.
+- Toda atualizacao significativa deve entrar na pagina com versao, data, status, impacto e mensagem clara.
+- Nova URL adicionada a navegacao global, footer, sitemap e Firebase rewrite `/atualizacoes`.
+
+### Atualizacao 2026-05-27 - navegacao desktop/mobile
+
+- `v0.3.1` registrada em `atualizacoes.html` com status `Publicado`.
+- Desktop ficou mais enxuto: Manifesto, Seguranca, Privacidade e Termos foram agrupados em `Sobre`.
+- Mobile passou a usar barra inferior fixa com Inicio, App, Editorial, Updates e Mais.
+- `Mais` abre o menu completo e preserva acesso a paginas institucionais e legais.
+- Cache-busting global de `css/style.css` e `js/main.js` atualizado para `20260527-nav-v031`.
+- Paginas raiz usam assets e links root-relative para funcionar tambem em rotas limpas com `trailingSlash`.
+- QA local desktop/mobile passou sem overflow horizontal e sem erros no console.
+- Deploy Firebase Hosting concluido e republicado apos ajuste de rota limpa.
+- Producao validada em `https://gmove.app/`, `/atualizacoes/`, `/manifesto/`, CSS e JS versionados.
+
+### Regra permanente - updates publicos
+
+- Antes de encerrar qualquer frente, conferir `documents/15_ATUALIZACOES_PUBLICAS.md`.
+- Se a mudanca for update significativo, atualizar `atualizacoes.html` antes de deploy, commit final ou entrega.
+- Se nao entrar em `atualizacoes.html`, registrar o motivo no handoff ou neste documento quando houver risco de duvida.
 
 Regra: uma conversa não deve editar arquivos da frente de outra sem revisar o diff atual e registrar o motivo no handoff.
 

@@ -118,7 +118,8 @@ Verificado:
 - URLs editoriais incluídas no `sitemap.xml`;
 - listagem `/conteudo/` com metadados próprios.
 - `robots.txt` presente, permitindo indexação e apontando para o sitemap público.
-- assets CSS/JS públicos versionados com `?v=20260527-site-growth` para evitar cache antigo após deploy.
+- `css/style.css` e `js/main.js` publicos versionados com `?v=20260527-nav-v031` para evitar cache antigo apos o ajuste global de navegacao.
+- CSS editorial especifico ainda versionado com `?v=20260527-site-growth`.
 
 Ainda não registrado como concluído:
 - validação externa de indexação no Google Search Console;

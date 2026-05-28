@@ -186,3 +186,68 @@ Antes de deploy, revisar o diff final e decidir se arquivos antigos (`print1.png
 - `https://gmove.app/` validado com referencias AVIF/WebP no HTML.
 - Asset `assets/screenshots/gmove-app-current-01-720.avif` respondeu HTTP 200 em producao com `content-type=image/avif`.
 - Rotas `/`, `/conteudo/`, `/sitemap.xml` e `/robots.txt` responderam HTTP 200.
+
+## 2026-05-27 - Pagina publica de atualizacoes
+
+### Estado
+
+- Criada `atualizacoes.html` como changelog publico versionado do GMOVE.
+- Versao publica atual definida como `v0.3.0`, cobrindo a pagina de updates, regra de versionamento e otimizacao de prints.
+- Historico inicial documenta 8 entradas entre `v0.3.0` e `v0.1.0`, puxadas dos registros locais de implementacao, QA, deploy e infra.
+- Navegacao global, mobile menu e footer passaram a incluir `Atualizacoes`.
+- `sitemap.xml`, `firebase.json`, `README.md` e matriz de paginas publicas foram atualizados para a nova URL.
+
+### Regra de produto
+
+- Todo update significativo deve entrar em `atualizacoes.html` com versao publica, data, status, resumo do que mudou e motivo de importancia.
+- Enquanto o produto esta em acesso assistido, usar versoes `v0.x` para marcos publicos e distinguir publicado, em teste e pesquisado.
+
+### Validacao local
+
+- `node --check js/main.js` passou.
+- `git diff --check` passou; apenas avisos LF/CRLF do Windows.
+- Auditoria local de `href`, `src`, `srcset`, JSON-LD e `sitemap.xml` passou em 19 arquivos HTML.
+- Browser local em 1366 x 900 e 390 x 844 validou `atualizacoes.html` sem overflow horizontal.
+- Menu mobile inclui `Atualizacoes` e o botao `Ver historico` rola para as notas de versao.
+
+## 2026-05-27 - Guardrail para nao perder updates futuros
+
+### Estado
+
+- Criado `documents/15_ATUALIZACOES_PUBLICAS.md` com criterios, status permitidos, regra de versao e checklist de atualizacao.
+- `CODEX.md`, `README.md`, `documents/00_START_HERE.md`, `documents/08_TRABALHO_SIMULTANEO.md`, `documents/13_GIT_LEGADOS_RELEASE.md` e `documents/20_TRABALHO_ATIVO.md` passaram a exigir conferencia de `atualizacoes.html` antes de encerramento, commit ou deploy quando houver update significativo.
+
+### Regra
+
+- Daqui para frente, update significativo sem entrada em `atualizacoes.html` precisa ter justificativa registrada.
+
+## 2026-05-27 - Navegacao compacta desktop e bottom nav mobile
+
+### Estado
+
+- Desktop: links institucionais foram agrupados em `Sobre`, reduzindo a carga visual do topo.
+- Mobile: criada barra inferior fixa com `Inicio`, `App`, `Editorial`, `Updates` e `Mais`.
+- `Mais` abre o menu completo, mantendo Manifesto, Seguranca, Privacidade e Termos acessiveis.
+- `atualizacoes.html` recebeu a entrada `v0.3.1` com status `Publicado`.
+- Cache-busting global de `css/style.css` e `js/main.js` atualizado para `20260527-nav-v031`.
+- Paginas raiz passaram a usar assets e links root-relative para preservar CSS/JS em rotas limpas com `trailingSlash`, como `/atualizacoes/`.
+
+### Validacao local
+
+- `node --check js/main.js` passou.
+- `git diff --check` passou; apenas avisos LF/CRLF do Windows.
+- Auditoria local de `href`, `src`, `srcset`, JSON-LD, `ItemList` de updates e `sitemap.xml` passou em 20 arquivos HTML.
+- Browser mobile em 396px: barra inferior com 5 itens, hamburger oculto, sem overflow horizontal e sem erros no console.
+- Interacao mobile: `Mais` abriu o menu completo, exibiu o botao de fechar e voltou `aria-expanded` para `false` ao fechar.
+- Chrome local em 1366 x 900: topo exibiu `O app`, `Como funciona`, `Editorial`, `Atualizacoes` e `Sobre`; dropdown `Sobre` abriu com Manifesto, Seguranca, Privacidade e Termos.
+- Evidencias: `documents/qa/gmove-nav-desktop-2026-05-27.png`, `documents/qa/gmove-nav-mobile-updates-2026-05-27.png`.
+
+### Publicacao
+
+- Deploy Firebase Hosting concluido no projeto `gmove-landing`.
+- Firebase encontrou 63 arquivos e enviou 22 novos/alterados.
+- Durante a validacao publicada, `/atualizacoes/` revelou quebra de assets relativos por causa de `trailingSlash`.
+- Corrigidos assets e links das paginas raiz para caminhos root-relative antes da republicacao.
+- Republicacao Firebase Hosting concluida com 7 arquivos alterados.
+- Validacao em producao passou para `/`, `/atualizacoes.html`, `/atualizacoes/`, `/manifesto/`, `css/style.css?v=20260527-nav-v031` e `js/main.js?v=20260527-nav-v031`.
+- Chrome headless em producao confirmou desktop com dropdown `Sobre` e mobile em `/atualizacoes/` com barra inferior ativa, `v0.3.1` publicado e sem overflow horizontal.

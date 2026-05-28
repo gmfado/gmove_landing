@@ -9,7 +9,7 @@ Atualizar este documento quando criar, remover, renomear ou mudar o papel de uma
 ## Resumo
 
 - Dominio canonico: `https://gmove.app/`.
-- Total no sitemap: 18 URLs.
+- Total no sitemap: 19 URLs.
 - Ultimo deploy registrado: 2026-05-27.
 - Ultima validacao ao vivo registrada: 2026-05-27.
 - Fonte de URL canonica: `sitemap.xml`.
@@ -27,6 +27,7 @@ Atualizar este documento quando criar, remover, renomear ou mudar o papel de uma
 | --- | --- | --- | --- | --- | --- | --- |
 | `/` | `index.html` | landing | Explicar produto e converter para acesso antecipado | Completo: title, description, canonical, OG/Twitter e JSON-LD | Live 2026-05-27 | Monitorar conversao e performance |
 | `/manifesto.html` | `manifesto.html` | landing | Expandir ponto de vista e autoridade de marca | Basico completo | Local/live parcial 2026-05-27 | Revalidar mobile apos proximo ajuste de copy |
+| `/atualizacoes.html` | `atualizacoes.html` | landing | Registrar updates significativos com versao, status e impacto | Completo: title, description, canonical, OG/Twitter e JSON-LD | Local 2026-05-27 | Atualizar a cada marco relevante |
 | `/conteudo/` | `conteudo/index.html` | editorial | Hub editorial e distribuicao de artigos/hubs | Completo: CollectionPage, ItemList, metadados e imagens | Live mobile 2026-05-27 | Enviar no Search Console |
 | `/conteudo/treino-com-criterio/` | `conteudo/treino-com-criterio/index.html` | editorial | Hub pilar de metodo e criterio | Completo: CollectionPage, breadcrumb e metadados | Local 2026-05-27 | URL Inspection |
 | `/conteudo/progressao/` | `conteudo/progressao/index.html` | editorial | Hub pilar de progressao | Completo: CollectionPage, breadcrumb e metadados | Local 2026-05-27 | URL Inspection |

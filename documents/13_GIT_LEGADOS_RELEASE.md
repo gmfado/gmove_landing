@@ -85,6 +85,7 @@ Decisao atual:
 - `git status --short --branch`;
 - revisar arquivos tocados;
 - confirmar que docs de handoff foram atualizadas;
+- confirmar se `atualizacoes.html` precisa de nova versao publica;
 - `git diff --check`;
 - `node --check js/main.js`, se JS mudou;
 - varredura de links/JSON-LD, se HTML ou sitemap mudou;
@@ -97,6 +98,7 @@ Decisao atual:
 - rodar dry-run do Firebase quando possivel;
 - garantir que `firebase.json` ignora docs e legados;
 - validar que novas paginas estao no sitemap;
+- validar que updates significativos estao em `atualizacoes.html`;
 - validar localmente rotas, assets e console;
 - publicar;
 - testar `https://gmove.app/` e rotas principais;
@@ -106,6 +108,7 @@ Decisao atual:
 
 - registrar URL publicada;
 - registrar rotas testadas;
+- registrar novo update publico quando o deploy alterar experiencia, conteudo, infra ou status relevante;
 - atualizar `documents/11_IMPLEMENTATION_LOG.md`;
 - atualizar Search Console quando houver mudanca estrutural;
 - commitar o pacote publicado;

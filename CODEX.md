@@ -26,6 +26,7 @@ Quando a tarefa depender do produto atual, consultar o app em `C:\Users\gmfad\Do
 - O Editorial é conteúdo estratégico e SEO, não blog genérico.
 - Prints do app devem vir do produto atual, preferencialmente device físico.
 - Respeitar mobile primeiro: sem overflow, sem texto cortado, sem controles pequenos.
+- Todo update significativo deve entrar em `atualizacoes.html` com versao, data, status e impacto antes de deploy, commit final ou entrega da frente.
 - Em conversas simultâneas, declarar escopo, evitar editar arquivos fora da frente e atualizar `documents/20_TRABALHO_ATIVO.md` quando abrir ou fechar uma frente.
 
 ## Validação
@@ -37,6 +38,7 @@ Sempre que houver mudança visual:
 - checar console;
 - conferir links principais;
 - revisar SEO básico das páginas tocadas;
+- conferir se a mudança exige atualização de `atualizacoes.html`;
 - manter docs atualizadas quando a direção mudar.
 
 ## Entrega

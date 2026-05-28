@@ -30,7 +30,8 @@ Evitar duas conversas editando o mesmo arquivo ao mesmo tempo. Se for inevitavel
 5. `documents/20_TRABALHO_ATIVO.md`
 6. Este documento
 7. `documents/10_MATRIZ_PAGINAS_PUBLICAS.md`, se a tarefa mexer em URL publica
-8. Documento especifico da area tocada
+8. `documents/15_ATUALIZACOES_PUBLICAS.md`, se a tarefa puder gerar update publico
+9. Documento especifico da area tocada
 
 Para tarefas editoriais, ler tambem:
 
@@ -57,6 +58,7 @@ Ao concluir uma frente:
 
 - atualizar `documents/11_IMPLEMENTATION_LOG.md` quando houver mudanca relevante de produto, site, visual, SEO ou publicacao;
 - atualizar `documents/05_QA_RELEASE.md` quando houver validacao, screenshot, deploy ou QA;
+- atualizar `atualizacoes.html` quando a mudanca for update publico significativo;
 - atualizar `documents/20_TRABALHO_ATIVO.md` quando abrir ou fechar uma frente paralela;
 - atualizar documentos editoriais quando a mudanca envolver `/conteudo/`.
 
@@ -77,6 +79,7 @@ Antes de entregar:
 - JSON-LD parseavel quando metadados estruturados mudarem;
 - teste mobile quando houver alteracao visual;
 - `git diff --check`;
+- conferir se `atualizacoes.html` foi atualizado ou se a exclusao foi justificada;
 - registrar evidencias em `documents/qa/` quando houver QA visual.
 
 Antes de publicar:

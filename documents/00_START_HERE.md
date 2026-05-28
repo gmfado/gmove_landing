@@ -26,6 +26,7 @@ Ele:
 
 - `index.html`: landing pública.
 - `manifesto.html`: ponto de vista expandido.
+- `atualizacoes.html`: histórico público de versões e updates significativos.
 - `conteudo/`: Editorial GMOVE.
 - `privacidade.html` e `termos.html`: páginas legais.
 - `assets/brand/`: marca atual importada do app.
@@ -39,14 +40,16 @@ Ele:
 - `documents/12_INVENTARIO_ASSETS.md`: inventário de imagens, vídeos, marca e otimização.
 - `documents/13_GIT_LEGADOS_RELEASE.md`: modelo de branch, commit, release e decisão sobre legados.
 - `documents/14_MELHORIAS_FEATURES_PESQUISA_2026.md`: pesquisa aplicada de melhorias e features para site, Editorial e produto.
+- `documents/15_ATUALIZACOES_PUBLICAS.md`: regra para registrar updates publicos e versionar marcos relevantes.
 
 ## Ordem de Trabalho
 
 1. Entender o estado atual do app.
 2. Atualizar marca, paleta, copy e assets do site.
 3. Validar screenshots e mobile.
-4. Atualizar docs do site.
-5. Validar links, SEO, performance básica e deploy Firebase.
+4. Atualizar `atualizacoes.html` quando houver update significativo.
+5. Atualizar docs do site.
+6. Validar links, SEO, performance básica e deploy Firebase.
 
 Quando houver mais de uma conversa trabalhando ao mesmo tempo, começar por `documents/08_TRABALHO_SIMULTANEO.md` e registrar a frente em `documents/20_TRABALHO_ATIVO.md`.
 
