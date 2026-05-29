@@ -1,0 +1,41 @@
+{
+  "checked_at": "2026-05-29T20:29:57-03:00",
+  "property": "https://gmove.app/",
+  "source": "Google Search Console URL Inspection via Edge Codex extension",
+  "context": "Post v0.3.9 clean public URLs and sitemap resend",
+  "results": [
+    {
+      "url": "https://gmove.app/manifesto/",
+      "status": "O URL nao esta no Google",
+      "page_indexing": "A pagina nao esta indexada: Detectada, mas nao indexada no momento",
+      "sitemap": "https://gmove.app/sitemap.xml",
+      "action": "Indexacao solicitada",
+      "queue_confirmation": "O URL foi adicionado a uma fila de rastreamento prioritario."
+    },
+    {
+      "url": "https://gmove.app/seguranca/",
+      "status": "O URL nao esta no Google",
+      "page_indexing": "A pagina nao esta indexada: Detectada, mas nao indexada no momento",
+      "sitemap": "https://gmove.app/sitemap.xml",
+      "action": "Indexacao solicitada",
+      "queue_confirmation": "O URL foi adicionado a uma fila de rastreamento prioritario."
+    },
+    {
+      "url": "https://gmove.app/atualizacoes/",
+      "status": "O URL nao esta no Google",
+      "page_indexing": "A pagina nao esta indexada: Detectada, mas nao indexada no momento",
+      "sitemap": "https://gmove.app/sitemap.xml",
+      "action": "Indexacao solicitada",
+      "queue_confirmation": "O URL foi adicionado a uma fila de rastreamento prioritario."
+    },
+    {
+      "url": "https://gmove.app/conteudo/o-que-anotar-no-treino-para-saber-se-voce-esta-evoluindo/",
+      "status": "O URL esta no Google",
+      "page_indexing": "A pagina esta indexada",
+      "https": "A pagina e exibida por HTTPS",
+      "breadcrumbs": "1 item valido detectado",
+      "action": "Nenhuma solicitacao necessaria"
+    }
+  ],
+  "next_check": "Acompanhar cobertura das 21 URLs limpas e revalidar URLs solicitadas em alguns dias."
+}

@@ -430,4 +430,7 @@ Antes de deploy, revisar o diff final e decidir se arquivos antigos (`print1.png
 - Producao validada com `HTTP 200` em rotas limpas, `301` das rotas `.html` para os caminhos finais, `/atualizacoes/` exibindo `v0.3.9` e `/sitemap.xml` com 21 URLs sem `.html`.
 - Browser em producao confirmou `/atualizacoes/` desktop e `/conteudo/` mobile sem links `.html`, sem overflow horizontal e sem erros de console.
 - Search Console recebeu novamente `https://gmove.app/sitemap.xml` apos `v0.3.9`; a tabela confirmou envio e ultima leitura em 2026-05-29, status `Processado`, 21 paginas encontradas e notificacao `Sitemap enviado`.
-- Proximo passo: acompanhar cobertura das 21 URLs limpas e revalidar o artigo 09 em alguns dias.
+- Search Console URL Inspection pos-`v0.3.9`: `/manifesto/`, `/seguranca/` e `/atualizacoes/` estavam como `O URL nao esta no Google`, motivo `Detectada, mas nao indexada no momento`; indexacao solicitada para as tres.
+- URL Inspection confirmou `https://gmove.app/conteudo/o-que-anotar-no-treino-para-saber-se-voce-esta-evoluindo/` como URL no Google, com HTTPS e breadcrumb validos.
+- Evidencia textual registrada em `documents/qa/search-console-url-inspection-clean-urls-2026-05-29.json`.
+- Proximo passo: acompanhar cobertura das 21 URLs limpas e revalidar URLs ainda pendentes em alguns dias.

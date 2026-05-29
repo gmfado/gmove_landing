@@ -26,6 +26,8 @@
 - Sitemap `/sitemap.xml` reenviado no Search Console apos `v0.3.9` em 2026-05-29; a tabela confirmou ultima leitura em 2026-05-29, status `Processado` e 21 paginas encontradas.
 - Indexacao solicitada no Search Console para `/conteudo/` e os 4 hubs editoriais em 2026-05-28.
 - Indexacao do artigo 09 solicitada em 2026-05-29; artigo 10 ja aparece como URL no Google, com HTTPS e breadcrumb validos.
+- Indexacao solicitada no Search Console para `/manifesto/`, `/seguranca/` e `/atualizacoes/` em 2026-05-29; as tres estavam detectadas pelo sitemap, mas ainda nao indexadas.
+- URL Inspection confirmou `https://gmove.app/conteudo/o-que-anotar-no-treino-para-saber-se-voce-esta-evoluindo/` como URL no Google, com HTTPS e breadcrumb validos.
 - Sitemap atual em producao tem 21 URLs, sem entradas `.html`, e usa caminhos finais com barra para paginas raiz.
 
 ## Arquivos-Chave
@@ -50,7 +52,7 @@
 
 ## Próximo Passo Provável
 
-Acompanhar a cobertura das 21 URLs limpas no Search Console e revalidar o artigo 09 em alguns dias.
+Acompanhar a cobertura das 21 URLs limpas no Search Console e revalidar `/manifesto/`, `/seguranca/`, `/atualizacoes/` e o artigo 09 em alguns dias.
 
 ## Cuidado
 

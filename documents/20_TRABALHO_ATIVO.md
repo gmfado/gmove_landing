@@ -220,7 +220,8 @@ Antes de abrir uma nova conversa, escolher uma frente:
 - Validacao local passou: `node --check js/main.js`, `tools/verify-docs.ps1`, `tools/verify-public-copy.ps1`, `git diff --check`, JSON-LD e Browser desktop/mobile.
 - Deploy Firebase Hosting concluido no projeto `gmove-landing`; producao validada em rotas limpas, redirecionamentos `.html`, `/atualizacoes/`, `/conteudo/` e `/sitemap.xml`.
 - Search Console recebeu novamente `https://gmove.app/sitemap.xml` apos `v0.3.9`; a tabela confirmou `/sitemap.xml`, envio e ultima leitura em 2026-05-29, status `Processado`, 21 paginas encontradas e notificacao `Sitemap enviado`.
-- Proximo passo operacional: acompanhar cobertura das 21 URLs limpas e revalidar o artigo 09 em alguns dias.
+- Search Console URL Inspection pos-`v0.3.9`: indexacao solicitada para `/manifesto/`, `/seguranca/` e `/atualizacoes/`; o artigo `o-que-anotar-no-treino-para-saber-se-voce-esta-evoluindo/` ja estava no Google.
+- Proximo passo operacional: acompanhar cobertura das 21 URLs limpas e revalidar URLs ainda pendentes em alguns dias.
 
 ### Regra permanente - updates publicos
 

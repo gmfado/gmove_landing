@@ -36,7 +36,9 @@ Antes de deploy:
 - Evidencias: `documents/qa/gmove-clean-urls-updates-desktop-2026-05-29.png`, `documents/qa/gmove-clean-urls-editorial-mobile-2026-05-29.png`, `documents/qa/gmove-prod-clean-urls-updates-desktop-2026-05-29.png`, `documents/qa/gmove-prod-clean-urls-editorial-mobile-2026-05-29.png`.
 - Search Console: `https://gmove.app/sitemap.xml` reenviado apos `v0.3.9`; a tabela confirmou `/sitemap.xml`, envio e ultima leitura em 2026-05-29, status `Processado`, 21 paginas encontradas e notificacao `Sitemap enviado`.
 - Evidencia textual: `documents/qa/search-console-sitemap-v039-2026-05-29.json`.
-- Proximo passo operacional: acompanhar cobertura das 21 URLs limpas e revalidar o artigo 09 em alguns dias.
+- Search Console URL Inspection: `/manifesto/`, `/seguranca/` e `/atualizacoes/` estavam detectadas, mas ainda nao indexadas; indexacao solicitada para as tres. O artigo `o-que-anotar-no-treino-para-saber-se-voce-esta-evoluindo/` ja estava no Google, com HTTPS e breadcrumb validos.
+- Evidencia textual: `documents/qa/search-console-url-inspection-clean-urls-2026-05-29.json`.
+- Proximo passo operacional: acompanhar cobertura das 21 URLs limpas e revalidar URLs ainda pendentes em alguns dias.
 
 ## Validação Editorial ED-010 - 2026-05-29
 

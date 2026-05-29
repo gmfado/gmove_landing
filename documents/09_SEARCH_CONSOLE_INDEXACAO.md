@@ -94,6 +94,8 @@ Validacoes ja feitas:
 - Sitemap reenviado no Search Console em 2026-05-29; apos `v0.3.9`, a tabela confirmou envio e ultima leitura em 29 de mai. de 2026, status `Processado`, 21 paginas encontradas e notificacao `Sitemap enviado`.
 - URL Inspection do artigo 09 mostrou `O URL nao esta no Google`, motivo `Detectada, mas nao indexada no momento`; solicitacao de indexacao enviada em 2026-05-29.
 - URL Inspection do artigo 10 mostrou `O URL esta no Google`, pagina indexada, HTTPS valido e 1 item valido de breadcrumb.
+- URL Inspection pos-`v0.3.9` solicitou indexacao para `https://gmove.app/manifesto/`, `https://gmove.app/seguranca/` e `https://gmove.app/atualizacoes/`; as tres estavam como `O URL nao esta no Google`, motivo `Detectada, mas nao indexada no momento`, e entraram na fila de rastreamento prioritario.
+- URL Inspection pos-`v0.3.9` confirmou que `https://gmove.app/conteudo/o-que-anotar-no-treino-para-saber-se-voce-esta-evoluindo/` esta no Google, com pagina indexada, HTTPS valido e breadcrumb valido.
 - CSS/JS com cache-busting novo carregaram em producao.
 - QA visual no navegador confirmou logo mobile menor em `/atualizacoes/` e Editorial sem overflow horizontal.
 - Auditoria ao vivo anterior confirmou 19 URLs, sem falhas criticas de status, `noindex`, H1 ou JSON-LD; validacao posterior de producao confirmou o sitemap com 21 URLs.
@@ -102,9 +104,9 @@ Proxima acao manual no Search Console:
 
 1. Entrar na propriedade `https://gmove.app/`.
 2. Acompanhar se a cobertura reflete as 21 URLs limpas apos a leitura de 2026-05-29.
-3. Acompanhar o artigo 09 ate sair de `Detectada, mas nao indexada no momento`.
+3. Acompanhar `/manifesto/`, `/seguranca/`, `/atualizacoes/` e o artigo 09 ate sairem de `Detectada, mas nao indexada no momento`.
 4. Fazer URL Inspection dos 8 artigos anteriores depois da frente de imagens, se ainda nao tiverem sido solicitados.
-5. Conferir se `/atualizacoes/` aparece como URL publicada e canonica.
+5. Conferir se `/atualizacoes/` aparece como URL publicada, canonica e indexada.
 6. Revalidar cobertura em alguns dias, considerando que o Google pode levar dias ou semanas para indexar.
 
 ## Rodada Pos-Deploy 2026-05-29 - URLs Limpas
@@ -119,6 +121,8 @@ Validacoes feitas:
 - `sitemap.xml` manteve 21 URLs, sem entradas `.html`.
 - Browser em producao confirmou `/atualizacoes/` desktop e `/conteudo/` mobile sem overflow horizontal, sem links `.html` e sem erros de console.
 - Search Console recebeu novamente `https://gmove.app/sitemap.xml` apos `v0.3.9`; a tabela mostrou `/sitemap.xml`, envio em 29 de mai. de 2026, ultima leitura em 29 de mai. de 2026, status `Processado`, 21 paginas encontradas e notificacao `Sitemap enviado`.
+- URL Inspection pos-`v0.3.9`: `/manifesto/`, `/seguranca/` e `/atualizacoes/` estavam detectadas no sitemap, mas ainda nao indexadas; indexacao solicitada para as tres. O artigo `o-que-anotar-no-treino-para-saber-se-voce-esta-evoluindo/` ja estava no Google, com HTTPS e breadcrumb validos.
+- Evidencia textual: `documents/qa/search-console-url-inspection-clean-urls-2026-05-29.json`.
 
 Proxima acao no Search Console: acompanhar cobertura das 21 URLs limpas e reinspecionar `/manifesto/`, `/seguranca/`, `/atualizacoes/` e o artigo 09 depois do processamento.
 
