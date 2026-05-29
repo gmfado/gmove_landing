@@ -210,6 +210,18 @@ Antes de abrir uma nova conversa, escolher uma frente:
 - URL Inspection do artigo 10 confirmou que a URL ja esta no Google, com HTTPS e breadcrumb validos.
 - Proximo passo operacional: aguardar o processamento do sitemap de 21 URLs e revalidar o artigo 09 em alguns dias.
 
+### Atualizacao 2026-05-29 - URLs limpas e sitemap alinhado
+
+- Frente `infra/seo` alinhou canonicals, `og:url`, JSON-LD, navegacao, rodapes, chamadas editoriais e `sitemap.xml` para os caminhos finais com barra.
+- Paginas raiz indexaveis passaram de `.html` para `/manifesto/`, `/atualizacoes/`, `/privacidade/`, `/seguranca/` e `/termos/` nas referencias publicas.
+- Links do Editorial e destaque rotativo tambem passaram a apontar para caminhos publicos sem `index.html`.
+- `tools/verify-docs.ps1` passou a resolver caminhos limpos de paginas raiz para seus arquivos `.html`.
+- `atualizacoes.html` registra `v0.3.9` com status `Publicado`.
+- Validacao local passou: `node --check js/main.js`, `tools/verify-docs.ps1`, `tools/verify-public-copy.ps1`, `git diff --check`, JSON-LD e Browser desktop/mobile.
+- Deploy Firebase Hosting concluido no projeto `gmove-landing`; producao validada em rotas limpas, redirecionamentos `.html`, `/atualizacoes/`, `/conteudo/` e `/sitemap.xml`.
+- Search Console recebeu novamente `https://gmove.app/sitemap.xml` apos `v0.3.9`; a tabela confirmou `/sitemap.xml`, envio e ultima leitura em 2026-05-29, status `Processado`, 21 paginas encontradas e notificacao `Sitemap enviado`.
+- Proximo passo operacional: acompanhar cobertura das 21 URLs limpas e revalidar o artigo 09 em alguns dias.
+
 ### Regra permanente - updates publicos
 
 - Antes de encerrar qualquer frente, conferir `documents/15_ATUALIZACOES_PUBLICAS.md`.

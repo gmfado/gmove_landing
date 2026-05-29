@@ -12,8 +12,8 @@
 - Documentação raiz antiga foi movida para `documents/legacy/`.
 - Site publicado em 2026-05-27 no Firebase Hosting.
 - Pacote Editorial publicado em 2026-05-28 ate `v0.3.7`, incluindo pesquisa aplicada, artigos 09 e 10, imagens humanizadas e referencias visuais nos artigos.
-- Pacote `v0.3.8` publicado em 2026-05-29 com paineis visuais maiores no Editorial, dominios ativos validados e `atualizacoes.html` atualizado.
-- `atualizacoes.html` mostra `v0.3.8` como update publicado; `v0.3.4` tambem esta marcado como publicado.
+- Pacote `v0.3.9` publicado em 2026-05-29 com caminhos publicos limpos, sitemap alinhado e `atualizacoes.html` atualizado.
+- `atualizacoes.html` mostra `v0.3.9` como update publicado; `v0.3.8` e `v0.3.4` tambem estao marcados como publicados.
 - Produção validada em `https://gmove.app/` e `https://gmove-landing.web.app/`.
 - `www.gmove.app` redireciona para `https://gmove.app/`.
 - `gmove.com.br` responde `HTTP 200`; `www.gmove.com.br` redireciona para `https://gmove.com.br/`.
@@ -23,10 +23,10 @@
 - Para decidir onde registrar cada tipo de trabalho, usar `documents/17_REGISTRO_OPERACIONAL.md`.
 - Batch de Search Console pronto em `documents/qa/search-console-batch-2026-05-28.md`.
 - Search Console URL-prefix `https://gmove.app/` verificado via `google6e48a74231fe8281.html`; nao remover esse arquivo do deploy.
-- Sitemap `/sitemap.xml` reenviado no Search Console em 2026-05-29; no momento da checagem, a tabela ainda mostrava ultima leitura em 2026-05-28 e 19 paginas encontradas.
+- Sitemap `/sitemap.xml` reenviado no Search Console apos `v0.3.9` em 2026-05-29; a tabela confirmou ultima leitura em 2026-05-29, status `Processado` e 21 paginas encontradas.
 - Indexacao solicitada no Search Console para `/conteudo/` e os 4 hubs editoriais em 2026-05-28.
 - Indexacao do artigo 09 solicitada em 2026-05-29; artigo 10 ja aparece como URL no Google, com HTTPS e breadcrumb validos.
-- Sitemap atual em producao tem 21 URLs; aguardar o Search Console processar a leitura nova.
+- Sitemap atual em producao tem 21 URLs, sem entradas `.html`, e usa caminhos finais com barra para paginas raiz.
 
 ## Arquivos-Chave
 
@@ -50,7 +50,7 @@
 
 ## Próximo Passo Provável
 
-Aguardar o Search Console processar o sitemap reenviado e revalidar o artigo 09 em alguns dias. Depois, alinhar URLs limpas (`/manifesto/`, `/atualizacoes/`, `/privacidade/`, `/seguranca/`, `/termos/`) em canonicals, `og:url`, links internos e sitemap, publicar e revalidar.
+Acompanhar a cobertura das 21 URLs limpas no Search Console e revalidar o artigo 09 em alguns dias.
 
 ## Cuidado
 

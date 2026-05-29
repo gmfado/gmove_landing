@@ -28,13 +28,14 @@ Este documento deve ser usado pela frente `infra` ou `editorial` depois de deplo
 - Sitemap publico: `https://gmove.app/sitemap.xml`.
 - Robots publico: `https://gmove.app/robots.txt`.
 - Sitemap atual tem 21 URLs: home, manifesto, atualizacoes, Editorial, 4 hubs, 10 artigos, privacidade, seguranca e termos.
+- As paginas raiz indexaveis usam caminhos finais com barra: `/manifesto/`, `/atualizacoes/`, `/privacidade/`, `/seguranca/` e `/termos/`.
 - `robots.txt` permite crawling geral e aponta para o sitemap.
 - Enquanto o canonico for `gmove.app`, `gmove.com.br` deve manter canonicals, sitemap e robots apontando para `https://gmove.app/`.
-- Ultimo deploy validado: 2026-05-29, incluindo `v0.3.8`, paineis visuais maiores no Editorial, dominios ativos e CSS editorial `20260529-editorial-photo-panels`.
+- Ultimo deploy validado: 2026-05-29, incluindo `v0.3.9`, caminhos publicos limpos, sitemap sem URLs `.html` e `atualizacoes.html` atualizado.
 - Search Console URL-prefix `https://gmove.app/` verificado em 2026-05-28 via arquivo HTML `google6e48a74231fe8281.html`.
-- Sitemap `https://gmove.app/sitemap.xml` enviado e processado no Search Console em 2026-05-28, com 19 paginas encontradas.
+- Sitemap `https://gmove.app/sitemap.xml` reenviado apos `v0.3.9` em 2026-05-29; tabela confirmou ultima leitura em 2026-05-29, status `Processado` e 21 paginas encontradas.
 - Primeira rodada de URL Inspection solicitada em 2026-05-28 para `/conteudo/` e os 4 hubs editoriais.
-- Deploy editorial ED-009 publicado em 2026-05-28; proximo passo no Search Console e reenviar o sitemap de 21 URLs.
+- Deploy `v0.3.9` publicado em 2026-05-29; proximo passo no Search Console e acompanhar processamento/cobertura das 21 URLs limpas.
 
 ## Setup Recomendado No Search Console
 
@@ -54,8 +55,8 @@ Prioridade inicial:
 4. `https://gmove.app/conteudo/progressao/`
 5. `https://gmove.app/conteudo/consistencia/`
 6. `https://gmove.app/conteudo/recuperacao/`
-7. `https://gmove.app/manifesto.html`
-8. `https://gmove.app/seguranca.html`
+7. `https://gmove.app/manifesto/`
+8. `https://gmove.app/seguranca/`
 9. Artigos novos ou alterados no ciclo.
 
 ## Rotina Apos Deploy
@@ -90,7 +91,7 @@ Validacoes ja feitas:
 - Search Console processou `/sitemap.xml` com 19 paginas encontradas.
 - URL Inspection com solicitacao de indexacao enviada para `https://gmove.app/conteudo/` e para os hubs `treino-com-criterio`, `progressao`, `consistencia` e `recuperacao`.
 - Producao ED-008 validou `/sitemap.xml` com 21 URLs, incluindo os artigos 09 e 10.
-- Sitemap reenviado no Search Console em 2026-05-29; a tabela passou a mostrar envio em 29 de mai. de 2026, ainda com ultima leitura em 28 de mai. de 2026 e 19 paginas encontradas no momento da checagem.
+- Sitemap reenviado no Search Console em 2026-05-29; apos `v0.3.9`, a tabela confirmou envio e ultima leitura em 29 de mai. de 2026, status `Processado`, 21 paginas encontradas e notificacao `Sitemap enviado`.
 - URL Inspection do artigo 09 mostrou `O URL nao esta no Google`, motivo `Detectada, mas nao indexada no momento`; solicitacao de indexacao enviada em 2026-05-29.
 - URL Inspection do artigo 10 mostrou `O URL esta no Google`, pagina indexada, HTTPS valido e 1 item valido de breadcrumb.
 - CSS/JS com cache-busting novo carregaram em producao.
@@ -100,13 +101,28 @@ Validacoes ja feitas:
 Proxima acao manual no Search Console:
 
 1. Entrar na propriedade `https://gmove.app/`.
-2. Aguardar o processamento do sitemap reenviado em 2026-05-29 ate a tabela atualizar a ultima leitura e as paginas encontradas.
+2. Acompanhar se a cobertura reflete as 21 URLs limpas apos a leitura de 2026-05-29.
 3. Acompanhar o artigo 09 ate sair de `Detectada, mas nao indexada no momento`.
 4. Fazer URL Inspection dos 8 artigos anteriores depois da frente de imagens, se ainda nao tiverem sido solicitados.
-5. Conferir se `atualizacoes/` aparece como URL publicada e canonica.
+5. Conferir se `/atualizacoes/` aparece como URL publicada e canonica.
 6. Revalidar cobertura em alguns dias, considerando que o Google pode levar dias ou semanas para indexar.
 
-Observacao tecnica: o Firebase Hosting redireciona as URLs `.html` de paginas raiz para as versoes finais com barra por causa de `cleanUrls` e `trailingSlash`. A recomendacao e alinhar canonicals, `og:url`, links internos e sitemap para as URLs finais com barra no proximo pacote tecnico, para evitar conflito em HTMLs editoriais.
+## Rodada Pos-Deploy 2026-05-29 - URLs Limpas
+
+Status: producao publicada e validada em `https://gmove.app/`.
+
+Validacoes feitas:
+
+- `/manifesto/`, `/atualizacoes/`, `/privacidade/`, `/seguranca/`, `/termos/`, `/conteudo/` e `/sitemap.xml` responderam `HTTP 200`.
+- As rotas `.html` de paginas raiz redirecionaram `301` para os caminhos finais com barra.
+- `/atualizacoes/` exibiu `v0.3.9`, canonical e `og:url` em `https://gmove.app/atualizacoes/`.
+- `sitemap.xml` manteve 21 URLs, sem entradas `.html`.
+- Browser em producao confirmou `/atualizacoes/` desktop e `/conteudo/` mobile sem overflow horizontal, sem links `.html` e sem erros de console.
+- Search Console recebeu novamente `https://gmove.app/sitemap.xml` apos `v0.3.9`; a tabela mostrou `/sitemap.xml`, envio em 29 de mai. de 2026, ultima leitura em 29 de mai. de 2026, status `Processado`, 21 paginas encontradas e notificacao `Sitemap enviado`.
+
+Proxima acao no Search Console: acompanhar cobertura das 21 URLs limpas e reinspecionar `/manifesto/`, `/seguranca/`, `/atualizacoes/` e o artigo 09 depois do processamento.
+
+Observacao tecnica: o Firebase Hosting redireciona as URLs `.html` de paginas raiz para as versoes finais com barra por causa de `cleanUrls` e `trailingSlash`. Em `v0.3.9`, canonicals, `og:url`, links internos e sitemap foram alinhados para essas URLs finais.
 
 ## Checklist De Indexacao Por URL
 
@@ -161,5 +177,6 @@ Quando houver conta AdSense aprovada:
 - Avaliar criacao futura de propriedade de dominio `gmove.app` por DNS, se for necessario consolidar subdominios.
 - Manter os registros de `gmove.com.br` documentados em `documents/16_DOMINIOS_DNS.md`.
 - Revalidar `https://gmove.com.br/` e `https://www.gmove.com.br/` quando houver mudanca de dominio, canonical ou Firebase Hosting.
+- Acompanhar a cobertura das 21 URLs limpas apos o reenvio do sitemap em `v0.3.9`.
 - Criar segunda rodada de URL Inspection para os 10 artigos, priorizando artigos 09 e 10.
 - Definir se havera analytics antes de AdSense.

@@ -58,14 +58,29 @@ function Convert-SitePathToFile {
 
   $cleanPath = $SitePath.TrimStart("/")
   if ($cleanPath.EndsWith("/")) {
-    return Join-Path $rootPath (Join-Path $cleanPath "index.html")
+    $directoryIndex = Join-Path $rootPath (Join-Path $cleanPath "index.html")
+    if (Test-Path -LiteralPath $directoryIndex) {
+      return $directoryIndex
+    }
+
+    $htmlPath = Join-Path $rootPath ($cleanPath.TrimEnd("/") + ".html")
+    if (Test-Path -LiteralPath $htmlPath) {
+      return $htmlPath
+    }
+
+    return $directoryIndex
   }
 
   if ($cleanPath.EndsWith(".html")) {
     return Join-Path $rootPath $cleanPath
   }
 
-  return Join-Path $rootPath (Join-Path $cleanPath "index.html")
+  $directoryIndex = Join-Path $rootPath (Join-Path $cleanPath "index.html")
+  if (Test-Path -LiteralPath $directoryIndex) {
+    return $directoryIndex
+  }
+
+  return Join-Path $rootPath ($cleanPath + ".html")
 }
 
 $markdownFiles = @()

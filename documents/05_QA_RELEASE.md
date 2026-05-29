@@ -17,6 +17,27 @@ Antes de deploy:
 - verificar console do navegador;
 - conferir que não há overflow horizontal.
 
+## Validacao URLs Limpas v0.3.9 - 2026-05-29
+
+- Canonicals, `og:url`, sitemap e links publicos foram alinhados para os caminhos finais com barra: `/manifesto/`, `/atualizacoes/`, `/privacidade/`, `/seguranca/`, `/termos/` e Editorial.
+- `atualizacoes.html` registra `v0.3.9` com status `Publicado`.
+- `tools/verify-docs.ps1`: passou com 36 Markdown files e 21 URLs no sitemap.
+- `tools/verify-public-copy.ps1`: passou com 22 HTML files.
+- `node --check js/main.js`: passou.
+- JSON-LD local parseou corretamente: 29 blocos em 21 HTML files.
+- Local Firebase Hosting: rotas limpas principais responderam `HTTP 200`; rotas `.html` de paginas raiz redirecionaram `301` para a forma com barra.
+- Browser local desktop 1280 x 900 em `/atualizacoes/`: `v0.3.9`, canonical e `og:url` limpos, sem links `.html`, sem overflow horizontal e sem erros de console.
+- Browser local mobile 390 x 844 em `/conteudo/`: canonical limpo, links editoriais sem `.html`, sem overflow horizontal e sem erros de console.
+- Deploy Firebase Hosting concluido no projeto `gmove-landing`; a CLI encontrou 88 arquivos e enviou 23 novos/alterados.
+- Producao validada com `Cache-Control: no-cache`: `/`, `/manifesto/`, `/atualizacoes/`, `/privacidade/`, `/seguranca/`, `/termos/`, `/conteudo/` e `/sitemap.xml` responderam `HTTP 200`.
+- Producao: `/manifesto.html`, `/atualizacoes.html`, `/privacidade.html`, `/seguranca.html` e `/termos.html` redirecionaram `301` para os caminhos finais com barra.
+- Producao: `/atualizacoes/` exibiu `v0.3.9`, canonical limpo e sem canonical `.html`; `/sitemap.xml` manteve 21 URLs e nenhuma URL `.html`.
+- Browser em producao confirmou `/atualizacoes/` desktop e `/conteudo/` mobile sem links `.html`, sem overflow horizontal e sem erros de console.
+- Evidencias: `documents/qa/gmove-clean-urls-updates-desktop-2026-05-29.png`, `documents/qa/gmove-clean-urls-editorial-mobile-2026-05-29.png`, `documents/qa/gmove-prod-clean-urls-updates-desktop-2026-05-29.png`, `documents/qa/gmove-prod-clean-urls-editorial-mobile-2026-05-29.png`.
+- Search Console: `https://gmove.app/sitemap.xml` reenviado apos `v0.3.9`; a tabela confirmou `/sitemap.xml`, envio e ultima leitura em 2026-05-29, status `Processado`, 21 paginas encontradas e notificacao `Sitemap enviado`.
+- Evidencia textual: `documents/qa/search-console-sitemap-v039-2026-05-29.json`.
+- Proximo passo operacional: acompanhar cobertura das 21 URLs limpas e revalidar o artigo 09 em alguns dias.
+
 ## Validação Editorial ED-010 - 2026-05-29
 
 - `css/editorial.css` ampliou os paineis visuais dos cards, guias e hubs do Editorial.

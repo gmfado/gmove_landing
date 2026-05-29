@@ -266,7 +266,7 @@
       {
         num: '01',
         meta: 'Método · 01',
-        href: 'como-evoluir-no-treino-sem-motivacao/index.html',
+        href: 'como-evoluir-no-treino-sem-motivacao/',
         image: '../conteudo/como-evoluir-no-treino-sem-motivacao/preset-imagem-conteudo-1.webp',
         tag: 'Método',
         title: 'Como evoluir no treino sem motivação.',
@@ -277,7 +277,7 @@
       {
         num: '02',
         meta: 'Continuidade · 02',
-        href: 'por-que-voce-comeca-e-para-no-treino/index.html',
+        href: 'por-que-voce-comeca-e-para-no-treino/',
         image: '../conteudo/por-que-voce-comeca-e-para-no-treino/preset-imagem-conteudo-2.webp',
         tag: 'Continuidade',
         title: 'Por que você começa e para no treino.',
@@ -288,7 +288,7 @@
       {
         num: '03',
         meta: 'Estrutura · 03',
-        href: 'o-treino-perfeito-que-voce-nunca-consegue-seguir/index.html',
+        href: 'o-treino-perfeito-que-voce-nunca-consegue-seguir/',
         image: '../conteudo/o-treino-perfeito-que-voce-nunca-consegue-seguir/preset-imagem-conteudo-3.webp',
         tag: 'Estrutura',
         title: 'O treino perfeito que você nunca consegue seguir.',
@@ -299,7 +299,7 @@
       {
         num: '04',
         meta: 'Adaptação · 04',
-        href: 'treinar-cansado-funciona/index.html',
+        href: 'treinar-cansado-funciona/',
         image: '../conteudo/treinar-cansado-funciona/preset-imagem-conteudo-4.webp',
         tag: 'Adaptação',
         title: 'Treinar cansado funciona?',
@@ -310,7 +310,7 @@
       {
         num: '05',
         meta: 'Estrutura · 05',
-        href: 'o-problema-nao-e-falta-de-disciplina-e-falta-de-estrutura/index.html',
+        href: 'o-problema-nao-e-falta-de-disciplina-e-falta-de-estrutura/',
         image: '../conteudo/o-problema-nao-e-falta-de-disciplina-e-falta-de-estrutura/preset-imagem-conteudo-5.webp',
         tag: 'Estrutura',
         title: 'O problema não é falta de disciplina. É falta de estrutura.',
@@ -321,7 +321,7 @@
       {
         num: '06',
         meta: 'Progressão · 06',
-        href: 'treinar-sem-registrar-e-repetir-sem-saber-se-esta-evoluindo/index.html',
+        href: 'treinar-sem-registrar-e-repetir-sem-saber-se-esta-evoluindo/',
         image: '../conteudo/treinar-sem-registrar-e-repetir-sem-saber-se-esta-evoluindo/preset-imagem-conteudo-6.webp',
         tag: 'Progressão',
         title: 'Treinar sem registrar é repetir sem saber se está evoluindo.',
@@ -332,7 +332,7 @@
       {
         num: '07',
         meta: 'Clareza · 07',
-        href: 'por-que-trocar-de-treino-toda-hora-atrapalha-sua-evolucao/index.html',
+        href: 'por-que-trocar-de-treino-toda-hora-atrapalha-sua-evolucao/',
         image: '../conteudo/por-que-trocar-de-treino-toda-hora-atrapalha-sua-evolucao/preset-imagem-conteudo-7.webp',
         tag: 'Clareza',
         title: 'Por que trocar de treino toda hora atrapalha sua evolução.',
@@ -343,7 +343,7 @@
       {
         num: '08',
         meta: 'Consistência · 08',
-        href: 'o-treino-que-voce-consegue-repetir-vale-mais-do-que-o-treino-que-parece-perfeito/index.html',
+        href: 'o-treino-que-voce-consegue-repetir-vale-mais-do-que-o-treino-que-parece-perfeito/',
         image: '../conteudo/o-treino-que-voce-consegue-repetir-vale-mais-do-que-o-treino-que-parece-perfeito/preset-imagem-conteudo-8.webp',
         tag: 'Consistência',
         title: 'O treino que você consegue repetir vale mais do que o treino que parece perfeito.',
@@ -354,7 +354,7 @@
       {
         num: '09',
         meta: 'Progressão · 09',
-        href: 'a-semana-e-a-menor-unidade-real-de-evolucao-no-treino/index.html',
+        href: 'a-semana-e-a-menor-unidade-real-de-evolucao-no-treino/',
         image: '../conteudo/a-semana-e-a-menor-unidade-real-de-evolucao-no-treino/preset-imagem-conteudo-9.webp',
         tag: 'Progressão',
         title: 'A semana é a menor unidade real de evolução no treino.',
@@ -365,7 +365,7 @@
       {
         num: '10',
         meta: 'Clareza · 10',
-        href: 'o-que-anotar-no-treino-para-saber-se-voce-esta-evoluindo/index.html',
+        href: 'o-que-anotar-no-treino-para-saber-se-voce-esta-evoluindo/',
         image: '../conteudo/o-que-anotar-no-treino-para-saber-se-voce-esta-evoluindo/preset-imagem-conteudo-10.webp',
         tag: 'Clareza',
         title: 'O que anotar no treino para saber se você está evoluindo.',

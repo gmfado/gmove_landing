@@ -406,3 +406,28 @@ Antes de deploy, revisar o diff final e decidir se arquivos antigos (`print1.png
 - Deploy Firebase Hosting concluido no projeto `gmove-landing`; a CLI encontrou 88 arquivos e enviou 17 novos/alterados.
 - Producao validada em `/atualizacoes/`, `/conteudo/`, artigos 01 e 10, CSS `editorial-reference`, asset AVIF de screenshot e `/sitemap.xml`.
 - Browser em producao confirmou `v0.3.7` publicado, bloco visual mobile sem overflow e AVIF carregado.
+
+## 2026-05-29 - URLs limpas e sitemap alinhado
+
+### Estado
+
+- Canonicals, `og:url`, JSON-LD, navegacao, rodapes, chamadas editoriais e `sitemap.xml` foram alinhados para os caminhos finais com barra.
+- Paginas raiz indexaveis usam `/manifesto/`, `/atualizacoes/`, `/privacidade/`, `/seguranca/` e `/termos/` nas referencias publicas.
+- Links do Editorial e destaque rotativo de `js/main.js` passaram a apontar para caminhos publicos sem `index.html`.
+- `tools/verify-docs.ps1` foi ajustado para resolver caminhos limpos de paginas raiz para seus arquivos `.html`.
+- `atualizacoes.html` recebeu a entrada publica `v0.3.9` com status `Publicado`.
+
+### Validacao e publicacao
+
+- `node --check js/main.js` passou.
+- `tools/verify-docs.ps1` passou com 36 Markdown files e 21 URLs no sitemap.
+- `tools/verify-public-copy.ps1` passou com 22 HTML files.
+- `git diff --check` passou sem erro real; apenas avisos LF/CRLF do Windows.
+- JSON-LD local parseou corretamente: 29 blocos em 21 HTML files.
+- Browser local desktop validou `/atualizacoes/` com `v0.3.9`, canonical limpo, sem links `.html`, sem overflow horizontal e sem erros de console.
+- Browser local mobile validou `/conteudo/` com links editoriais limpos, sem overflow horizontal e sem erros de console.
+- Deploy Firebase Hosting concluido no projeto `gmove-landing`; a CLI encontrou 88 arquivos e enviou 23 novos/alterados.
+- Producao validada com `HTTP 200` em rotas limpas, `301` das rotas `.html` para os caminhos finais, `/atualizacoes/` exibindo `v0.3.9` e `/sitemap.xml` com 21 URLs sem `.html`.
+- Browser em producao confirmou `/atualizacoes/` desktop e `/conteudo/` mobile sem links `.html`, sem overflow horizontal e sem erros de console.
+- Search Console recebeu novamente `https://gmove.app/sitemap.xml` apos `v0.3.9`; a tabela confirmou envio e ultima leitura em 2026-05-29, status `Processado`, 21 paginas encontradas e notificacao `Sitemap enviado`.
+- Proximo passo: acompanhar cobertura das 21 URLs limpas e revalidar o artigo 09 em alguns dias.
