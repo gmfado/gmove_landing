@@ -41,6 +41,8 @@ Ele:
 - `documents/13_GIT_LEGADOS_RELEASE.md`: modelo de branch, commit, release e decisão sobre legados.
 - `documents/14_MELHORIAS_FEATURES_PESQUISA_2026.md`: pesquisa aplicada de melhorias e features para site, Editorial e produto.
 - `documents/15_ATUALIZACOES_PUBLICAS.md`: regra para registrar updates publicos e versionar marcos relevantes.
+- `documents/16_DOMINIOS_DNS.md`: estado dos dominios, registros DNS e validacao de Firebase Hosting.
+- `documents/17_REGISTRO_OPERACIONAL.md`: mapa de onde registrar log, QA, deploy, handoff, DNS, SEO, assets e updates publicos.
 
 ## Ordem de Trabalho
 
@@ -52,6 +54,18 @@ Ele:
 6. Validar links, SEO, performance básica e deploy Firebase.
 
 Quando houver mais de uma conversa trabalhando ao mesmo tempo, começar por `documents/08_TRABALHO_SIMULTANEO.md` e registrar a frente em `documents/20_TRABALHO_ATIVO.md`.
+
+## Onde Registrar O Trabalho
+
+Antes de encerrar uma frente, consultar `documents/17_REGISTRO_OPERACIONAL.md`.
+
+Resumo rapido:
+
+- mudanca relevante e decisao interna: `documents/11_IMPLEMENTATION_LOG.md`;
+- QA, evidencia e deploy: `documents/05_QA_RELEASE.md`;
+- pendencia e handoff: `documents/20_TRABALHO_ATIVO.md`;
+- update publico significativo: `atualizacoes.html`;
+- duvida sobre changelog publico: `documents/15_ATUALIZACOES_PUBLICAS.md`.
 
 ## Regras de Produto
 

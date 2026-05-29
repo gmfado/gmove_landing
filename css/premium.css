@@ -1743,6 +1743,27 @@ body::before,
     width: 100%;
     max-width: 320px;
   }
+
+  /* Guardrail: numbered, dotted, or data-heavy cards stay scan-friendly on mobile. */
+  :is(
+    .decision-flow,
+    .decision-flow__item,
+    .decision-board,
+    .decision-signal-grid,
+    .decision-signal-grid div,
+    .decision-demo__controls,
+    .decision-result,
+    .decision-result__facts,
+    .decision-result__facts div,
+    .decision-learning,
+    .trust-item,
+    .feature-card,
+    .profile-card,
+    .build-item,
+    .build-item__body
+  ) {
+    text-align: left;
+  }
 }
 
 @media (max-width: 480px) {

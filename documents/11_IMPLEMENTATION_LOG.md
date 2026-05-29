@@ -152,6 +152,24 @@ Antes de deploy, revisar o diff final e decidir se arquivos antigos (`print1.png
 - Se o certificado nao emitir apos a troca de CNAME, adicionar o TXT ACME solicitado.
 - Revalidar `https://www.gmove.app/` apos propagacao DNS e emissao do certificado.
 
+## 2026-05-27 - Configuracao inicial de gmove.com.br
+
+### Estado
+
+- Custom Domain `gmove.com.br` criado no Firebase Hosting no site `gmove-landing`.
+- Custom Domain `www.gmove.com.br` criado com `redirectTarget` para `gmove.com.br`.
+- DNS autoritativo do dominio confirmado como Registro.br: `a.auto.dns.br` e `b.auto.dns.br`.
+- Firebase retornou `HOST_UNHOSTED`, `OWNERSHIP_MISSING` e `CERT_VALIDATING` para os dois novos dominios, indicando pendencia de DNS externo.
+- Registros DNS necessarios foram consolidados em `documents/16_DOMINIOS_DNS.md`.
+- `atualizacoes.html` recebeu a entrada publica `v0.3.2`.
+- Deploy Firebase Hosting publicado no projeto `gmove-landing` apos o registro publico.
+
+### Pendencia
+
+- Salvar os registros A, CNAME, TXT de ownership e TXT de ACME no painel do Registro.br.
+- Reconsultar o Firebase depois da propagacao ate `HOST_ACTIVE`, `OWNERSHIP_ACTIVE` e `CERT_ACTIVE`.
+- Testar `https://gmove.com.br/` e o redirect `https://www.gmove.com.br/` depois da emissao do certificado.
+
 ## 2026-05-27 - Otimizacao de prints do app
 
 ### Estado
@@ -251,3 +269,115 @@ Antes de deploy, revisar o diff final e decidir se arquivos antigos (`print1.png
 - Republicacao Firebase Hosting concluida com 7 arquivos alterados.
 - Validacao em producao passou para `/`, `/atualizacoes.html`, `/atualizacoes/`, `/manifesto/`, `css/style.css?v=20260527-nav-v031` e `js/main.js?v=20260527-nav-v031`.
 - Chrome headless em producao confirmou desktop com dropdown `Sobre` e mobile em `/atualizacoes/` com barra inferior ativa, `v0.3.1` publicado e sem overflow horizontal.
+
+## 2026-05-28 - Pesquisa aplicada e SEO visual do Editorial
+
+### Estado
+
+- Pesquisa externa registrada em `documents/editorial/EDITORIAL_RESEARCH_2026-05-28.md`.
+- Oito artigos do Editorial receberam capa visivel com `<picture>`, AVIF, WebP, JPG fallback, `alt`, dimensoes e legenda.
+- Oito artigos receberam bloco de "Leitura rapida" para escaneabilidade.
+- JSON-LD dos artigos foi enriquecido com `articleSection`, `keywords`, `isAccessibleForFree`, `dateModified=2026-05-28` e `BreadcrumbList`.
+- `conteudo/index.html`, hubs e artigos passaram a usar cache-busting `20260528-editorial-research` para CSS/JS editoriais.
+- `sitemap.xml` recebeu `lastmod=2026-05-28` nas 13 URLs editoriais.
+- `atualizacoes.html` recebeu a entrada publica `v0.3.3` com status `Publicado`.
+
+### Validacao local
+
+- `node --check js/main.js` passou.
+- `git diff --check` passou; apenas avisos LF/CRLF do Windows.
+- Auditoria local de `href`, `src`, `srcset`, JSON-LD, imagens AVIF/WebP e `sitemap.xml` passou em 20 arquivos HTML.
+- Browser local em 1280 x 900: `/conteudo/` sem overflow horizontal, H1 revelado e cards editoriais com imagens.
+- Browser local em 390 x 844: artigo com AVIF ativo, H1 revelado, capa carregada, bloco "Leitura rapida" visivel e console sem erros.
+- Evidencias: `documents/qa/gmove-editorial-research-desktop-2026-05-28.png`, `documents/qa/gmove-editorial-article-mobile-2026-05-28.png`.
+
+### Pendencia
+
+- Reenviar `/conteudo/`, hubs e artigos no Search Console apos deploy.
+
+### Publicacao
+
+- Deploy Firebase Hosting concluido no projeto `gmove-landing`.
+- Firebase encontrou 79 arquivos e enviou 39 novos/alterados.
+- Producao validada em `https://gmove.app/`, `/conteudo/`, artigo editorial, `/atualizacoes/`, CSS/JS versionados, `sitemap.xml` e asset AVIF.
+- Browser em producao confirmou logo mobile com aproximadamente 24px, `v0.3.3` publicado, `/conteudo/` desktop com WebP e console sem erros.
+
+## 2026-05-28 - Humanizacao das imagens editoriais
+
+### Estado
+
+- As oito imagens editoriais dos artigos foram substituidas por cenas documentais mais humanas e variadas, com pessoas, ambientes e objetos distintos em rotina real de treino, preparacao, registro, decisao de carga e repeticao.
+- A segunda rodada ampliou a variedade visual com escada de predio, lavanderia de casa, mesa de cozinha, gaveta de escritorio, aparelho de cabo, leg press, mural de treino e barras de parque.
+- Foram removidos da linguagem visual os sinais de mockup/futurismo e a repeticao excessiva de personagens, roupas e objetos que deixavam o Editorial com cara robotica ou de uma unica sessao fotografica.
+- Os mesmos caminhos publicos foram preservados: `preset-imagem-conteudo-1` a `preset-imagem-conteudo-8` dentro dos respectivos slugs.
+- Cada asset foi normalizado em 2048x1152 nos formatos JPG, WebP e AVIF.
+- Os atributos `alt`, `width` e `height` das capas visiveis nos oito artigos foram atualizados para refletir as novas cenas.
+- `css/editorial.css` recebeu um guardrail mobile para titulos longos de artigo e os HTMLs editoriais passaram a usar cache-busting `20260528-editorial-humanized`.
+- `atualizacoes.html` recebeu a entrada publica `v0.3.4` com status `Em validacao visual`, porque a alteracao e perceptivel para o usuario e ainda nao foi publicada em producao nesta frente.
+
+### Validacao local
+
+- `node --check js/main.js` passou.
+- `git diff --check` passou sem erros reais; apenas avisos LF/CRLF do Windows.
+- Auditoria local confirmou 8 artigos x JPG/WebP/AVIF em 2048x1152.
+- Browser local em `/conteudo/index.html` validou a listagem sem overflow horizontal.
+- Browser local no artigo de repeticao viavel confirmou AVIF ativo, dimensoes 2048x1152, alt atualizado e console sem erros.
+- Browser mobile em 390 x 844 capturou o artigo com titulo sem corte, capa nova visivel e sem overflow horizontal.
+- Evidencias locais: `documents/qa/gmove-editorial-humanized-list-desktop-2026-05-28.png`, `documents/qa/gmove-editorial-humanized-article-desktop-2026-05-28.png`, `documents/qa/gmove-editorial-humanized-article-mobile-2026-05-28.png`.
+
+### Pendencia
+
+- Publicar em Firebase Hosting quando a frente for aprovada.
+
+## 2026-05-28 - Mapa de registro operacional
+
+### Estado
+
+- Criado `documents/17_REGISTRO_OPERACIONAL.md` para definir onde registrar log interno, QA, deploy, handoff, updates publicos, DNS, SEO, assets, Git e sprints editoriais.
+- `documents/00_START_HERE.md`, `README.md`, `CODEX.md`, `documents/08_TRABALHO_SIMULTANEO.md`, `documents/15_ATUALIZACOES_PUBLICAS.md` e `documents/CODEX_HANDOFF.md` passaram a apontar para o novo mapa.
+- `documents/08_TRABALHO_SIMULTANEO.md` foi atualizado para refletir que `www.gmove.app` ja aponta para o Firebase e que ha frente editorial/infra local em andamento.
+
+### Decisao de registro publico
+
+- Nao foi criada entrada em `atualizacoes.html` porque a mudanca e governanca interna de documentacao, sem alteracao publicada de produto, site, Editorial ou infraestrutura.
+
+## 2026-05-28 - Artigo 10 e cache AVIF
+
+### Estado
+
+- Artigo `O que anotar no treino para saber se voce esta evoluindo` integrado ao Editorial.
+- `conteudo/index.html` passou a listar o Ensaio 10 e a exibir o decimo indicador no destaque rotativo.
+- `js/main.js` recebeu o item do Ensaio 10 no carrossel editorial.
+- `sitemap.xml` passou a incluir a URL do artigo 10, elevando o sitemap para 21 URLs.
+- `atualizacoes.html` recebeu a entrada publica `v0.3.6` com status `Publicado`.
+- `firebase.json` passou a incluir `avif` no header de cache longo de imagens.
+
+### Validacao e publicacao
+
+- `node --check js/main.js` passou.
+- Auditoria local confirmou 22 HTMLs, 10 artigos, 21 URLs no sitemap, JSON-LD parseavel, H1 unico, links/assets resolvidos e trio JPG/WebP/AVIF em todos os artigos.
+- Browser local validou `/conteudo/` e artigo 10 sem overflow horizontal.
+- Deploy Firebase Hosting concluido no projeto `gmove-landing`.
+- Producao validada em `/conteudo/`, artigo 10, `/sitemap.xml`, `/atualizacoes/`, asset AVIF do artigo 10 e arquivo de verificacao do Search Console.
+- Browser em producao confirmou artigo 10 com JSON-LD `Article`/`BreadcrumbList`, capa carregada e console sem erros.
+- Proximo passo: reenviar sitemap no Search Console e solicitar URL Inspection para os artigos 09 e 10.
+
+## 2026-05-28 - Referencias visuais e leitura mobile dos artigos
+
+### Estado
+
+- Os 10 ensaios publicados receberam bloco `article-reference` com screenshot real do app, texto de contexto, legenda, `alt`, dimensoes e `loading="lazy"`.
+- `css/editorial.css` recebeu estilos compartilhados para a referencia visual, ajustes de leitura mobile, links em paragrafos, `text-wrap` e alvos de toque mais confortaveis.
+- HTMLs editoriais passaram a usar cache-busting `20260528-editorial-reference`.
+- `atualizacoes.html` recebeu a entrada publica `v0.3.7` com status `Publicado`.
+- Pesquisa complementar e criterio visual registrados em `documents/editorial/EDITORIAL_RESEARCH_2026-05-28.md` e `documents/editorial/VISUAL_SYSTEM_EDITORIAL.md`.
+
+### Validacao e publicacao
+
+- `node --check js/main.js` passou.
+- JSON-LD de `atualizacoes.html` parseou corretamente e incluiu `v0.3.7`.
+- Local: `/atualizacoes.html`, `/conteudo/`, artigo 01, artigo 10 e CSS editorial responderam 200.
+- Browser local mobile confirmou 10 artigos com bloco `article-reference` e sem overflow horizontal.
+- Deploy Firebase Hosting concluido no projeto `gmove-landing`; a CLI encontrou 88 arquivos e enviou 17 novos/alterados.
+- Producao validada em `/atualizacoes/`, `/conteudo/`, artigos 01 e 10, CSS `editorial-reference`, asset AVIF de screenshot e `/sitemap.xml`.
+- Browser em producao confirmou `v0.3.7` publicado, bloco visual mobile sem overflow e AVIF carregado.

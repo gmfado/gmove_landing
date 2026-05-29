@@ -29,9 +29,10 @@ Evitar duas conversas editando o mesmo arquivo ao mesmo tempo. Se for inevitavel
 4. `documents/CODEX_HANDOFF.md`
 5. `documents/20_TRABALHO_ATIVO.md`
 6. Este documento
-7. `documents/10_MATRIZ_PAGINAS_PUBLICAS.md`, se a tarefa mexer em URL publica
-8. `documents/15_ATUALIZACOES_PUBLICAS.md`, se a tarefa puder gerar update publico
-9. Documento especifico da area tocada
+7. `documents/17_REGISTRO_OPERACIONAL.md`
+8. `documents/10_MATRIZ_PAGINAS_PUBLICAS.md`, se a tarefa mexer em URL publica
+9. `documents/15_ATUALIZACOES_PUBLICAS.md`, se a tarefa puder gerar update publico
+10. Documento especifico da area tocada
 
 Para tarefas editoriais, ler tambem:
 
@@ -54,6 +55,8 @@ Se a tarefa tocar produto, copy, promessa publica ou prints do app, consultar a 
 
 ## Como Registrar Trabalho
 
+Consultar `documents/17_REGISTRO_OPERACIONAL.md` antes de encerrar a frente. Ele define o documento correto para cada tipo de registro.
+
 Ao concluir uma frente:
 
 - atualizar `documents/11_IMPLEMENTATION_LOG.md` quando houver mudanca relevante de produto, site, visual, SEO ou publicacao;
@@ -74,13 +77,26 @@ O registro deve informar:
 
 Antes de entregar:
 
+- revisar `git status --short --branch` e separar o escopo que sera fechado;
+- nunca usar `git add .` quando houver frentes paralelas ou arquivos fora do escopo;
+- staged deve ser feito por lista explicita de arquivos;
 - `node --check js/main.js`, quando `js/main.js` mudar;
+- `powershell -ExecutionPolicy Bypass -File .\tools\verify-public-copy.ps1`, quando HTML/copy publica mudar;
 - varredura de links internos quando HTML, sitemap ou assets mudarem;
 - JSON-LD parseavel quando metadados estruturados mudarem;
 - teste mobile quando houver alteracao visual;
 - `git diff --check`;
 - conferir se `atualizacoes.html` foi atualizado ou se a exclusao foi justificada;
 - registrar evidencias em `documents/qa/` quando houver QA visual.
+- antes da resposta final, rodar `powershell -ExecutionPolicy Bypass -File .\tools\finish-worktree-check.ps1`;
+- se o worktree continuar sujo de proposito, rodar o mesmo comando com `-AllowDirty` e registrar no handoff exatamente quais arquivos ficaram pendentes e por que.
+
+Contrato de fechamento:
+
+- frente concluida deve terminar commitada ou com pendencia explicita no handoff;
+- commits devem ser por escopo, com mensagem que indique a frente fechada;
+- trabalhos publicados em producao nao podem ficar apenas no disco local;
+- quando um chat encontrar trabalho de outro chat, deve preservar, validar e registrar se esta incluindo ou deixando fora.
 
 Antes de publicar:
 
@@ -91,15 +107,15 @@ Antes de publicar:
 
 ## Estado Atual de Coordenacao
 
-Ultima revisao: 2026-05-27.
+Ultima revisao: 2026-05-28.
 
 Estado publicado:
 
 - producao ativa em `https://gmove.app/`;
 - Firebase Hosting padrao em `https://gmove-landing.web.app/`;
-- `https://www.gmove.app/` nao respondeu no ultimo teste;
+- `https://www.gmove.app/` usa CNAME para `gmove-landing.web.app` e deve redirecionar para `https://gmove.app/`;
 - deploy de 2026-05-27 registrado em `documents/05_QA_RELEASE.md`;
-- mudancas locais ainda nao foram commitadas.
+- ha uma frente editorial/infra local em andamento; revisar `git status --short --branch` antes de editar ou commitar.
 
 Frentes naturais para conversas paralelas:
 
@@ -114,10 +130,13 @@ Frentes naturais para conversas paralelas:
 - `documents/10_MATRIZ_PAGINAS_PUBLICAS.md`
 - `documents/12_INVENTARIO_ASSETS.md`
 - `documents/13_GIT_LEGADOS_RELEASE.md`
+- `documents/15_ATUALIZACOES_PUBLICAS.md`
+- `documents/16_DOMINIOS_DNS.md`
+- `documents/17_REGISTRO_OPERACIONAL.md`
 
 ## Pendencias Operacionais
 
 - Executar Search Console e URL Inspection.
-- Resolver ou documentar `www.gmove.app`.
-- Otimizar prints para WebP/AVIF.
+- Monitorar `www.gmove.app` se houver oscilacao regional/CDN.
+- Resolver DNS de `gmove.com.br` no Registro.br, se a frente de dominio continuar aprovada.
 - Decidir se legados serao removidos do repositorio ou apenas mantidos fora do deploy.

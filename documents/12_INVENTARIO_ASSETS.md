@@ -8,7 +8,7 @@ Atualizar quando novos prints, imagens editoriais, videos, favicons ou assets de
 
 ## Resumo Atual
 
-Data da auditoria: 2026-05-27.
+Data da auditoria: 2026-05-28.
 
 Maiores arquivos detectados:
 
@@ -51,14 +51,19 @@ Todos os prints atuais vieram do app em `C:\Users\gmfad\Documents\Projetos\gmove
 
 ## Imagens Editoriais
 
-Imagens editoriais atuais ficam dentro dos slugs de artigo como `preset-imagem-conteudo-*.jpg`.
+Imagens editoriais atuais ficam dentro dos slugs de artigo como `preset-imagem-conteudo-*`.
 
 Status:
 
-- artigos 01 a 08 tem imagens sociais/editoriais;
+- artigos 01 a 08 tem imagens sociais/editoriais em JPG, WebP e AVIF;
+- as capas foram humanizadas em 2026-05-28 com maior variacao de pessoas, ambientes, objetos e cenas de treino, preparacao, registro, decisao de carga e repeticao;
+- a curadoria atual alterna escada de predio, lavanderia, mesa de cozinha, escritorio, aparelho de cabo, leg press, mural de treino e parque para evitar repeticao visual;
+- todos os arquivos finais dos oito artigos estao normalizados em 2048x1152;
+- JPGs ficam aproximadamente entre 245 KB e 314 KB;
+- WebP fica aproximadamente entre 68 KB e 103 KB;
+- AVIF fica aproximadamente entre 35 KB e 63 KB;
 - hubs usam imagens dos artigos como apoio visual;
-- tamanhos estao entre 114 KB e 230 KB, adequados para a fase atual;
-- proximo passo ideal e gerar WebP para cards/listagem mantendo JPG fallback.
+- caminhos publicos foram preservados para manter Open Graph, Twitter Card, hubs e listagem sem quebra.
 
 ## Legados E Fora Do Deploy
 
@@ -77,10 +82,9 @@ Observacao: `video.mp4` foi removido do workspace em 2026-05-27 porque nao era n
 
 ## Plano De Otimizacao
 
-1. Gerar WebP/AVIF para imagens editoriais mantendo JPG fallback.
-2. Criar variantes menores para imagens editoriais em listagens, se o peso crescer.
-3. Rodar QA visual desktop/mobile apos cada troca de formato.
-4. Atualizar esta matriz depois de cada lote.
+1. Criar variantes menores para imagens editoriais em listagens, se o peso crescer.
+2. Rodar QA visual desktop/mobile apos cada troca de formato.
+3. Atualizar esta matriz depois de cada lote.
 
 ## Comandos Uteis
 

@@ -33,7 +33,9 @@ Não há CMS implementado nesta fase.
 
 ## ARTIGOS PUBLICADOS
 
-Total atual: **8 artigos publicados** e **4 hubs editoriais**.
+Total atual: **10 artigos publicados** e **4 hubs editoriais**.
+
+Observacao: o artigo 10 foi publicado em producao em 2026-05-28 via Firebase Hosting e validado no dominio canonico.
 
 1. `conteudo/como-evoluir-no-treino-sem-motivacao/`
 2. `conteudo/por-que-voce-comeca-e-para-no-treino/`
@@ -43,6 +45,8 @@ Total atual: **8 artigos publicados** e **4 hubs editoriais**.
 6. `conteudo/treinar-sem-registrar-e-repetir-sem-saber-se-esta-evoluindo/`
 7. `conteudo/por-que-trocar-de-treino-toda-hora-atrapalha-sua-evolucao/`
 8. `conteudo/o-treino-que-voce-consegue-repetir-vale-mais-do-que-o-treino-que-parece-perfeito/`
+9. `conteudo/a-semana-e-a-menor-unidade-real-de-evolucao-no-treino/`
+10. `conteudo/o-que-anotar-no-treino-para-saber-se-voce-esta-evoluindo/`
 
 Hubs publicados:
 
@@ -78,7 +82,9 @@ Cada artigo possui:
 - `conteudo/treinar-sem-registrar-e-repetir-sem-saber-se-esta-evoluindo/preset-imagem-conteudo-6.jpg` → imagem social/editorial do artigo 06;
 - `conteudo/por-que-trocar-de-treino-toda-hora-atrapalha-sua-evolucao/preset-imagem-conteudo-7.jpg` → imagem social/editorial do artigo 07;
 - `conteudo/o-treino-que-voce-consegue-repetir-vale-mais-do-que-o-treino-que-parece-perfeito/preset-imagem-conteudo-8.jpg` → imagem social/editorial do artigo 08;
-- `sitemap.xml` → inclui `/conteudo/`, os quatro hubs e os oito artigos publicados.
+- `conteudo/a-semana-e-a-menor-unidade-real-de-evolucao-no-treino/preset-imagem-conteudo-9.jpg` → imagem social/editorial do artigo 09;
+- `conteudo/o-que-anotar-no-treino-para-saber-se-voce-esta-evoluindo/preset-imagem-conteudo-10.jpg` → imagem social/editorial do artigo 10;
+- `sitemap.xml` → inclui `/conteudo/`, os quatro hubs e os dez artigos publicados, totalizando 21 URLs no sitemap publico.
 
 ### Documentação editorial
 
@@ -95,10 +101,10 @@ Cada artigo possui:
 
 ## STATUS DE SEO
 
-Status atual: **SEO estrutural completo nas páginas públicas principais, nos oito artigos publicados e nos quatro hubs editoriais**.
+Status atual: **SEO estrutural completo nas páginas públicas principais, nos dez artigos publicados e nos quatro hubs editoriais**.
 
 Verificado:
-- `<title>` e meta description próprios na home, manifesto, listagem `/conteudo/`, oito artigos e quatro hubs;
+- `<title>` e meta description próprios na home, manifesto, listagem `/conteudo/`, dez artigos e quatro hubs;
 - canonical correto nas páginas públicas principais, artigos e hubs;
 - Open Graph e Twitter Card coerentes na home, manifesto, listagem `/conteudo/`, artigos e hubs;
 - JSON-LD global `Organization`, `WebSite` e `SoftwareApplication` na home;
@@ -108,9 +114,9 @@ Verificado:
 - Open Graph;
 - Twitter Card;
 - `og:image` apontando para asset real do slug;
-- JSON-LD `Article` nos oito artigos;
+- JSON-LD `Article` nos dez artigos publicados;
 - JSON-LD `CollectionPage` na listagem `/conteudo/` e nos hubs;
-- `datePublished` e `dateModified` normalizados nos oito artigos;
+- `datePublished` e `dateModified` normalizados nos dez artigos publicados;
 - H1 único por artigo;
 - `lang="pt-BR"`, `charset UTF-8` e viewport nas páginas públicas principais;
 - alt em imagens relevantes;
@@ -118,17 +124,69 @@ Verificado:
 - URLs editoriais incluídas no `sitemap.xml`;
 - listagem `/conteudo/` com metadados próprios.
 - `robots.txt` presente, permitindo indexação e apontando para o sitemap público.
-- `css/style.css` e `js/main.js` publicos versionados com `?v=20260527-nav-v031` para evitar cache antigo apos o ajuste global de navegacao.
-- CSS editorial especifico ainda versionado com `?v=20260527-site-growth`.
+- `css/style.css` continua versionado com `?v=20260527-nav-v031`.
+- `js/main.js` esta versionado com `?v=20260528-editorial-research` e o CSS editorial especifico com `?v=20260528-editorial-reference`.
+- Artigos publicados possuem imagem editorial visivel em `<picture>` com AVIF, WebP, JPG fallback, `alt`, dimensoes e legenda.
+- Dez artigos publicados possuem bloco `article-reference` com screenshot real do app, AVIF/WebP/PNG fallback, `alt`, dimensoes e legenda para tornar a tese editorial mais concreta.
+- Imagens editoriais dos oito artigos foram humanizadas em 2026-05-28 com cenas documentais mais variadas de treino e rotina, alternando casa, trabalho, academia e parque enquanto mantem os caminhos publicos existentes.
+- Artigos publicados possuem bloco de "Leitura rapida" para escaneabilidade e JSON-LD `BreadcrumbList`.
+- `sitemap.xml` possui `lastmod` para as URLs editoriais revisadas em 2026-05-28.
+- QA local e producao de 2026-05-28 validaram links, JSON-LD, sitemap, assets AVIF/WebP e Browser desktop/mobile sem overflow horizontal.
+- ED-008 publicou o artigo 10, validou `/conteudo/` com 10 indicadores e confirmou AVIF com cache longo em producao.
 
 Ainda não registrado como concluído:
-- validação externa de indexação no Google Search Console;
+- reenvio do sitemap de 21 URLs no Google Search Console;
+- URL Inspection dos artigos 09 e 10;
 - monitoramento de performance orgânica;
 - rotina formal de atualização de artigos antigos.
 
 ---
 
 ## ÚLTIMA SPRINT EDITORIAL
+
+### ED-009 — Referencias visuais e leitura mobile dos artigos
+
+Resultado:
+- dez ensaios publicados receberam bloco `article-reference` com screenshot real do app, legenda, alt, dimensoes e carregamento lazy;
+- CSS editorial ganhou estilos compartilhados para a referencia visual, leitura mobile, links em paragrafos, `text-wrap` e alvos de toque mais confortaveis;
+- HTMLs editoriais passaram a usar cache-busting `20260528-editorial-reference`;
+- `atualizacoes.html` registra `v0.3.7` como update publicado;
+- QA local e producao passaram sem overflow horizontal, com AVIF ativo e `/atualizacoes/` exibindo `v0.3.7`.
+
+Registro completo:
+
+`documents/editorial/EDITORIAL_SPRINTS.md`
+
+### ED-006-R1 — Humanizacao das imagens editoriais
+
+Resultado:
+- oito capas editoriais foram substituidas por cenas mais humanas e menos repetidas de treino, preparacao, registro, decisao de carga e repeticao;
+- a rodada final inclui escada de predio, lavanderia, mesa de cozinha, gaveta de escritorio, aparelho de cabo, leg press, mural de treino e barras de parque;
+- os mesmos caminhos `preset-imagem-conteudo-*` foram preservados nos slugs dos artigos;
+- JPG, WebP e AVIF foram normalizados em 2048x1152;
+- `alt`, `width` e `height` das capas foram atualizados nos oito artigos;
+- CSS editorial recebeu guardrail mobile para titulos longos e cache-busting `20260528-editorial-humanized`;
+- `atualizacoes.html` registra `v0.3.4` como update em validacao visual;
+- QA local passou com evidencias em `documents/qa/gmove-editorial-humanized-list-desktop-2026-05-28.png`, `documents/qa/gmove-editorial-humanized-article-desktop-2026-05-28.png` e `documents/qa/gmove-editorial-humanized-article-mobile-2026-05-28.png`.
+
+Registro completo:
+
+`documents/editorial/EDITORIAL_SPRINTS.md`
+
+### ED-006 — Pesquisa aplicada, imagem SEO e leitura rapida dos artigos
+
+Resultado:
+- pesquisa externa aprofundada registrada em `documents/editorial/EDITORIAL_RESEARCH_2026-05-28.md`;
+- oito artigos receberam bloco de leitura rapida, capa editorial em `<picture>`, AVIF/WebP e alt contextual;
+- JSON-LD `Article` foi enriquecido e os artigos receberam `BreadcrumbList`;
+- listagem e destaque rotativo passaram a usar WebP em backgrounds editoriais;
+- `sitemap.xml` recebeu `lastmod` nas URLs editoriais tocadas.
+- QA local passou com evidencias em `documents/qa/gmove-editorial-research-desktop-2026-05-28.png` e `documents/qa/gmove-editorial-article-mobile-2026-05-28.png`.
+- Deploy Firebase Hosting publicado no projeto `gmove-landing`; producao validada em `https://gmove.app/conteudo/`, artigo editorial e `/atualizacoes/`.
+
+Registro completo:
+
+`documents/editorial/EDITORIAL_SPRINTS.md`
 
 ### ED-005 — Correção de abertura e refinamento premium da listagem editorial
 
@@ -228,7 +286,7 @@ Registro completo:
 
 ## PRÓXIMOS PASSOS SUGERIDOS
 
-1. Fazer QA visual em desktop e mobile da listagem `/conteudo/` e dos oito artigos.
+1. Fazer QA visual em desktop e mobile da listagem `/conteudo/` e dos dez artigos publicados.
 2. Validar as URLs editoriais, hubs e páginas principais no Google Search Console após deploy.
 3. Definir a próxima sprint editorial a partir de `CONTENT_IDEAS.md`.
 4. Criar rotina leve para revisar artigos antigos sem misturar com sprint do app.

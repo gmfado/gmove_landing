@@ -20,6 +20,8 @@ Leia nesta ordem:
 12. `documents/13_GIT_LEGADOS_RELEASE.md`
 13. `documents/14_MELHORIAS_FEATURES_PESQUISA_2026.md`
 14. `documents/15_ATUALIZACOES_PUBLICAS.md`
+15. `documents/16_DOMINIOS_DNS.md`
+16. `documents/17_REGISTRO_OPERACIONAL.md`
 
 ## Estrutura
 
@@ -34,6 +36,8 @@ Leia nesta ordem:
 
 Para conversas paralelas, use `documents/08_TRABALHO_SIMULTANEO.md` e mantenha `documents/20_TRABALHO_ATIVO.md` atualizado.
 
+Para saber onde registrar cada tipo de trabalho, use `documents/17_REGISTRO_OPERACIONAL.md`.
+
 ## Desenvolvimento Local
 
 ```powershell
@@ -41,6 +45,14 @@ python -m http.server 8000
 ```
 
 Abrir `http://localhost:8000`.
+
+## Validação de Copy Pública
+
+```powershell
+.\tools\verify-public-copy.ps1
+```
+
+Use antes de publicar mudanças em landing, Editorial, atualizações ou qualquer texto público.
 
 ## Deploy
 

@@ -65,6 +65,243 @@ Cada sprint editorial deve conter:
 
 ## SPRINT ATUAL
 
+### ED-009 - Referencias visuais e leitura mobile dos artigos
+
+**status**
+Publicada em producao.
+
+**objetivo**
+Melhorar a leitura dos ensaios no mobile e tornar cada tese editorial mais concreta com referencias visuais reais do app GMOVE.
+
+**arquivos envolvidos**
+- `css/editorial.css`
+- `conteudo/*/index.html`
+- `assets/screenshots/gmove-app-current-02-plan-*`
+- `assets/screenshots/gmove-app-current-03-evolution-*`
+- `assets/screenshots/gmove-app-current-05-execution-*`
+- `atualizacoes.html`
+- `documents/editorial/EDITORIAL_RESEARCH_2026-05-28.md`
+- `documents/editorial/VISUAL_SYSTEM_EDITORIAL.md`
+
+**alteracoes**
+- dez ensaios publicados receberam bloco `article-reference`;
+- cada bloco usa screenshot real do app com AVIF, WebP e PNG fallback, alt, dimensoes, legenda e `loading="lazy"`;
+- CSS editorial recebeu layout responsivo para a referencia visual, com coluna unica no mobile e imagem limitada para nao pesar a leitura;
+- links em paragrafos ficaram mais visiveis e links de retorno/rodape ganharam alvo minimo de toque;
+- HTMLs editoriais passaram a usar cache-busting `20260528-editorial-reference`;
+- changelog publico recebeu `v0.3.7`.
+
+**validacao**
+- `node --check js/main.js` passou;
+- JSON-LD de `atualizacoes.html` parseou corretamente e inclui `v0.3.7`;
+- 11 rotas editoriais responderam 200 localmente;
+- Browser local mobile 390 x 844 confirmou 10 artigos com 1 bloco `article-reference` e sem overflow horizontal;
+- deploy Firebase Hosting concluido no projeto `gmove-landing`;
+- producao validada em `/atualizacoes/`, `/conteudo/`, artigos 01 e 10, CSS versionado, asset AVIF de screenshot e `/sitemap.xml`;
+- Browser em producao confirmou `v0.3.7` publicado, bloco visual mobile sem overflow e AVIF carregado.
+
+**evidencias**
+- `documents/qa/gmove-editorial-reference-mobile-2026-05-28.png`
+- `documents/qa/gmove-editorial-reference-desktop-2026-05-28.png`
+- `documents/qa/gmove-prod-reference-mobile-2026-05-28.png`
+- `documents/qa/gmove-prod-updates-v037-2026-05-28.png`
+
+### ED-008 - Ensaio 10 sobre registro de treino
+
+**status**
+Publicada em producao.
+
+**objetivo**
+Integrar o artigo `O que anotar no treino para saber se voce esta evoluindo` como decimo ensaio do Editorial, conectando registro, progressao e decisao de treino.
+
+**arquivos envolvidos**
+- `conteudo/o-que-anotar-no-treino-para-saber-se-voce-esta-evoluindo/index.html`
+- `conteudo/o-que-anotar-no-treino-para-saber-se-voce-esta-evoluindo/preset-imagem-conteudo-10.jpg`
+- `conteudo/o-que-anotar-no-treino-para-saber-se-voce-esta-evoluindo/preset-imagem-conteudo-10.webp`
+- `conteudo/o-que-anotar-no-treino-para-saber-se-voce-esta-evoluindo/preset-imagem-conteudo-10.avif`
+- `conteudo/index.html`
+- `conteudo/progressao/index.html`
+- `conteudo/treinar-sem-registrar-e-repetir-sem-saber-se-esta-evoluindo/index.html`
+- `js/main.js`
+- `sitemap.xml`
+- `firebase.json`
+- `atualizacoes.html`
+
+**alteracoes**
+- artigo 10 mantem SEO completo, Open Graph, Twitter Card, JSON-LD `Article`, breadcrumb estruturado, H1 unico, leitura rapida, capa editorial e CTA;
+- capa do artigo 10 foi refeita antes da publicacao para evitar repeticao de personagem, roupa, celular ou tela de app, mantendo uma cena editorial com caderno fisico na academia;
+- `/conteudo/` passou a listar o Ensaio 10 na grade;
+- destaque rotativo do Editorial passou a ter 10 itens e 10 indicadores;
+- hub `progressao/` passou a recomendar o Ensaio 10;
+- artigo 06 passou a apontar para o novo ensaio como resposta pratica sobre o que registrar no treino;
+- `sitemap.xml` passou a incluir a URL do artigo 10;
+- `firebase.json` passou a incluir AVIF no header de cache longo de imagens;
+- changelog publico recebeu `v0.3.6`.
+
+**validacao**
+- `node --check js/main.js`;
+- auditoria local de JSON-LD, H1, links, `src`, `srcset`, sitemap e assets passou;
+- Browser local desktop/mobile validou `/conteudo/` e o artigo 10;
+- deploy Firebase Hosting concluido em `gmove-landing`;
+- producao validada com HTTP 200 no novo artigo, `/conteudo/`, `/atualizacoes/`, `/sitemap.xml` e assets da capa;
+- pendente operacional: reenvio do sitemap no Search Console apos publicacao.
+
+**validacao local**
+- `node --check js/main.js` passou;
+- auditoria local confirmou 22 HTMLs, 10 artigos, 21 URLs no sitemap, JSON-LD parseavel, H1 unico, links/assets resolvidos e trio JPG/WebP/AVIF em todos os artigos;
+- Browser local validou `/conteudo/` sem overflow horizontal, com 10 indicadores no destaque editorial e card do Ensaio 10;
+- Browser local desktop 1280 x 900 e mobile 390 x 844 validou o artigo 10 sem overflow horizontal, com H1 integro, alt correto e capa AVIF carregada em 2048x1152;
+- evidencias: `documents/qa/gmove-editorial-ed008-article-desktop-2026-05-28.png`, `documents/qa/gmove-editorial-ed008-article-mobile-2026-05-28.png` e `documents/qa/gmove-editorial-ed008-list-desktop-2026-05-28.png`;
+- producao validada apos deploy em 2026-05-28.
+
+**validacao em producao**
+- deploy Firebase Hosting concluido no projeto `gmove-landing`;
+- producao validada com HTTP 200 em `https://gmove.app/conteudo/`, artigo 10, `https://gmove.app/sitemap.xml`, `https://gmove.app/atualizacoes/`, asset AVIF do artigo 10 e arquivo de verificacao do Search Console;
+- sitemap em producao possui 21 URLs e inclui o artigo 10;
+- Browser em producao confirmou `/conteudo/` com 10 indicadores, artigo 10 sem overflow horizontal, JSON-LD `Article`/`BreadcrumbList`, capa carregada e console sem erros;
+- evidencia: `documents/qa/gmove-prod-ed008-article-desktop-2026-05-28.png`.
+
+**pendencia**
+- reenviar o sitemap no Search Console e solicitar URL Inspection para os artigos 09 e 10.
+
+---
+
+### ED-007 - Ensaio 09 e fila editorial orientada a Ads
+
+**status**
+Publicada em producao.
+
+**objetivo**
+Auditar os oito artigos existentes contra a nova regua de Google Ads e iniciar a sequencia de novos posts pelo artigo sobre semana como unidade real de evolucao.
+
+**arquivos envolvidos**
+- `documents/editorial/EDITORIAL_ADS_RESEARCH_MAP_2026-05-28.md`
+- `conteudo/a-semana-e-a-menor-unidade-real-de-evolucao-no-treino/index.html`
+- `conteudo/a-semana-e-a-menor-unidade-real-de-evolucao-no-treino/preset-imagem-conteudo-9.jpg`
+- `conteudo/a-semana-e-a-menor-unidade-real-de-evolucao-no-treino/preset-imagem-conteudo-9.webp`
+- `conteudo/a-semana-e-a-menor-unidade-real-de-evolucao-no-treino/preset-imagem-conteudo-9.avif`
+- `conteudo/index.html`
+- `js/main.js`
+- `sitemap.xml`
+- `conteudo/progressao/index.html`
+- artigos 01, 03, 05 e 08 para pontes internas
+- `documents/03_SEO_EDITORIAL_E_ADS.md`
+- `documents/editorial/EDITORIAL_ESTADO_ATUAL.md`
+
+**alteracoes**
+- os oito artigos existentes foram auditados para Ads/SEO e classificados como base boa, sem necessidade de reescrita ampla;
+- a decisao registrada foi usar ajustes leves de linkagem conforme novos clusters forem publicados;
+- criado o artigo 09, `A semana e a menor unidade real de evolucao no treino`;
+- o artigo 09 recebeu title, meta description, canonical, Open Graph, Twitter Card, JSON-LD `Article`, JSON-LD `BreadcrumbList`, H1 unico, leitura rapida, capa editorial e CTA;
+- a capa do artigo 09 foi gerada como cena documental domestica e convertida para JPG, WebP e AVIF em 2048x1152;
+- `/conteudo/`, destaque rotativo de `js/main.js`, hub `progressao/` e `sitemap.xml` foram atualizados para o novo ensaio;
+- artigos 01, 03, 05 e 08 receberam pontes internas para ED-007 sem alterar suas teses principais.
+
+**validacao**
+- `node --check js/main.js` passou;
+- `git diff --check` passou, com apenas avisos LF/CRLF do Windows;
+- auditoria local confirmou JSON-LD parseavel, H1 unico, referencias locais resolvidas e assets do artigo 09 em 2048x1152.
+- Chrome headless/CDP validou `/conteudo/` e o artigo 09 em desktop/mobile sem overflow horizontal, com 9 indicadores no destaque editorial e imagem de capa carregada;
+- evidencias: `documents/qa/gmove-editorial-ed007-list-cdp-2026-05-28.png`, `documents/qa/gmove-editorial-ed007-article-desktop-cdp-2026-05-28.png` e `documents/qa/gmove-editorial-ed007-article-mobile-cdp-2026-05-28.png`.
+- deploy Firebase Hosting concluido no projeto `gmove-landing`; a CLI encontrou 84 arquivos e publicou a nova versao;
+- producao validada com HTTP 200 em `https://gmove.app/conteudo/a-semana-e-a-menor-unidade-real-de-evolucao-no-treino/`, `https://gmove.app/conteudo/`, `https://gmove.app/sitemap.xml` e `https://gmove.app/atualizacoes/`;
+- changelog publico atualizado para `v0.3.5` com status `Publicado` e validado em producao.
+
+**impacto**
+- o Editorial passa a ter uma primeira peca nova explicitamente orientada por clusters de Google Ads, sem abandonar a linguagem de ensaio;
+- os artigos antigos comecam a funcionar como trilhas internas para os novos posts, melhorando continuidade editorial e relevancia de landing/pre-landing.
+
+---
+
+### ED-006-R1 - Humanizacao das imagens editoriais
+
+**status**
+Concluida localmente; aguardando publicacao.
+
+**objetivo**
+Substituir o lote visual dos oito artigos por imagens mais humanas, mais variadas, menos genericas e menos roboticas, mantendo URLs publicas, formatos modernos e estrutura SEO existentes.
+
+**arquivos envolvidos**
+- oito artigos em `conteudo/<slug>/index.html`
+- listagem e hubs editoriais em `conteudo/index.html` e `conteudo/<hub>/index.html`
+- oito JPGs `preset-imagem-conteudo-*.jpg`
+- 16 variantes AVIF/WebP `preset-imagem-conteudo-*.avif` e `preset-imagem-conteudo-*.webp`
+- `css/editorial.css`
+- `atualizacoes.html`
+- `documents/05_QA_RELEASE.md`
+- `documents/11_IMPLEMENTATION_LOG.md`
+- `documents/12_INVENTARIO_ASSETS.md`
+- `documents/editorial/EDITORIAL_SPRINTS.md`
+- `documents/editorial/EDITORIAL_ESTADO_ATUAL.md`
+
+**alteracoes**
+- capas com mockup, composicao abstrata, cara de banco generico ou repeticao excessiva de personagens e objetos foram substituidas por cenas documentais com pessoas, ambientes e objetos mais variados;
+- a rodada final alterna escada de predio, lavanderia de casa, mesa de cozinha, gaveta de escritorio, aparelho de cabo, leg press, mural de treino e barras de parque;
+- todos os assets finais foram normalizados em 2048x1152 com JPG, WebP e AVIF;
+- os `alt`, `width` e `height` das capas visiveis nos oito artigos foram atualizados;
+- `css/editorial.css` recebeu guardrail mobile para titulos longos de artigo e cache-busting `20260528-editorial-humanized`;
+- os caminhos publicos foram preservados para manter Open Graph, Twitter Card, hubs, listagem e destaque rotativo sem troca de URL;
+- `atualizacoes.html` recebeu `v0.3.4` com status `Em validacao visual`.
+
+**validacao**
+- `node --check js/main.js` passou;
+- `git diff --check` passou sem erros reais, apenas avisos LF/CRLF do Windows;
+- auditoria local confirmou os oito artigos com JPG/WebP/AVIF em 2048x1152 e referencias HTML presentes;
+- Browser local validou `/conteudo/index.html` sem overflow horizontal;
+- Browser local no artigo de repeticao viavel confirmou AVIF ativo, alt atualizado, dimensoes naturais 2048x1152 e console sem erros;
+- Browser mobile em 390 x 844 capturou o artigo com titulo sem corte, capa nova visivel e sem overflow horizontal;
+- evidencias: `documents/qa/gmove-editorial-humanized-list-desktop-2026-05-28.png`, `documents/qa/gmove-editorial-humanized-article-desktop-2026-05-28.png` e `documents/qa/gmove-editorial-humanized-article-mobile-2026-05-28.png`.
+
+**impacto**
+- o Editorial fica visualmente mais humano e proprietario, com menor repeticao de personagens, objetos e enquadramentos, menos dependente de interface ficticia e mais conectado ao treino real que o GMOVE tenta organizar.
+
+---
+
+### ED-006 - Pesquisa aplicada, imagem SEO e leitura rapida dos artigos
+
+**status**
+Concluida.
+
+**objetivo**
+Fazer pesquisa aprofundada em canais externos adequados e aplicar melhorias nos oito artigos do Editorial GMOVE em SEO, copy, escaneabilidade, imagens e governanca tecnica, sem criar novos slugs e sem transformar o Editorial em blog generico.
+
+**arquivos envolvidos**
+- oito artigos em `conteudo/<slug>/index.html`
+- `conteudo/index.html`
+- `css/editorial.css`
+- `js/main.js`
+- 16 novas variantes de imagem em AVIF/WebP nos slugs dos artigos
+- `sitemap.xml`
+- `documents/editorial/EDITORIAL_RESEARCH_2026-05-28.md`
+- `documents/editorial/EDITORIAL_SPRINTS.md`
+- `documents/editorial/EDITORIAL_ESTADO_ATUAL.md`
+- `documents/03_SEO_EDITORIAL_E_ADS.md`
+
+**alteracoes**
+- pesquisa externa registrada com 6 canais: Google Search Central, base tecnica de treino/saude, SERP brasileira, benchmarks de apps, comunidades e auditoria visual aplicada;
+- cada artigo recebeu bloco de "Leitura rapida" com tese e 3 pontos de decisao;
+- cada artigo recebeu imagem editorial real em `<picture>` com AVIF, WebP, JPG fallback, `alt`, dimensoes e legenda;
+- JSON-LD `Article` dos oito artigos foi enriquecido com `articleSection`, `keywords`, `isAccessibleForFree` e `dateModified` em 2026-05-28;
+- oito artigos receberam JSON-LD `BreadcrumbList`;
+- listagem editorial passou a usar imagem social editorial real em vez de apenas `icon-512.png`;
+- backgrounds editoriais da listagem e destaque rotativo passaram a usar WebP;
+- `sitemap.xml` recebeu `lastmod` nas URLs editoriais tocadas;
+- cache-busting de `editorial.css` e `main.js` atualizado para `20260528-editorial-research`.
+
+**validacao**
+- `node --check js/main.js` passou;
+- `git diff --check` passou sem erros, apenas avisos LF/CRLF do Windows;
+- auditoria local de `href`, `src`, `srcset`, JSON-LD, imagens AVIF/WebP e `sitemap.xml` passou em 20 arquivos HTML;
+- Browser local em 1280 x 900 validou `/conteudo/` sem overflow horizontal, H1 revelado e cards editoriais com imagens;
+- Browser local em 390 x 844 validou artigo com AVIF ativo, H1 revelado, capa carregada, bloco "Leitura rapida" visivel e console sem erros;
+- deploy Firebase Hosting concluido no projeto `gmove-landing` e producao validada em `https://gmove.app/conteudo/`, artigo editorial, `/atualizacoes/`, CSS/JS versionados, `sitemap.xml` e AVIF;
+- evidencias: `documents/qa/gmove-editorial-research-desktop-2026-05-28.png` e `documents/qa/gmove-editorial-article-mobile-2026-05-28.png`.
+
+**impacto**
+- artigos ficam mais escaneaveis, mais ricos para Image SEO, mais claros para mecanismos de busca e mais consistentes com a tese editorial de decisao, registro, progressao e criterio.
+
+---
+
 ### ED-005 — Correção de abertura e refinamento premium da listagem editorial
 
 **status**

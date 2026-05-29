@@ -110,7 +110,7 @@
     linear-gradient(180deg, rgba(5,6,10,0.42) 0%, rgba(5,6,10,0.78) 100%),
     radial-gradient(ellipse 60% 60% at 30% 30%, rgba(87,199,255,0.18) 0%, transparent 60%),
     radial-gradient(ellipse 45% 50% at 80% 85%, rgba(184,242,75,0.08) 0%, transparent 65%),
-    var(--ed-featured-image, url('../conteudo/como-evoluir-no-treino-sem-motivacao/preset-imagem-conteudo-1.jpg'));
+    var(--ed-featured-image, url('../conteudo/como-evoluir-no-treino-sem-motivacao/preset-imagem-conteudo-1.webp'));
   background-size: cover;
   background-position: center;
   overflow: hidden;
@@ -435,6 +435,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  min-height: 44px;
   font-size: 13px;
   font-weight: 500;
   letter-spacing: 0;
@@ -451,6 +452,9 @@
   line-height: 1.08;
   color: var(--c-text);
   margin: var(--s-md) 0 var(--s-md);
+  max-width: 100%;
+  overflow-wrap: break-word;
+  text-wrap: balance;
 }
 .article-hero__sub {
   font-size: 21px;
@@ -459,6 +463,7 @@
   max-width: 640px;
   font-weight: 400;
   letter-spacing: 0;
+  text-wrap: pretty;
 }
 
 .article-hero__meta {
@@ -481,6 +486,50 @@
   display: inline-block;
 }
 
+/* ----- Capa editorial do artigo ----- */
+.article-cover {
+  width: min(980px, calc(100% - (var(--s-md) * 2)));
+  margin: calc(var(--s-md) * -0.25) auto var(--s-xl);
+  position: relative;
+  z-index: 1;
+}
+.article-cover picture,
+.article-cover img {
+  display: block;
+  width: 100%;
+}
+.article-cover img {
+  aspect-ratio: 16 / 9;
+  height: auto;
+  object-fit: cover;
+  border: 1px solid var(--c-border);
+  border-radius: 8px;
+  background: var(--c-surface);
+  box-shadow: 0 24px 68px rgba(0,0,0,0.28);
+}
+.article-cover figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--s-md);
+  padding: 12px 2px 0;
+  color: var(--c-text-3);
+  font-size: 12.5px;
+  line-height: 1.55;
+}
+.article-cover figcaption span {
+  flex: 0 0 auto;
+  color: var(--c-blue);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+.article-cover figcaption p {
+  margin: 0;
+  max-width: 520px;
+  text-align: right;
+}
+
 /* ----- Corpo ----- */
 .article-body {
   padding: var(--s-xl) 0 var(--s-2xl);
@@ -495,6 +544,7 @@
   font-size: 18px;
   color: var(--c-text-2);
   line-height: 1.82;
+  text-wrap: pretty;
 }
 .article-body p + p { margin-top: var(--s-md); }
 .article-body p b, .article-body p strong {
@@ -502,6 +552,17 @@
   font-weight: 500;
 }
 .article-body p mark { background: none; color: var(--c-yellow); font-weight: 500; }
+.article-body p a {
+  color: var(--c-text);
+  text-decoration: underline;
+  text-decoration-color: rgba(87,199,255,0.56);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+.article-body p a:hover {
+  color: var(--c-yellow);
+  text-decoration-color: rgba(184,242,75,0.72);
+}
 
 .article-body h2 {
   font-size: 34px;
@@ -510,6 +571,7 @@
   line-height: 1.15;
   color: var(--c-text);
   margin: var(--s-xl) 0 var(--s-md);
+  text-wrap: balance;
 }
 .article-body h2::before {
   content: '';
@@ -528,6 +590,57 @@
   letter-spacing: 0;
   color: var(--c-text);
   margin: var(--s-lg) 0 12px;
+}
+
+/* ----- Resumo de leitura ----- */
+.article-snapshot {
+  margin: 0 0 var(--s-xl);
+  padding: var(--s-md);
+  border: 1px solid rgba(87,199,255,0.18);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(87,199,255,0.085), rgba(184,242,75,0.045) 58%, rgba(255,255,255,0.012)),
+    var(--c-surface);
+}
+.article-snapshot__label {
+  display: inline-flex;
+  margin-bottom: 12px;
+  color: var(--c-blue);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+.article-body .article-snapshot__lead {
+  margin: 0;
+  color: var(--c-text);
+  font-size: 18px;
+  line-height: 1.58;
+}
+.article-snapshot ul {
+  display: grid;
+  gap: 10px;
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.article-snapshot li {
+  position: relative;
+  padding-left: 18px;
+  color: var(--c-text-2);
+  font-size: 14.5px;
+  line-height: 1.58;
+}
+.article-snapshot li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.66em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--c-yellow);
+  box-shadow: 0 0 16px rgba(184,242,75,0.22);
 }
 
 /* ----- Impacto editorial ----- */
@@ -551,6 +664,7 @@
   line-height: 1.18;
   letter-spacing: 0;
   color: var(--c-text);
+  text-wrap: balance;
 }
 .article-impact--closing {
   margin-top: var(--s-2xl);
@@ -705,6 +819,97 @@
   color: var(--c-text-2);
 }
 
+/* ----- Referencia visual no artigo ----- */
+.article-reference {
+  margin: var(--s-xl) 0;
+  padding: var(--s-lg);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(180px, 0.44fr);
+  gap: var(--s-lg);
+  align-items: center;
+  border: 1px solid var(--c-border);
+  border-radius: 8px;
+  background:
+    radial-gradient(ellipse 80% 110% at 100% 0%, rgba(87,199,255,0.10) 0%, transparent 64%),
+    linear-gradient(180deg, rgba(255,255,255,0.024), rgba(255,255,255,0.006)),
+    var(--c-surface);
+}
+.article-reference__copy {
+  min-width: 0;
+}
+.article-reference__label {
+  display: inline-flex;
+  margin-bottom: 12px;
+  color: var(--c-blue);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+.article-body .article-reference__title {
+  margin: 0 0 12px;
+  font-size: 24px;
+  line-height: 1.22;
+}
+.article-body .article-reference__title::before {
+  display: none;
+}
+.article-body .article-reference__text {
+  max-width: 470px;
+  margin: 0;
+  color: var(--c-text-2);
+  font-size: 15.5px;
+  line-height: 1.68;
+}
+.article-reference__points {
+  display: grid;
+  gap: 10px;
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.article-reference__points li {
+  position: relative;
+  padding-left: 18px;
+  color: var(--c-text-3);
+  font-size: 13.5px;
+  line-height: 1.55;
+}
+.article-reference__points li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.68em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--c-blue);
+}
+.article-reference__media {
+  width: min(220px, 100%);
+  margin: 0;
+  justify-self: center;
+}
+.article-reference__media picture,
+.article-reference__media img {
+  display: block;
+  width: 100%;
+}
+.article-reference__media img {
+  height: auto;
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 28px;
+  background: #050608;
+  box-shadow: 0 22px 58px rgba(0,0,0,0.34);
+}
+.article-reference__media figcaption {
+  margin-top: 10px;
+  color: var(--c-text-3);
+  font-size: 12px;
+  line-height: 1.45;
+  text-align: center;
+}
+
 /* ----- CTA final (estilo manifesto, com respiro extra) ----- */
 .article-cta {
   margin: var(--s-2xl) auto 0;
@@ -759,6 +964,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  min-height: 44px;
 }
 .article-foot a:hover { color: var(--c-text); gap: 12px; }
 .article-foot a.back::before { content: '←'; }
@@ -812,10 +1018,28 @@
   .ed-bridge__actions .btn { width: 100%; max-width: 320px; justify-content: center; }
 
   .article-hero__inner,
+  .article-cover,
   .article-body__inner,
   .article-foot {
     padding-left: var(--s-sm);
     padding-right: var(--s-sm);
+  }
+  .article-cover {
+    width: 100%;
+    margin: 0 auto var(--s-lg);
+  }
+  .article-cover img {
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0;
+  }
+  .article-cover figcaption {
+    flex-direction: column;
+    gap: 4px;
+    padding: 10px var(--s-sm) 0;
+  }
+  .article-cover figcaption p {
+    text-align: left;
   }
   .article-body p { font-size: 16.5px; line-height: 1.76; }
   .article-body h2::before { width: 24px; margin-bottom: 14px; }
@@ -829,6 +1053,26 @@
   .article-concept__copy strong { max-width: 100%; }
   .article-concept text { font-size: 13px; }
   .article-method__item { padding: var(--s-md) var(--s-sm); }
+  .article-reference {
+    grid-template-columns: 1fr;
+    padding: var(--s-md) var(--s-sm);
+    gap: var(--s-md);
+  }
+  .article-body .article-reference__title {
+    font-size: 22px;
+  }
+  .article-body .article-reference__text {
+    font-size: 15px;
+    line-height: 1.66;
+  }
+  .article-reference__media {
+    width: min(220px, 68vw);
+  }
+  .article-reference__media img {
+    max-height: 410px;
+    object-fit: cover;
+    object-position: top;
+  }
   .article-cta { padding: var(--s-lg) var(--s-md); }
   .article-cta__actions { flex-direction: column; align-items: center; gap: 10px; }
   .article-cta__actions .btn { width: 100%; max-width: 320px; justify-content: center; }
@@ -1273,15 +1517,19 @@
 .ed-card,
 .ed-bridge,
 .ed-paths__grid,
-.ed-path,
 .ed-hub-card,
 .hub-card,
 .ed-standard,
 .article-concept,
+.article-reference,
 .article-pullkey,
 .article-method,
 .article-cta {
   border-radius: 8px;
+}
+
+.ed-paths__grid .ed-path {
+  border-radius: 0;
 }
 
 .ed-featured__title {
@@ -1445,12 +1693,21 @@ body [data-reveal].is-above {
     padding: 92px 0 var(--s-md);
   }
 
-  .ed-hero h1,
-  .article-hero h1 {
+  .ed-hero h1 {
     font-size: 36px;
   }
 
-  .ed-hero__sub {
+  .article-hero__inner {
+    padding: 0 var(--s-sm);
+  }
+
+  .article-hero h1 {
+    font-size: 32px;
+    line-height: 1.12;
+  }
+
+  .ed-hero__sub,
+  .article-hero__sub {
     font-size: 15.5px;
     line-height: 1.58;
   }

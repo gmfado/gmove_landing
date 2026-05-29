@@ -227,6 +227,23 @@ Uso:
 
 Não usar para listas genéricas.
 
+### `article-reference`
+
+Uso:
+
+- referencia visual informativa dentro do artigo;
+- ponte entre a tese editorial e a interface real do GMOVE;
+- screenshot real do app, nao imagem decorativa;
+- apoio de leitura em mobile sem virar bloco promocional.
+
+Regras:
+
+- usar `<picture>` com AVIF, WebP e PNG/JPG fallback;
+- incluir `alt`, `width`, `height`, `loading="lazy"` e legenda;
+- manter a imagem proxima de texto que explique por que ela existe;
+- evitar screenshots falsos, telas prometidas e composicoes que parecam anuncio;
+- no mobile, a referencia deve caber como pausa de leitura, nao como mural gigante.
+
 ### `article-pullkey`
 
 Uso:

@@ -13,7 +13,8 @@ Antes de mexer em conteúdo, design ou estrutura do site, ler nesta ordem:
 3. `documents/01_SITE_E_PRODUTO.md`
 4. `documents/02_DESIGN_E_UX.md`
 5. `documents/08_TRABALHO_SIMULTANEO.md`, quando houver risco de trabalho paralelo.
-6. O documento específico da área tocada.
+6. `documents/17_REGISTRO_OPERACIONAL.md`, para saber onde registrar o trabalho.
+7. O documento específico da área tocada.
 
 Quando a tarefa depender do produto atual, consultar o app em `C:\Users\gmfad\Documents\Projetos\gmove-app-renew`, especialmente `documents/00_START_HERE.md`, `documents/CODEX_HANDOFF.md`, `documents/01_PRODUTO_E_MVP.md` e `documents/02_DESIGN_E_UX.md`.
 
@@ -24,10 +25,12 @@ Quando a tarefa depender do produto atual, consultar o app em `C:\Users\gmfad\Do
 - Não prometer abertura pública, iOS, preço, IA livre, wearable ou P1 sem validação.
 - Landing, manifesto, editorial, termos e privacidade precisam manter a mesma identidade.
 - O Editorial é conteúdo estratégico e SEO, não blog genérico.
+- Copy público não deve explicar SEO, Search Console, sitemap, JSON-LD, hubs, páginas pilar, assets, deploy, DNS ou organização interna do Editorial. Traduzir isso em benefício para quem treina.
 - Prints do app devem vir do produto atual, preferencialmente device físico.
 - Respeitar mobile primeiro: sem overflow, sem texto cortado, sem controles pequenos.
 - Todo update significativo deve entrar em `atualizacoes.html` com versao, data, status e impacto antes de deploy, commit final ou entrega da frente.
 - Em conversas simultâneas, declarar escopo, evitar editar arquivos fora da frente e atualizar `documents/20_TRABALHO_ATIVO.md` quando abrir ou fechar uma frente.
+- Ao concluir uma frente, usar `documents/17_REGISTRO_OPERACIONAL.md` para registrar no log correto e evitar duplicidade.
 
 ## Validação
 
@@ -38,6 +41,7 @@ Sempre que houver mudança visual:
 - checar console;
 - conferir links principais;
 - revisar SEO básico das páginas tocadas;
+- rodar `.\tools\verify-public-copy.ps1` quando tocar landing, Editorial, changelog ou qualquer copy pública;
 - conferir se a mudança exige atualização de `atualizacoes.html`;
 - manter docs atualizadas quando a direção mudar.
 
@@ -49,3 +53,4 @@ Ao concluir, registrar:
 - quais arquivos foram alterados;
 - como foi validado;
 - pendências reais.
+- onde ficou registrado.

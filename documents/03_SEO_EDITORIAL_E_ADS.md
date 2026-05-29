@@ -13,7 +13,7 @@ Pesquisa consultada:
 
 ## Estado Atual
 
-O Editorial existe em `/conteudo/` e possui oito artigos publicados mais quatro hubs editoriais.
+O Editorial existe em `/conteudo/` e possui dez artigos publicados mais quatro hubs editoriais.
 
 Pontos positivos:
 
@@ -23,9 +23,11 @@ Pontos positivos:
 - Open Graph;
 - Twitter Card;
 - JSON-LD `Article`;
+- JSON-LD `BreadcrumbList` nos dez artigos publicados;
 - JSON-LD `CollectionPage` com `ItemList` na listagem editorial;
 - hubs editoriais para treino com critério, progressão, consistência e recuperação;
 - datas estruturadas nos artigos;
+- imagens editoriais visíveis nos artigos com `<picture>`, AVIF, WebP, JPG fallback, alt contextual e legenda;
 - sitemap com URLs editoriais;
 - termos e privacidade existem.
 - CSS/JS versionados no HTML público para evitar cache antigo em deploys de copy, links e visual.
@@ -62,7 +64,7 @@ Antes de solicitar AdSense:
 
 ## Próximos Passos
 
-1. QA mobile periódico dos oito artigos e dos quatro hubs.
+1. QA mobile periódico dos dez artigos e dos quatro hubs.
 2. Validar Search Console após deploy.
 3. Criar rotina de revisão de artigos antigos.
 4. Planejar próximos ensaios a partir de `documents/editorial/CONTENT_IDEAS.md`.
@@ -74,3 +76,30 @@ Antes de solicitar AdSense:
 - Links locais do Editorial passaram a evitar URLs de diretório quando o ambiente não resolve `index.html` automaticamente.
 - `main.js` e CSS receberam cache-busting para impedir que o destaque rotativo use links antigos após deploy.
 - Pesquisa usada como base: conteúdo people-first, títulos claros, linkagem interna útil, dados estruturados de artigo e escaneabilidade de leitura.
+
+## Ajuste ED-006 - 2026-05-28
+
+- Pesquisa aprofundada registrada em `documents/editorial/EDITORIAL_RESEARCH_2026-05-28.md`.
+- Oito artigos receberam resumo "Leitura rapida", capa editorial real, AVIF/WebP e `alt` contextual.
+- JSON-LD dos artigos ganhou `articleSection`, `keywords`, `isAccessibleForFree`, `dateModified` atualizado e `BreadcrumbList`.
+- Listagem `/conteudo/` passou a usar imagem social editorial real e backgrounds WebP.
+- `sitemap.xml` recebeu `lastmod` nas URLs editoriais tocadas.
+- QA local validou JSON-LD, links, assets AVIF/WebP, sitemap e Browser desktop/mobile sem overflow horizontal.
+
+## Ajuste ED-007 - 2026-05-28
+
+- Auditoria dos oito artigos existentes contra a nova regua de Google Ads registrada em `documents/editorial/EDITORIAL_ADS_RESEARCH_MAP_2026-05-28.md`.
+- Decisao: nao reescrever os artigos antigos por atacado; usar pontes internas conforme os novos clusters forem publicados.
+- Criado localmente o artigo `conteudo/a-semana-e-a-menor-unidade-real-de-evolucao-no-treino/`.
+- O novo artigo recebeu SEO completo, `Article`, `BreadcrumbList`, capa JPG/WebP/AVIF, leitura rapida, CTA e linkagem interna.
+- Artigos 01, 03, 05 e 08 receberam pontes leves para o novo ensaio.
+- Listagem `/conteudo/`, destaque rotativo, hub `progressao/` e `sitemap.xml` foram atualizados localmente para incluir o Ensaio 09.
+
+## Ajuste ED-008 - 2026-05-28
+
+- Criado e publicado o artigo `conteudo/o-que-anotar-no-treino-para-saber-se-voce-esta-evoluindo/`.
+- O novo artigo trabalha o cluster de Ads/SEO sobre registrar treino, anotar treino, carga, repeticoes, execucao e contexto sem prometer resultado fisico.
+- Capa final foi corrigida para uma cena editorial distinta, sem repetir personagem, roupa, celular ou tela de app do artigo anterior.
+- Artigo 06 recebeu ponte interna para o novo ensaio como resposta pratica sobre o que registrar.
+- Hub `progressao/`, `/conteudo/`, destaque rotativo, `sitemap.xml` e `atualizacoes.html` foram atualizados para o Ensaio 10.
+- Producao validada em `https://gmove.app/` com HTTP 200 no artigo, listagem, changelog, sitemap e imagens da capa.

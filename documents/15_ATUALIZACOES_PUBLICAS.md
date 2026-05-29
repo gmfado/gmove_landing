@@ -62,10 +62,20 @@ Cada update publico deve ter:
 - bloco `Por que importa`;
 - quando houver pendencia, deixar claro que esta em validacao ou pesquisado.
 
+## Regra De Linguagem Publica
+
+`atualizacoes.html` e o Editorial devem falar com usuario/leitor, nao com operador de SEO ou infraestrutura.
+
+Evitar no texto publico: SEO, Search Console, sitemap, JSON-LD, hubs, paginas pilar, assets, deploy, DNS, HTTP, formatos de imagem e organizacao interna do Editorial.
+
+Traduzir o detalhe tecnico para impacto percebido: leitura mais clara, pagina mais leve, caminho mais simples, conteudo mais facil de encontrar ou experiencia mais confiavel.
+
 ## Checklist Antes De Encerrar Uma Frente
 
+- Conferir `documents/17_REGISTRO_OPERACIONAL.md` para decidir onde cada registro deve ficar.
 - Conferir se a mudanca se encaixa em `O Que Conta Como Update Significativo`.
 - Atualizar `atualizacoes.html`, se sim.
+- Rodar `.\tools\verify-public-copy.ps1` quando tocar copy publica.
 - Atualizar JSON-LD `ItemList` da pagina, se uma entrada nova foi criada.
 - Validar links, JSON-LD e sitemap quando a pagina ou URLs mudarem.
 - Registrar a decisao em `documents/11_IMPLEMENTATION_LOG.md` e `documents/05_QA_RELEASE.md` quando houver QA, deploy ou mudanca estrutural.

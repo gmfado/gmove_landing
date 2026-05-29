@@ -2023,6 +2023,12 @@ section     { overflow-x: hidden; }
   /* filter helps on both light/dark contexts */
 }
 
+@media (max-width: 768px) {
+  .nav__logo-img {
+    height: 24px;
+  }
+}
+
 .footer__logo-img {
   height: 22px;
   width: auto;
@@ -2795,19 +2801,53 @@ section     { overflow-x: hidden; }
 @media (max-width: 768px) {
 
   /* ===================================================
-     UNIVERSAL: center all text on mobile
+     MOBILE DEFAULT: center section-level storytelling.
+     Content cards and list-like blocks opt out below.
      =================================================== */
   section,
   .manifesto-hero__inner,
-  .manifesto-body__inner,
-  .legal-hero__inner,
-  .legal-body__inner { text-align: center; }
+  .legal-hero__inner { text-align: center; }
 
   /* Inline-flex eyebrows: need explicit auto-margin to center */
   .eyebrow { margin-left: auto; margin-right: auto; }
 
   /* Form inputs always left-aligned for usability */
   input, textarea, select { text-align: left; }
+
+  /* Cards, rows and symbol-led lists read better left-aligned on narrow screens. */
+  :is(
+    .feature-card,
+    .profile-card,
+    .build-list,
+    .build-item,
+    .build-item__body,
+    .decision-flow,
+    .decision-flow__item,
+    .decision-board,
+    .decision-signal-grid,
+    .decision-signal-grid div,
+    .decision-demo__controls,
+    .decision-result,
+    .decision-result__facts,
+    .decision-result__facts div,
+    .decision-learning,
+    .trust-item,
+    .updates-current-card,
+    .updates-principle,
+    .update-card__body,
+    .update-card__columns,
+    .update-list,
+    .updates-versioning__panel,
+    .version-rules,
+    .version-rules li,
+    .manifesto-body__inner,
+    .legal-body__inner,
+    .legal-section,
+    .legal-highlight,
+    .legal-list
+  ) {
+    text-align: left;
+  }
 
   /* ===================================================
      HERO
@@ -2889,7 +2929,7 @@ section     { overflow-x: hidden; }
   .legal-hero__meta   { justify-content: center; flex-direction: column; gap: 8px; }
   .legal-body__inner  { padding: 0 var(--s-sm); }
   .legal-section h2   { font-size: 20px; }
-  .legal-highlight    { padding: 14px 16px 14px 18px; text-align: center; }
+  .legal-highlight    { padding: 14px 16px 14px 18px; text-align: left; }
   .legal-contact      { padding: var(--s-md); }
   /* List items: keep left so the — marker aligns correctly */
   .legal-list         { text-align: left; }

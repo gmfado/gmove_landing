@@ -120,6 +120,74 @@ Antes de abrir uma nova conversa, escolher uma frente:
 - Deploy Firebase Hosting concluido e republicado apos ajuste de rota limpa.
 - Producao validada em `https://gmove.app/`, `/atualizacoes/`, `/manifesto/`, CSS e JS versionados.
 
+### Atualizacao 2026-05-28 - editorial com pesquisa aplicada
+
+- Frente `editorial` revisou os oito artigos publicados com base em pesquisa externa documentada.
+- Cada artigo recebeu capa visivel com AVIF/WebP/JPG fallback, alt, dimensoes e legenda.
+- Cada artigo recebeu bloco "Leitura rapida" e JSON-LD enriquecido com breadcrumb, secao, keywords, disponibilidade livre e `dateModified=2026-05-28`.
+- `/conteudo/` passou a usar imagens WebP em destaque/listas e imagem social editorial real.
+- `sitemap.xml` recebeu `lastmod=2026-05-28` nas 13 URLs editoriais.
+- `atualizacoes.html` registra `v0.3.3` como update publicado.
+- QA local desktop/mobile passou sem overflow horizontal e com AVIF ativo no artigo testado.
+- Deploy Firebase Hosting concluido e producao validada em `https://gmove.app/`, `/conteudo/`, `/atualizacoes/`, CSS/JS versionados, `sitemap.xml` e asset AVIF.
+- Proximo passo desta frente: reenvio das URLs editoriais no Search Console.
+
+### Atualizacao 2026-05-28 - mapa de registros operacionais
+
+- Criado `documents/17_REGISTRO_OPERACIONAL.md` para orientar onde registrar log interno, QA, deploy, handoff, updates publicos, DNS, SEO, assets, Git e Editorial.
+- Documentos de entrada atualizados para apontar para o mapa: `README.md`, `CODEX.md`, `documents/00_START_HERE.md`, `documents/08_TRABALHO_SIMULTANEO.md`, `documents/15_ATUALIZACOES_PUBLICAS.md` e `documents/CODEX_HANDOFF.md`.
+- Nao entrou em `atualizacoes.html` por ser governanca interna de documentacao, sem alteracao publica de produto, site, Editorial ou infraestrutura.
+
+### Atualizacao 2026-05-28 - Search Console batch
+
+- Auditoria ao vivo do sitemap em producao validou 19 URLs sem falhas criticas de status, `noindex`, H1 ou JSON-LD.
+- Criado `documents/qa/search-console-batch-2026-05-28.md` com URLs priorizadas para URL Inspection.
+- Propriedade URL-prefix `https://gmove.app/` verificada no Search Console via arquivo HTML `google6e48a74231fe8281.html`.
+- Sitemap `/sitemap.xml` enviado e processado no Search Console com 19 paginas encontradas.
+- Solicitacao de indexacao enviada para `/conteudo/` e para os 4 hubs editoriais.
+- Arquivo de verificacao publicado no Firebase Hosting; nao remover em limpezas futuras.
+- Nao foram editados HTMLs nem imagens do Editorial para evitar conflito com a frente paralela de melhoria visual das imagens.
+- Proximo pacote recomendado: alinhar canonicals, `og:url`, links internos e sitemap das paginas raiz para as URLs finais com barra, junto com a frente de imagens.
+- Nao entrou em `atualizacoes.html` porque e preparacao operacional de Search Console, sem nova mudanca publicada no site.
+
+### Atualizacao 2026-05-28 - imagens editoriais humanizadas
+
+- Frente `editorial/assets` substituiu as oito capas dos artigos por imagens mais humanas, variadas e menos roboticas.
+- As novas cenas priorizam treino real, preparacao, registro, decisao de carga e repeticao, com maior variacao de pessoas, ambientes e objetos, sem mockup futurista como protagonista.
+- A rodada final alterna escada de predio, lavanderia, mesa de cozinha, escritorio, aparelho de cabo, leg press, mural de treino e parque.
+- Os caminhos publicos `preset-imagem-conteudo-*` foram preservados nos slugs dos artigos.
+- JPG, WebP e AVIF foram normalizados em 2048x1152.
+- `alt`, `width` e `height` das capas foram atualizados nos oito artigos.
+- CSS editorial recebeu guardrail mobile para titulos longos de artigo e cache-busting `20260528-editorial-humanized`.
+- `atualizacoes.html` registra `v0.3.4` com status `Em validacao visual`.
+- QA local passou: Browser desktop sem overflow, artigo com AVIF ativo, console sem erros, Browser mobile com titulo sem corte, capa nova visivel e sem overflow horizontal.
+- Evidencias: `documents/qa/gmove-editorial-humanized-list-desktop-2026-05-28.png`, `documents/qa/gmove-editorial-humanized-article-desktop-2026-05-28.png`, `documents/qa/gmove-editorial-humanized-article-mobile-2026-05-28.png`.
+- Pendente: publicar em Firebase Hosting e validar producao quando a frente for aprovada.
+
+### Atualizacao 2026-05-28 - artigo 10 e cache AVIF
+
+- Artigo 10 `O que anotar no treino para saber se voce esta evoluindo` integrado ao Editorial.
+- `/conteudo/`, destaque rotativo de `js/main.js`, `sitemap.xml` e `atualizacoes.html` foram atualizados para o novo ensaio.
+- `atualizacoes.html` registra `v0.3.6` com status `Publicado`.
+- `firebase.json` passou a incluir AVIF no header de cache longo de imagens.
+- QA local e producao passaram; deploy Firebase Hosting concluido no projeto `gmove-landing`.
+- Producao validada em `/conteudo/`, artigo 10, `/sitemap.xml`, `/atualizacoes/`, asset AVIF do artigo 10 e arquivo de verificacao do Search Console.
+- Proximo passo desta frente: reenviar o sitemap no Search Console e solicitar URL Inspection para os artigos 09 e 10.
+
+### Atualizacao 2026-05-28 - referencias visuais e leitura mobile dos artigos
+
+- Os 10 ensaios receberam um bloco `article-reference` com screenshots reais do app para conectar a tese do texto a uma referencia visual concreta.
+- `css/editorial.css` recebeu estilos compartilhados para o novo bloco, ajustes de leitura mobile, links em paragrafos, `text-wrap` e alvo minimo de toque em links de retorno/rodape.
+- HTMLs editoriais passaram a usar cache-busting `20260528-editorial-reference`.
+- Screenshots usados: `assets/screenshots/gmove-app-current-02-plan-*`, `gmove-app-current-03-evolution-*` e `gmove-app-current-05-execution-*`.
+- Pesquisa complementar registrada em `documents/editorial/EDITORIAL_RESEARCH_2026-05-28.md`.
+- `atualizacoes.html` registra `v0.3.7` com status `Publicado`.
+- QA local: 11 rotas editoriais responderam 200; Browser mobile 390x844 confirmou 1 bloco por artigo e sem overflow horizontal; Browser desktop validou grid e AVIF ativo.
+- Evidencias: `documents/qa/gmove-editorial-reference-mobile-2026-05-28.png` e `documents/qa/gmove-editorial-reference-desktop-2026-05-28.png`.
+- Deploy Firebase Hosting concluido no projeto `gmove-landing`; primeira publicacao encontrou 88 arquivos e enviou 17 novos/alterados.
+- Producao validada em `https://gmove.app/atualizacoes/`, `/conteudo/`, artigos 01 e 10, CSS editorial versionado, asset AVIF de screenshot, `/sitemap.xml` e Browser mobile/desktop.
+- Evidencias de producao: `documents/qa/gmove-prod-reference-mobile-2026-05-28.png` e `documents/qa/gmove-prod-updates-v037-2026-05-28.png`.
+
 ### Regra permanente - updates publicos
 
 - Antes de encerrar qualquer frente, conferir `documents/15_ATUALIZACOES_PUBLICAS.md`.
@@ -136,14 +204,29 @@ Status: criados em 2026-05-27
 - `documents/10_MATRIZ_PAGINAS_PUBLICAS.md`;
 - `documents/12_INVENTARIO_ASSETS.md`;
 - `documents/13_GIT_LEGADOS_RELEASE.md`;
-- `documents/14_MELHORIAS_FEATURES_PESQUISA_2026.md`.
+- `documents/14_MELHORIAS_FEATURES_PESQUISA_2026.md`;
+- `documents/15_ATUALIZACOES_PUBLICAS.md`;
+- `documents/16_DOMINIOS_DNS.md`;
+- `documents/17_REGISTRO_OPERACIONAL.md`.
 
 ## Infra - WWW
 
-Status: aguardando ajuste DNS externo
+Status: ativo no Firebase; manter em observacao
 
 - Custom Domain `www.gmove.app` criado no Firebase Hosting em 2026-05-27.
-- Firebase pediu CNAME `www -> gmove-landing.web.app`.
-- Firebase tambem pediu TXT `_acme-challenge.www.gmove.app` com valor `rDJYrfPftE3tEqg9ad8cHwdqCXUFL8f9MGCTsltO75I` enquanto o certificado esta em validacao.
-- DNS atual ainda esta como `www -> gmove.app`.
-- Apos mudar no Hostinger, revalidar HTTPS e redirect para `gmove.app`.
+- DNS atual via Google DNS aponta `www.gmove.app` como CNAME de `gmove-landing.web.app`.
+- Firebase Hosting reportou `HOST_ACTIVE`, `OWNERSHIP_ACTIVE` e `CERT_ACTIVE`.
+- Configuracao desejada: redirect de `www.gmove.app` para `gmove.app`.
+- Se algum teste HTTP retornar erro regional/CDN, revalidar depois antes de registrar como incidente de producao.
+
+## Infra - gmove.com.br
+
+Status: aguardando ajuste DNS no Registro.br
+
+- Custom Domain `gmove.com.br` criado no Firebase Hosting em 2026-05-27.
+- Custom Domain `www.gmove.com.br` criado com redirect para `gmove.com.br`.
+- DNS autoritativo confirmado no Registro.br: `a.auto.dns.br` e `b.auto.dns.br`.
+- Firebase pediu A apex `199.36.158.100`, TXT `hosting-site=gmove-landing`, CNAME `www -> gmove-landing.web.app` e TXT ACME.
+- Registros completos para copiar estao em `documents/16_DOMINIOS_DNS.md`.
+- Apos salvar DNS, revalidar estados Firebase e testar `https://gmove.com.br/` e `https://www.gmove.com.br/`.
+- Canonical segue em `https://gmove.app/` ate decisao explicita de trocar o dominio principal.
