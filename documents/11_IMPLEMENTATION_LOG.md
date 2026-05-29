@@ -1,5 +1,30 @@
 ﻿# 11 - Implementation Log
 
+## 2026-05-29 - Paineis visuais do Editorial e dominios ativos
+
+### Estado
+
+- `css/editorial.css` ampliou os paineis de imagem nos cards de artigos, guias e hubs do Editorial.
+- Os paineis passaram a preservar mais contexto visual, com gradiente menos escuro e bordas individuais.
+- HTMLs editoriais passaram a usar `editorial.css?v=20260529-editorial-photo-panels`.
+- `atualizacoes.html` recebeu a entrada publica `v0.3.8` com status `Publicado`.
+- `documents/16_DOMINIOS_DNS.md` foi atualizado para refletir `gmove.com.br`, `www.gmove.com.br` e `www.gmove.app` ativos.
+
+### Validacao local e externa
+
+- Browser local desktop em `/conteudo/`: cards, guias e hubs sem overflow horizontal e console sem erros.
+- Browser local mobile 390 x 844 em `/conteudo/`: cards, guias e hubs sem overflow horizontal e console sem erros.
+- Browser local mobile 390 x 844 no artigo 10: bloco `article-reference` preservado e sem overflow horizontal.
+- `curl -I -L https://www.gmove.app/` confirmou redirect para `https://gmove.app/`.
+- `curl -I -L https://gmove.com.br/` confirmou `HTTP 200`.
+- `curl -I -L https://www.gmove.com.br/` confirmou redirect para `https://gmove.com.br/`.
+
+### Publicacao
+
+- Deploy Firebase Hosting concluido no projeto `gmove-landing`; a CLI encontrou 88 arquivos e enviou 17 novos/alterados.
+- Producao validada em `/atualizacoes/`, `/conteudo/`, CSS editorial, `/sitemap.xml`, `gmove-landing.web.app`, `www.gmove.app`, `gmove.com.br` e `www.gmove.com.br`.
+- Reenviar o sitemap de 21 URLs no Search Console e solicitar URL Inspection dos artigos 09 e 10.
+
 ## 2026-05-25 - Atualização para GMOVE Renew
 
 ### Estado
@@ -313,7 +338,7 @@ Antes de deploy, revisar o diff final e decidir se arquivos antigos (`print1.png
 - Cada asset foi normalizado em 2048x1152 nos formatos JPG, WebP e AVIF.
 - Os atributos `alt`, `width` e `height` das capas visiveis nos oito artigos foram atualizados para refletir as novas cenas.
 - `css/editorial.css` recebeu um guardrail mobile para titulos longos de artigo e os HTMLs editoriais passaram a usar cache-busting `20260528-editorial-humanized`.
-- `atualizacoes.html` recebeu a entrada publica `v0.3.4` com status `Em validacao visual`, porque a alteracao e perceptivel para o usuario e ainda nao foi publicada em producao nesta frente.
+- `atualizacoes.html` recebeu a entrada publica `v0.3.4` com status `Em validacao visual` nesta frente; o update foi publicado nas rodadas editoriais seguintes.
 
 ### Validacao local
 
@@ -368,7 +393,7 @@ Antes de deploy, revisar o diff final e decidir se arquivos antigos (`print1.png
 
 - Os 10 ensaios publicados receberam bloco `article-reference` com screenshot real do app, texto de contexto, legenda, `alt`, dimensoes e `loading="lazy"`.
 - `css/editorial.css` recebeu estilos compartilhados para a referencia visual, ajustes de leitura mobile, links em paragrafos, `text-wrap` e alvos de toque mais confortaveis.
-- HTMLs editoriais passaram a usar cache-busting `20260528-editorial-reference`.
+- A referencia visual foi adicionada ao CSS editorial; no estado atual, os HTMLs editoriais usam `editorial.css?v=20260528-editorial-border-fix`.
 - `atualizacoes.html` recebeu a entrada publica `v0.3.7` com status `Publicado`.
 - Pesquisa complementar e criterio visual registrados em `documents/editorial/EDITORIAL_RESEARCH_2026-05-28.md` e `documents/editorial/VISUAL_SYSTEM_EDITORIAL.md`.
 

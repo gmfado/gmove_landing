@@ -73,13 +73,20 @@ Importante: nao remover `google6e48a74231fe8281.html` do deploy publico. O Searc
 
 ## Proxima Rodada Apos Artigo 10
 
-Deploy do artigo 10 concluido em 2026-05-28. Proxima acao manual:
+Deploy do artigo 10 concluido em 2026-05-28.
 
-1. Reenviar `sitemap.xml` no Search Console.
-2. Confirmar que o sitemap passa a listar 21 URLs.
-3. Fazer URL Inspection de `https://gmove.app/conteudo/a-semana-e-a-menor-unidade-real-de-evolucao-no-treino/`.
-4. Fazer URL Inspection de `https://gmove.app/conteudo/o-que-anotar-no-treino-para-saber-se-voce-esta-evoluindo/`.
-5. Solicitar indexacao das duas URLs se ainda nao estiverem no Google.
+Rodada executada em 2026-05-29:
+
+1. `sitemap.xml` reenviado no Search Console.
+2. A tabela passou a mostrar envio em 29 de mai. de 2026, com ultima leitura ainda em 28 de mai. de 2026 e 19 paginas encontradas no momento da checagem.
+3. URL Inspection de `https://gmove.app/conteudo/a-semana-e-a-menor-unidade-real-de-evolucao-no-treino/`: URL ainda nao esta no Google; motivo `Detectada, mas nao indexada no momento`; indexacao solicitada em 2026-05-29.
+4. URL Inspection de `https://gmove.app/conteudo/o-que-anotar-no-treino-para-saber-se-voce-esta-evoluindo/`: URL esta no Google, pagina indexada, HTTPS valido e breadcrumb valido.
+
+Proxima acao:
+
+1. Aguardar o Search Console processar a leitura nova do sitemap de 21 URLs.
+2. Rechecar o artigo 09 em alguns dias.
+3. Fazer URL Inspection dos 8 artigos anteriores se ainda nao tiverem sido reenviados depois da frente de imagens.
 
 ## Observacao Tecnica Para O Proximo Deploy
 

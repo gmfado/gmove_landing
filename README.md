@@ -11,17 +11,26 @@ Leia nesta ordem:
 3. `documents/CODEX_HANDOFF.md`
 4. `documents/01_SITE_E_PRODUTO.md`
 5. `documents/02_DESIGN_E_UX.md`
-6. `documents/06_FEATURES_PESQUISA_2026.md`
-7. `documents/07_DIRECAO_PREMIUM.md`
-8. `documents/08_TRABALHO_SIMULTANEO.md`
-9. `documents/09_SEARCH_CONSOLE_INDEXACAO.md`
-10. `documents/10_MATRIZ_PAGINAS_PUBLICAS.md`
-11. `documents/12_INVENTARIO_ASSETS.md`
-12. `documents/13_GIT_LEGADOS_RELEASE.md`
-13. `documents/14_MELHORIAS_FEATURES_PESQUISA_2026.md`
-14. `documents/15_ATUALIZACOES_PUBLICAS.md`
-15. `documents/16_DOMINIOS_DNS.md`
-16. `documents/17_REGISTRO_OPERACIONAL.md`
+6. `documents/03_SEO_EDITORIAL_E_ADS.md`
+7. `documents/04_ASSETS_E_PRINTS.md`
+8. `documents/05_QA_RELEASE.md`
+9. `documents/08_TRABALHO_SIMULTANEO.md`
+10. `documents/17_REGISTRO_OPERACIONAL.md`
+11. O documento especifico da frente: Editorial, Search Console, matriz publica, assets, DNS, release ou trabalho ativo.
+
+Documentos operacionais frequentes:
+
+- `documents/06_FEATURES_PESQUISA_2026.md` e `documents/14_MELHORIAS_FEATURES_PESQUISA_2026.md`: pesquisa e roadmap.
+- `documents/07_DIRECAO_PREMIUM.md`: criterios visuais.
+- `documents/09_SEARCH_CONSOLE_INDEXACAO.md`: Search Console, sitemap, robots e Ads/AdSense.
+- `documents/10_MATRIZ_PAGINAS_PUBLICAS.md`: inventario das URLs publicas.
+- `documents/11_IMPLEMENTATION_LOG.md`: log interno de implementacao.
+- `documents/12_INVENTARIO_ASSETS.md`: inventario de imagens e arquivos.
+- `documents/13_GIT_LEGADOS_RELEASE.md`: Git, legados e release.
+- `documents/15_ATUALIZACOES_PUBLICAS.md`: regra do changelog publico.
+- `documents/16_DOMINIOS_DNS.md`: dominios e DNS.
+- `documents/20_TRABALHO_ATIVO.md`: escopo ativo e frentes paralelas.
+- `documents/editorial/`: governanca editorial.
 
 ## Estrutura
 
@@ -54,8 +63,16 @@ Abrir `http://localhost:8000`.
 
 Use antes de publicar mudanças em landing, Editorial, atualizações ou qualquer texto público.
 
+## Validação de Documentação
+
+```powershell
+.\tools\verify-docs.ps1
+```
+
+Use quando tocar `documents/`, `README.md`, `CODEX.md`, `sitemap.xml` ou a matriz de paginas publicas.
+
 ## Deploy
 
 ```powershell
-firebase deploy
+firebase deploy --only hosting --project gmove-landing
 ```

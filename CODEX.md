@@ -45,6 +45,12 @@ Sempre que houver mudança visual:
 - conferir se a mudança exige atualização de `atualizacoes.html`;
 - manter docs atualizadas quando a direção mudar.
 
+Sempre que houver mudança documental, de sitemap ou de matriz publica:
+
+- rodar `.\tools\verify-docs.ps1`;
+- conferir se o handoff e `documents/20_TRABALHO_ATIVO.md` ainda descrevem o estado atual;
+- se a mudança afetar texto público, rodar também `.\tools\verify-public-copy.ps1`.
+
 ## Entrega
 
 Ao concluir, registrar:

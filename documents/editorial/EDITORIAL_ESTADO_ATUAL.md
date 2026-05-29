@@ -124,14 +124,15 @@ Verificado:
 - URLs editoriais incluídas no `sitemap.xml`;
 - listagem `/conteudo/` com metadados próprios.
 - `robots.txt` presente, permitindo indexação e apontando para o sitemap público.
-- `css/style.css` continua versionado com `?v=20260527-nav-v031`.
-- `js/main.js` esta versionado com `?v=20260528-editorial-research` e o CSS editorial especifico com `?v=20260528-editorial-reference`.
+- `css/style.css` esta versionado com `?v=20260528-mobile-text`.
+- `js/main.js` esta versionado com `?v=20260528-editorial-research` e o CSS editorial especifico com `?v=20260529-editorial-photo-panels`.
 - Artigos publicados possuem imagem editorial visivel em `<picture>` com AVIF, WebP, JPG fallback, `alt`, dimensoes e legenda.
 - Dez artigos publicados possuem bloco `article-reference` com screenshot real do app, AVIF/WebP/PNG fallback, `alt`, dimensoes e legenda para tornar a tese editorial mais concreta.
 - Imagens editoriais dos oito artigos foram humanizadas em 2026-05-28 com cenas documentais mais variadas de treino e rotina, alternando casa, trabalho, academia e parque enquanto mantem os caminhos publicos existentes.
 - Artigos publicados possuem bloco de "Leitura rapida" para escaneabilidade e JSON-LD `BreadcrumbList`.
 - `sitemap.xml` possui `lastmod` para as URLs editoriais revisadas em 2026-05-28.
 - QA local e producao de 2026-05-28 validaram links, JSON-LD, sitemap, assets AVIF/WebP e Browser desktop/mobile sem overflow horizontal.
+- QA local e producao de 2026-05-29 validaram `/conteudo/` desktop/mobile e artigo 10 mobile com paineis visuais maiores, CSS novo ativo, console sem erros e sem overflow horizontal.
 - ED-008 publicou o artigo 10, validou `/conteudo/` com 10 indicadores e confirmou AVIF com cache longo em producao.
 
 Ainda não registrado como concluído:
@@ -144,12 +145,24 @@ Ainda não registrado como concluído:
 
 ## ÚLTIMA SPRINT EDITORIAL
 
+### ED-010 — Paineis visuais no Editorial
+
+Resultado:
+- cards de artigos, guias e hubs do Editorial receberam paineis de imagem maiores e menos escurecidos;
+- a listagem `/conteudo/` passou a usar cache-busting `editorial.css?v=20260529-editorial-photo-panels`;
+- `atualizacoes.html` registra `v0.3.8` como update publicado;
+- QA local e producao desktop/mobile passaram sem overflow horizontal e sem erros de console.
+
+Registro completo:
+
+`documents/editorial/EDITORIAL_SPRINTS.md`
+
 ### ED-009 — Referencias visuais e leitura mobile dos artigos
 
 Resultado:
 - dez ensaios publicados receberam bloco `article-reference` com screenshot real do app, legenda, alt, dimensoes e carregamento lazy;
 - CSS editorial ganhou estilos compartilhados para a referencia visual, leitura mobile, links em paragrafos, `text-wrap` e alvos de toque mais confortaveis;
-- HTMLs editoriais passaram a usar cache-busting `20260528-editorial-reference`;
+- HTMLs editoriais mantem cache-busting de `style.css` em `20260528-mobile-text`, `main.js` em `20260528-editorial-research` e, apos ED-010, `editorial.css` em `20260529-editorial-photo-panels`;
 - `atualizacoes.html` registra `v0.3.7` como update publicado;
 - QA local e producao passaram sem overflow horizontal, com AVIF ativo e `/atualizacoes/` exibindo `v0.3.7`.
 
@@ -166,7 +179,7 @@ Resultado:
 - JPG, WebP e AVIF foram normalizados em 2048x1152;
 - `alt`, `width` e `height` das capas foram atualizados nos oito artigos;
 - CSS editorial recebeu guardrail mobile para titulos longos e cache-busting `20260528-editorial-humanized`;
-- `atualizacoes.html` registra `v0.3.4` como update em validacao visual;
+- `atualizacoes.html` registra `v0.3.4` como update publicado;
 - QA local passou com evidencias em `documents/qa/gmove-editorial-humanized-list-desktop-2026-05-28.png`, `documents/qa/gmove-editorial-humanized-article-desktop-2026-05-28.png` e `documents/qa/gmove-editorial-humanized-article-mobile-2026-05-28.png`.
 
 Registro completo:

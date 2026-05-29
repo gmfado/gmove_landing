@@ -65,6 +65,43 @@ Cada sprint editorial deve conter:
 
 ## SPRINT ATUAL
 
+### ED-010 - Paineis visuais no Editorial
+
+**status**
+Publicada em producao.
+
+**objetivo**
+Dar mais presenca visual aos cards, guias e hubs do Editorial sem perder leitura, performance percebida ou estabilidade mobile.
+
+**arquivos envolvidos**
+- `css/editorial.css`
+- `conteudo/index.html`
+- `conteudo/*/index.html`
+- `atualizacoes.html`
+- `documents/05_QA_RELEASE.md`
+- `documents/11_IMPLEMENTATION_LOG.md`
+- `documents/20_TRABALHO_ATIVO.md`
+
+**alteracoes**
+- cards de artigo, guias e hubs ganharam paineis de imagem maiores;
+- gradientes de imagem ficaram menos escuros para preservar mais contexto visual;
+- cards e guias passaram a usar borda individual, evitando bloco visual pesado na listagem;
+- mobile recebeu alturas fixas para paineis de imagem e checagem contra overflow horizontal;
+- HTMLs editoriais passaram a usar `editorial.css?v=20260529-editorial-photo-panels`;
+- changelog publico recebeu `v0.3.8`.
+
+**validacao local**
+- Browser local desktop em `/conteudo/`: 9 cards visuais, 4 guias e 4 hubs sem overflow horizontal;
+- Browser local mobile 390 x 844 em `/conteudo/`: cards, guias e hubs sem overflow horizontal;
+- Browser local mobile 390 x 844 no artigo 10: bloco `article-reference` preservado e sem overflow horizontal;
+- console do navegador sem erros nas rotas testadas;
+- CSS `20260529-editorial-photo-panels` ativo nas rotas testadas.
+
+**validacao e publicacao**
+- deploy Firebase Hosting concluido no projeto `gmove-landing`;
+- producao validada em `/atualizacoes/`, `/conteudo/`, CSS editorial e `/sitemap.xml`;
+- Browser em producao confirmou `/atualizacoes/` mobile com `v0.3.8`, `/conteudo/` desktop/mobile com 9 cards visuais, 4 guias, 4 hubs, H1 unico, console sem erros e sem overflow horizontal.
+
 ### ED-009 - Referencias visuais e leitura mobile dos artigos
 
 **status**
@@ -88,7 +125,7 @@ Melhorar a leitura dos ensaios no mobile e tornar cada tese editorial mais concr
 - cada bloco usa screenshot real do app com AVIF, WebP e PNG fallback, alt, dimensoes, legenda e `loading="lazy"`;
 - CSS editorial recebeu layout responsivo para a referencia visual, com coluna unica no mobile e imagem limitada para nao pesar a leitura;
 - links em paragrafos ficaram mais visiveis e links de retorno/rodape ganharam alvo minimo de toque;
-- HTMLs editoriais passaram a usar cache-busting `20260528-editorial-reference`;
+- a referencia visual foi adicionada ao CSS editorial; no estado atual, os HTMLs editoriais usam `editorial.css?v=20260528-editorial-border-fix`;
 - changelog publico recebeu `v0.3.7`.
 
 **validacao**
@@ -241,7 +278,7 @@ Substituir o lote visual dos oito artigos por imagens mais humanas, mais variada
 - os `alt`, `width` e `height` das capas visiveis nos oito artigos foram atualizados;
 - `css/editorial.css` recebeu guardrail mobile para titulos longos de artigo e cache-busting `20260528-editorial-humanized`;
 - os caminhos publicos foram preservados para manter Open Graph, Twitter Card, hubs, listagem e destaque rotativo sem troca de URL;
-- `atualizacoes.html` recebeu `v0.3.4` com status `Em validacao visual`.
+- `atualizacoes.html` recebeu `v0.3.4` com status `Em validacao visual` nesta rodada; o update foi publicado nas rodadas editoriais seguintes.
 
 **validacao**
 - `node --check js/main.js` passou;

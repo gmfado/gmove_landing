@@ -159,10 +159,10 @@ Antes de abrir uma nova conversa, escolher uma frente:
 - JPG, WebP e AVIF foram normalizados em 2048x1152.
 - `alt`, `width` e `height` das capas foram atualizados nos oito artigos.
 - CSS editorial recebeu guardrail mobile para titulos longos de artigo e cache-busting `20260528-editorial-humanized`.
-- `atualizacoes.html` registra `v0.3.4` com status `Em validacao visual`.
+- `atualizacoes.html` registra `v0.3.4` com status `Publicado`.
 - QA local passou: Browser desktop sem overflow, artigo com AVIF ativo, console sem erros, Browser mobile com titulo sem corte, capa nova visivel e sem overflow horizontal.
 - Evidencias: `documents/qa/gmove-editorial-humanized-list-desktop-2026-05-28.png`, `documents/qa/gmove-editorial-humanized-article-desktop-2026-05-28.png`, `documents/qa/gmove-editorial-humanized-article-mobile-2026-05-28.png`.
-- Pendente: publicar em Firebase Hosting e validar producao quando a frente for aprovada.
+- Publicado em producao nas rodadas editoriais seguintes; manter apenas monitoramento visual normal.
 
 ### Atualizacao 2026-05-28 - artigo 10 e cache AVIF
 
@@ -178,7 +178,7 @@ Antes de abrir uma nova conversa, escolher uma frente:
 
 - Os 10 ensaios receberam um bloco `article-reference` com screenshots reais do app para conectar a tese do texto a uma referencia visual concreta.
 - `css/editorial.css` recebeu estilos compartilhados para o novo bloco, ajustes de leitura mobile, links em paragrafos, `text-wrap` e alvo minimo de toque em links de retorno/rodape.
-- HTMLs editoriais passaram a usar cache-busting `20260528-editorial-reference`.
+- A referencia visual foi adicionada ao CSS editorial; no estado atual, os HTMLs editoriais usam `editorial.css?v=20260528-editorial-border-fix`.
 - Screenshots usados: `assets/screenshots/gmove-app-current-02-plan-*`, `gmove-app-current-03-evolution-*` e `gmove-app-current-05-execution-*`.
 - Pesquisa complementar registrada em `documents/editorial/EDITORIAL_RESEARCH_2026-05-28.md`.
 - `atualizacoes.html` registra `v0.3.7` com status `Publicado`.
@@ -187,6 +187,28 @@ Antes de abrir uma nova conversa, escolher uma frente:
 - Deploy Firebase Hosting concluido no projeto `gmove-landing`; primeira publicacao encontrou 88 arquivos e enviou 17 novos/alterados.
 - Producao validada em `https://gmove.app/atualizacoes/`, `/conteudo/`, artigos 01 e 10, CSS editorial versionado, asset AVIF de screenshot, `/sitemap.xml` e Browser mobile/desktop.
 - Evidencias de producao: `documents/qa/gmove-prod-reference-mobile-2026-05-28.png` e `documents/qa/gmove-prod-updates-v037-2026-05-28.png`.
+
+### Atualizacao 2026-05-29 - revisao geral dos documentos
+
+- Frente `docs` revisou README, CODEX, start here, handoff, matriz de paginas publicas, Search Console, trabalho ativo e estado editorial.
+- Matriz publica foi alinhada ao sitemap atual de 21 URLs e passou a incluir os artigos 09 e 10.
+- Handoff foi atualizado para refletir `v0.3.7`, dez artigos publicados e pendencia real de reenvio do sitemap no Search Console.
+- Criado `tools/verify-docs.ps1` para checar links locais de Markdown, arquivos da matriz, total do sitemap e divergencias entre `sitemap.xml` e `documents/10_MATRIZ_PAGINAS_PUBLICAS.md`.
+- Nao entrou em `atualizacoes.html` porque e governanca interna de documentacao, sem mudanca publica de produto, conteudo ou interface.
+
+### Atualizacao 2026-05-29 - paineis visuais e dominios ativos
+
+- Frente `editorial/infra` ampliou a presenca das imagens nos cards e guias do Editorial.
+- CSS editorial recebeu paineis maiores, menos escurecidos e com guardrail mobile para cards, guias e hubs.
+- HTMLs editoriais passaram a usar `editorial.css?v=20260529-editorial-photo-panels`.
+- `atualizacoes.html` registra `v0.3.8` com status `Publicado`.
+- Validacao local passou: `/conteudo/` desktop/mobile e artigo 10 mobile sem overflow horizontal, com console sem erros e CSS novo ativo.
+- Deploy Firebase Hosting concluido no projeto `gmove-landing`; producao validada em `/atualizacoes/`, `/conteudo/`, CSS editorial e `/sitemap.xml`.
+- `gmove.com.br` respondeu `HTTP 200`; `www.gmove.com.br` redirecionou para `https://gmove.com.br/`; `www.gmove.app` redirecionou para `https://gmove.app/`.
+- Sitemap reenviado no Search Console em 2026-05-29; a tabela ainda mostrava ultima leitura em 2026-05-28 e 19 paginas encontradas no momento da checagem.
+- URL Inspection do artigo 09 confirmou que a URL ainda nao esta no Google; indexacao solicitada em 2026-05-29.
+- URL Inspection do artigo 10 confirmou que a URL ja esta no Google, com HTTPS e breadcrumb validos.
+- Proximo passo operacional: aguardar o processamento do sitemap de 21 URLs e revalidar o artigo 09 em alguns dias.
 
 ### Regra permanente - updates publicos
 
@@ -211,22 +233,24 @@ Status: criados em 2026-05-27
 
 ## Infra - WWW
 
-Status: ativo no Firebase; manter em observacao
+Status: ativo e validado por HTTP em 2026-05-29
 
 - Custom Domain `www.gmove.app` criado no Firebase Hosting em 2026-05-27.
 - DNS atual via Google DNS aponta `www.gmove.app` como CNAME de `gmove-landing.web.app`.
 - Firebase Hosting reportou `HOST_ACTIVE`, `OWNERSHIP_ACTIVE` e `CERT_ACTIVE`.
 - Configuracao desejada: redirect de `www.gmove.app` para `gmove.app`.
+- `curl -I -L https://www.gmove.app/` confirmou `HTTP 301` para `https://gmove.app/` e depois `HTTP 200`.
 - Se algum teste HTTP retornar erro regional/CDN, revalidar depois antes de registrar como incidente de producao.
 
 ## Infra - gmove.com.br
 
-Status: aguardando ajuste DNS no Registro.br
+Status: ativo e validado por HTTP/DNS em 2026-05-29
 
 - Custom Domain `gmove.com.br` criado no Firebase Hosting em 2026-05-27.
 - Custom Domain `www.gmove.com.br` criado com redirect para `gmove.com.br`.
 - DNS autoritativo confirmado no Registro.br: `a.auto.dns.br` e `b.auto.dns.br`.
-- Firebase pediu A apex `199.36.158.100`, TXT `hosting-site=gmove-landing`, CNAME `www -> gmove-landing.web.app` e TXT ACME.
-- Registros completos para copiar estao em `documents/16_DOMINIOS_DNS.md`.
-- Apos salvar DNS, revalidar estados Firebase e testar `https://gmove.com.br/` e `https://www.gmove.com.br/`.
+- Google DNS confirmou A apex `199.36.158.100`, TXT `hosting-site=gmove-landing`, CNAME `www -> gmove-landing.web.app` e TXT ACME.
+- `https://gmove.com.br/` respondeu `HTTP 200`.
+- `https://www.gmove.com.br/` respondeu `HTTP 301` para `https://gmove.com.br/` e depois `HTTP 200`.
+- Registros completos e rotina de revalidacao estao em `documents/16_DOMINIOS_DNS.md`.
 - Canonical segue em `https://gmove.app/` ate decisao explicita de trocar o dominio principal.

@@ -17,10 +17,24 @@ Antes de deploy:
 - verificar console do navegador;
 - conferir que não há overflow horizontal.
 
+## Validação Editorial ED-010 - 2026-05-29
+
+- `css/editorial.css` ampliou os paineis visuais dos cards, guias e hubs do Editorial.
+- HTMLs editoriais usam `css/editorial.css?v=20260529-editorial-photo-panels`.
+- `atualizacoes.html` registra `v0.3.8` com status `Publicado`.
+- Local desktop `/conteudo/`: 9 cards visuais, 4 guias e 4 hubs sem overflow horizontal, CSS novo ativo e console sem erros.
+- Local mobile 390 x 844 `/conteudo/`: cards, guias e hubs sem overflow horizontal, CSS novo ativo e console sem erros.
+- Local mobile 390 x 844 artigo 10: bloco `article-reference` preservado e sem overflow horizontal.
+- DNS/HTTP de dominios validado: `www.gmove.app` redireciona para `https://gmove.app/`; `gmove.com.br` responde `HTTP 200`; `www.gmove.com.br` redireciona para `https://gmove.com.br/`.
+- Deploy Firebase Hosting concluido no projeto `gmove-landing`; a CLI encontrou 88 arquivos e enviou 17 novos/alterados.
+- Producao validada com `Cache-Control: no-cache`: `/atualizacoes/` exibiu `v0.3.8`, `/conteudo/` carregou `editorial.css?v=20260529-editorial-photo-panels`, CSS editorial respondeu `HTTP 200` e `/sitemap.xml` manteve 21 URLs.
+- Browser em producao confirmou `/atualizacoes/` mobile com `v0.3.8`, `/conteudo/` desktop/mobile com CSS novo, 9 cards visuais, 4 guias, 4 hubs, H1 unico, console sem erros e sem overflow horizontal.
+- Search Console: sitemap reenviado em 2026-05-29; artigo 09 com indexacao solicitada; artigo 10 ja aparece como URL no Google.
+
 ## Validação Editorial ED-009 - 2026-05-28
 
 - Os 10 ensaios receberam bloco `article-reference` com screenshot real do app, texto de contexto, legenda, `alt`, dimensoes e `loading="lazy"`.
-- HTMLs editoriais passaram a usar `css/editorial.css?v=20260528-editorial-reference`.
+- A referencia visual foi adicionada ao CSS editorial; no estado atual, os HTMLs editoriais usam `css/editorial.css?v=20260528-editorial-border-fix`.
 - `atualizacoes.html` registra `v0.3.7` com status `Publicado`.
 - `node --check js/main.js`: sem erro de sintaxe.
 - JSON-LD de `atualizacoes.html` parseou corretamente e inclui `v0.3.7`.
@@ -28,7 +42,7 @@ Antes de deploy:
 - Local mobile 390 x 844: 10 artigos com 1 bloco `article-reference`, imagens carregadas e sem overflow horizontal.
 - Deploy Firebase Hosting concluido no projeto `gmove-landing`; a CLI encontrou 88 arquivos e enviou 17 novos/alterados.
 - Producao validada com HTTP 200 em `/atualizacoes/`, `/atualizacoes.html`, `/conteudo/`, artigos 01 e 10, CSS editorial versionado, asset AVIF de screenshot e `/sitemap.xml`.
-- Browser em producao confirmou `v0.3.7` publicado em `/atualizacoes/`, artigo mobile sem overflow horizontal, CSS `editorial-reference` ativo e AVIF do screenshot carregado.
+- Browser em producao confirmou `v0.3.7` publicado em `/atualizacoes/`, artigo mobile sem overflow horizontal, CSS editorial carregado e AVIF do screenshot carregado.
 - Evidencias de producao: `documents/qa/gmove-prod-reference-mobile-2026-05-28.png` e `documents/qa/gmove-prod-updates-v037-2026-05-28.png`.
 
 ## Validação Editorial ED-008 - 2026-05-28
@@ -256,7 +270,7 @@ Antes de deploy:
 - Os arquivos finais foram normalizados em 2048x1152.
 - Os atributos `alt`, `width` e `height` das capas nos oito artigos foram atualizados.
 - `css/editorial.css` recebeu guardrail mobile para titulos longos de artigo e cache-busting `20260528-editorial-humanized`.
-- `atualizacoes.html` registra `v0.3.4` com status `Em validacao visual`; esta frente ainda nao foi publicada em producao.
+- Nesta rodada, `atualizacoes.html` registrava `v0.3.4` com status `Em validacao visual`; o update foi publicado nas rodadas editoriais seguintes.
 - `node --check js/main.js` passou.
 - `git diff --check` passou sem erros reais; apenas avisos LF/CRLF do Windows.
 - Auditoria local confirmou 8 artigos x JPG/WebP/AVIF em 2048x1152 e referencias HTML presentes.
@@ -264,7 +278,7 @@ Antes de deploy:
 - Browser local no artigo de repeticao viavel confirmou capa carregando AVIF, `naturalWidth=2048`, `naturalHeight=1152`, alt atualizado e console sem erros.
 - Browser mobile em 390 x 844 capturou o artigo com titulo sem corte, capa nova visivel e sem overflow horizontal.
 - Evidencias locais: `documents/qa/gmove-editorial-humanized-list-desktop-2026-05-28.png`, `documents/qa/gmove-editorial-humanized-article-desktop-2026-05-28.png`, `documents/qa/gmove-editorial-humanized-article-mobile-2026-05-28.png`.
-- Pendente: deploy Firebase Hosting e validacao em producao, se a mudanca for aprovada.
+- Pendente nesta rodada: deploy Firebase Hosting e validacao em producao, concluido nas rodadas editoriais seguintes.
 
 ## SEO
 

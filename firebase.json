@@ -9,6 +9,7 @@
       "README.md",
       "CODEX.md",
       "documents/**",
+      "tools/**",
       "assets/screenshots/*.xml",
       "arquitetura-site.md",
       "copy-site.md",

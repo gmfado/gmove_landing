@@ -2,11 +2,12 @@
 
 ## Estado Atual
 
-Data da ultima checagem: 2026-05-27, horario de Sao Paulo.
+Data da ultima checagem: 2026-05-29, horario de Sao Paulo.
 
 - Dominio canonico do site: `https://gmove.app/`.
-- Dominio adicional criado no Firebase Hosting: `gmove.com.br`.
-- Redirect adicional criado no Firebase Hosting: `www.gmove.com.br` -> `gmove.com.br`.
+- Dominio adicional ativo no Firebase Hosting: `https://gmove.com.br/`.
+- Redirect adicional ativo: `https://www.gmove.com.br/` -> `https://gmove.com.br/`.
+- Redirect ativo: `https://www.gmove.app/` -> `https://gmove.app/`.
 - Site Firebase Hosting: `gmove-landing`.
 - URL padrao Firebase: `https://gmove-landing.web.app/`.
 - DNS autoritativo de `gmove.com.br`: `a.auto.dns.br` e `b.auto.dns.br`.
@@ -14,9 +15,9 @@ Data da ultima checagem: 2026-05-27, horario de Sao Paulo.
 
 Enquanto a decisao canonica continuar sendo `gmove.app`, `gmove.com.br` deve ser tratado como dominio adicional. O sitemap, robots, canonicals e dados estruturados continuam apontando para `https://gmove.app/` para evitar duplicacao de SEO.
 
-## Registros Para Adicionar No Registro.br
+## Registros Ativos No Registro.br
 
-Adicionar estes registros na zona DNS de `gmove.com.br`.
+Registros observados na zona DNS de `gmove.com.br`.
 
 | Host no Registro.br | Tipo | Valor |
 | --- | --- | --- |
@@ -39,39 +40,33 @@ Se o painel pedir o host completo, usar:
 - `_acme-challenge.gmove.com.br` para o TXT ACME do apex.
 - `_acme-challenge.www.gmove.com.br` para o TXT ACME do `www`.
 
-## Estado Firebase Apos Criacao
+## Estado Validado Em Producao
 
-`gmove.com.br`:
+- `https://gmove.com.br/` respondeu `HTTP 200` e serviu o mesmo site publicado.
+- `https://www.gmove.com.br/` respondeu `HTTP 301` para `https://gmove.com.br/`.
+- `https://www.gmove.app/` respondeu `HTTP 301` para `https://gmove.app/`.
+- `nslookup -type=A gmove.com.br 8.8.8.8` retornou `199.36.158.100`.
+- `nslookup -type=TXT gmove.com.br 8.8.8.8` retornou `hosting-site=gmove-landing`.
+- `nslookup -type=CNAME www.gmove.com.br 8.8.8.8` retornou `gmove-landing.web.app`.
+- TXT ACME de apex e `www` responderam no Google DNS.
 
-- `hostState`: `HOST_UNHOSTED`.
-- `ownershipState`: `OWNERSHIP_MISSING`.
-- `certState`: `CERT_VALIDATING`.
-- `redirectTarget`: nenhum, deve servir o site.
-- DNS requerido: `A 199.36.158.100` e `TXT hosting-site=gmove-landing`.
+Como HTTPS ja responde nos dois dominios, a verificacao externa indica certificado valido e dominio servido pelo Firebase Hosting.
 
-`www.gmove.com.br`:
+## Rotina De Revalidacao
 
-- `hostState`: `HOST_UNHOSTED`.
-- `ownershipState`: `OWNERSHIP_MISSING`.
-- `certState`: `CERT_VALIDATING`.
-- `redirectTarget`: `gmove.com.br`.
-- DNS requerido: `CNAME gmove-landing.web.app`.
+Quando mexer nos dominios, revalidar:
 
-## Validacao Depois De Alterar DNS
-
-Depois de salvar os registros no Registro.br:
-
-1. Aguardar propagacao. O SOA atual do Registro.br usa TTL de 900s, mas a validacao de certificado pode levar mais.
-2. Verificar DNS:
+1. Verificar DNS:
    - `nslookup -type=A gmove.com.br 8.8.8.8`
    - `nslookup -type=TXT gmove.com.br 8.8.8.8`
    - `nslookup -type=CNAME www.gmove.com.br 8.8.8.8`
    - `nslookup -type=TXT _acme-challenge.gmove.com.br 8.8.8.8`
    - `nslookup -type=TXT _acme-challenge.www.gmove.com.br 8.8.8.8`
-3. Consultar o Firebase Hosting Custom Domain ate `HOST_ACTIVE`, `OWNERSHIP_ACTIVE` e `CERT_ACTIVE`.
-4. Testar:
+2. Consultar o Firebase Hosting Custom Domain e confirmar `HOST_ACTIVE`, `OWNERSHIP_ACTIVE` e `CERT_ACTIVE`.
+3. Testar:
    - `https://gmove.com.br/` deve abrir o site.
    - `https://www.gmove.com.br/` deve redirecionar para `https://gmove.com.br/`.
-5. Confirmar que `gmove.app` segue como canonical no HTML, sitemap e robots.
+   - `https://www.gmove.app/` deve redirecionar para `https://gmove.app/`.
+4. Confirmar que `gmove.app` segue como canonical no HTML, sitemap e robots.
 
 Observacao: os TXT de ACME podem mudar se o Firebase regenerar o desafio antes da configuracao no Registro.br. Se a validacao travar, consultar novamente o Custom Domain no Firebase e substituir os valores ACME pelos novos.
