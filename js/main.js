@@ -8,6 +8,34 @@
   /* ---- Helpers -------------------------------------------- */
   const qs  = (sel, ctx = document) => ctx.querySelector(sel);
   const qsa = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
+  const trackGmoveEvent = (name, detail = {}) => {
+    const payload = {
+      path: window.location.pathname,
+      ...detail
+    };
+
+    if (Array.isArray(window.dataLayer)) window.dataLayer.push({ event: name, ...payload });
+    if (typeof window.gtag === 'function') window.gtag('event', name, payload);
+    if (typeof window.plausible === 'function') window.plausible(name, { props: payload });
+    if (typeof window.clarity === 'function') window.clarity('event', name);
+    document.dispatchEvent(new CustomEvent('gmove:analytics', { detail: { name, payload } }));
+  };
+
+  document.addEventListener('click', event => {
+    const target = event.target.closest('[data-track], a[href*="#cta-final"], .article-cta a, .ed-bridge__actions a, [data-editorial-featured], .ed-card');
+    if (!target) return;
+
+    const href = target.getAttribute('href') || '';
+    const isCta = target.matches('a[href*="#cta-final"], .article-cta a, .ed-bridge__actions a');
+    const isEditorial = target.matches('[data-editorial-featured], .ed-card');
+    const label = target.dataset.track || target.getAttribute('aria-label') || target.textContent?.replace(/\s+/g, ' ').trim() || 'interaction';
+    const eventName = isCta ? 'cta_click' : isEditorial ? 'editorial_click' : 'site_click';
+
+    trackGmoveEvent(eventName, {
+      label: label.slice(0, 120),
+      href: href.slice(0, 180)
+    });
+  });
 
   /* ==========================================================
      NAV — blur on scroll
@@ -372,6 +400,17 @@
         excerpt: 'Registro bom não é arquivo cheio. É memória suficiente para decidir carga, repetição, execução e contexto na próxima sessão.',
         reading: '<b>Leitura</b> · 7 min &nbsp;·&nbsp; Maio de 2026',
         aria: 'Ler o ensaio: O que anotar no treino para saber se você está evoluindo'
+      },
+      {
+        num: '11',
+        meta: 'Consistência · 11',
+        href: 'como-montar-uma-semana-de-treino-que-voce-consegue-repetir/',
+        image: '../conteudo/como-montar-uma-semana-de-treino-que-voce-consegue-repetir/preset-imagem-conteudo-11.webp',
+        tag: 'Consistência',
+        title: 'Como montar uma semana de treino que você consegue repetir.',
+        excerpt: 'Plano bom não é o mais ambicioso. É o que protege prioridade, margem e repetição suficiente para sobreviver à semana real.',
+        reading: '<b>Leitura</b> · 8 min &nbsp;·&nbsp; Maio de 2026',
+        aria: 'Ler o ensaio: Como montar uma semana de treino que você consegue repetir'
       }
     ];
 
@@ -479,7 +518,10 @@
             _template: 'table'
           })
         });
-        if (res.ok) { showSuccess(); } else { throw new Error('send failed'); }
+        if (res.ok) {
+          trackGmoveEvent('early_access_submit', { label: 'email_form' });
+          showSuccess();
+        } else { throw new Error('send failed'); }
       } catch (_) {
         if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Entrar na lista'; }
       }

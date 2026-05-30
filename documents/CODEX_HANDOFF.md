@@ -13,12 +13,13 @@
 - Site publicado em 2026-05-27 no Firebase Hosting.
 - Pacote Editorial publicado em 2026-05-28 ate `v0.3.7`, incluindo pesquisa aplicada, artigos 09 e 10, imagens humanizadas e referencias visuais nos artigos.
 - Pacote `v0.3.9` publicado em 2026-05-29 com caminhos publicos limpos, sitemap alinhado e `atualizacoes.html` atualizado.
-- `atualizacoes.html` mostra `v0.3.9` como update publicado; `v0.3.8` e `v0.3.4` tambem estao marcados como publicados.
+- Pacote `v0.3.10` publicado em 2026-05-30 com Ensaio 11, sitemap de 22 URLs e tracking leve de conversao/editorial.
+- `atualizacoes.html` mostra `v0.3.10` como update publicado; `v0.3.9`, `v0.3.8` e `v0.3.4` tambem estao marcados como publicados.
 - Produção validada em `https://gmove.app/` e `https://gmove-landing.web.app/`.
 - `www.gmove.app` redireciona para `https://gmove.app/`.
 - `gmove.com.br` responde `HTTP 200`; `www.gmove.com.br` redireciona para `https://gmove.com.br/`.
 - Home tem seção interativa `Como funciona`, seção de confiança e CTA de acesso antecipado.
-- Editorial tem dez artigos publicados e quatro hubs: `treino-com-criterio`, `progressao`, `consistencia` e `recuperacao`.
+- Editorial tem onze artigos publicados e quatro hubs: `treino-com-criterio`, `progressao`, `consistencia` e `recuperacao`.
 - Para conversas paralelas, usar `documents/08_TRABALHO_SIMULTANEO.md`.
 - Para decidir onde registrar cada tipo de trabalho, usar `documents/17_REGISTRO_OPERACIONAL.md`.
 - Batch de Search Console pronto em `documents/qa/search-console-batch-2026-05-28.md`.
@@ -28,7 +29,7 @@
 - Indexacao do artigo 09 solicitada em 2026-05-29; artigo 10 ja aparece como URL no Google, com HTTPS e breadcrumb validos.
 - Indexacao solicitada no Search Console para `/manifesto/`, `/seguranca/` e `/atualizacoes/` em 2026-05-29; as tres estavam detectadas pelo sitemap, mas ainda nao indexadas.
 - URL Inspection confirmou `https://gmove.app/conteudo/o-que-anotar-no-treino-para-saber-se-voce-esta-evoluindo/` como URL no Google, com HTTPS e breadcrumb validos.
-- Sitemap atual em producao tem 21 URLs, sem entradas `.html`, e usa caminhos finais com barra para paginas raiz.
+- Sitemap atual em producao tem 22 URLs, sem entradas `.html`, e usa caminhos finais com barra para paginas raiz.
 
 ## Arquivos-Chave
 
@@ -52,7 +53,7 @@
 
 ## Próximo Passo Provável
 
-Acompanhar a cobertura das 21 URLs limpas no Search Console e revalidar `/manifesto/`, `/seguranca/`, `/atualizacoes/` e o artigo 09 em alguns dias.
+Reenviar o sitemap de 22 URLs no Search Console e solicitar URL Inspection do artigo 11.
 
 ## Cuidado
 

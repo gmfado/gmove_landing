@@ -223,6 +223,19 @@ Antes de abrir uma nova conversa, escolher uma frente:
 - Search Console URL Inspection pos-`v0.3.9`: indexacao solicitada para `/manifesto/`, `/seguranca/` e `/atualizacoes/`; o artigo `o-que-anotar-no-treino-para-saber-se-voce-esta-evoluindo/` ja estava no Google.
 - Proximo passo operacional: acompanhar cobertura das 21 URLs limpas e revalidar URLs ainda pendentes em alguns dias.
 
+### Atualizacao 2026-05-30 - Ensaio 11 e tracking leve
+
+- Frente `editorial/conversao` criou o Ensaio 11: `como-montar-uma-semana-de-treino-que-voce-consegue-repetir/`.
+- `/conteudo/`, destaque rotativo, hubs `consistencia/` e `treino-com-criterio/`, `sitemap.xml` e `atualizacoes.html` foram atualizados.
+- `sitemap.xml` passou para 22 URLs.
+- `atualizacoes.html` registra `v0.3.10` com status `Publicado`.
+- `main.js` ganhou tracking leve para cliques de CTA, formulario de acesso antecipado e leitura editorial quando houver provedor de analytics disponivel.
+- Validacao local passou: `node --check js/main.js`, `tools/verify-public-copy.ps1`, `tools/verify-docs.ps1`, auditoria de JSON-LD/H1/links/assets e `git diff --check`.
+- Browser local validou artigo 11 desktop/mobile, `/conteudo/` com 11 indicadores e `atualizacoes.html` com `v0.3.10`, sem overflow horizontal e sem erros de console.
+- Deploy Firebase Hosting concluido no projeto `gmove-landing`.
+- Producao validada com HTTP 200 no artigo 11, `/conteudo/`, `/atualizacoes/`, `/sitemap.xml` e AVIF do artigo 11; sitemap publico tem 22 URLs e inclui o artigo 11.
+- Proximo passo operacional: reenviar o sitemap de 22 URLs no Search Console e solicitar URL Inspection do artigo 11.
+
 ### Regra permanente - updates publicos
 
 - Antes de encerrar qualquer frente, conferir `documents/15_ATUALIZACOES_PUBLICAS.md`.

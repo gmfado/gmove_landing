@@ -910,6 +910,33 @@
   text-align: center;
 }
 
+/* ----- Nota editorial / autoria ----- */
+.article-author-note {
+  margin: 0 0 var(--s-lg);
+  padding: var(--s-md);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 8px;
+  background:
+    linear-gradient(90deg, rgba(87,199,255,0.075), transparent 68%),
+    rgba(255,255,255,0.024);
+}
+.article-author-note span {
+  display: inline-flex;
+  margin-bottom: 8px;
+  color: var(--c-blue);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+.article-body .article-author-note p {
+  max-width: 680px;
+  margin: 0;
+  color: var(--c-text-2);
+  font-size: 14.5px;
+  line-height: 1.7;
+}
+
 /* ----- CTA final (estilo manifesto, com respiro extra) ----- */
 .article-cta {
   margin: var(--s-2xl) auto 0;

@@ -17,6 +17,27 @@ Antes de deploy:
 - verificar console do navegador;
 - conferir que não há overflow horizontal.
 
+## Validacao Editorial ED-011 - 2026-05-30
+
+- Artigo 11 criado em `conteudo/como-montar-uma-semana-de-treino-que-voce-consegue-repetir/`.
+- Assets do artigo 11 confirmados em JPG, WebP e AVIF, todos normalizados para `2048 x 1152`.
+- `/conteudo/`, destaque rotativo de `js/main.js`, hubs `consistencia/` e `treino-com-criterio/`, `sitemap.xml` e `atualizacoes.html` passaram a incluir o Ensaio 11.
+- `atualizacoes.html` registra `v0.3.10` com status `Publicado`.
+- `main.js` recebeu tracking leve para cliques de CTA, formulario de acesso antecipado e leitura editorial quando houver provedor de analytics disponivel.
+- `node --check js/main.js`: passou.
+- `tools/verify-public-copy.ps1`: passou com 23 HTML files.
+- `tools/verify-docs.ps1`: passou com 36 Markdown files e 22 URLs no sitemap.
+- Auditoria local de JSON-LD, H1, links e assets passou em 23 HTML files, 31 blocos JSON-LD e 22 URLs no sitemap.
+- `git diff --check`: passou sem erro real; apenas avisos LF/CRLF do Windows.
+- Browser local desktop 1280 x 900 e mobile 390 x 844 validou o artigo 11 sem overflow horizontal, com capa carregada em `2048 x 1152`, JSON-LD `Article`/`BreadcrumbList` e console sem erros.
+- Browser local validou `/conteudo/` com 11 indicadores, link para o novo ensaio e sem overflow horizontal.
+- Browser local validou `atualizacoes.html` com `v0.3.10` como versao atual e sem overflow horizontal.
+- Deploy Firebase Hosting concluido no projeto `gmove-landing`; a CLI encontrou 92 arquivos e enviou 28 novos/alterados.
+- Producao validada com HTTP 200 em `/conteudo/`, artigo 11, `/atualizacoes/`, `/sitemap.xml` e asset AVIF do artigo 11.
+- `/sitemap.xml` em producao possui 22 URLs e inclui o artigo 11; `tools/verify-docs.ps1` em producao respondeu 404, confirmando que a pasta interna nao foi publicada.
+- Browser em producao confirmou artigo 11 mobile sem overflow horizontal, capa carregada, JSON-LD `Article`/`BreadcrumbList`, `/conteudo/` com 11 indicadores e console sem erros.
+- Pendente operacional: reenviar o sitemap de 22 URLs no Search Console e solicitar URL Inspection do artigo 11.
+
 ## Validacao URLs Limpas v0.3.9 - 2026-05-29
 
 - Canonicals, `og:url`, sitemap e links publicos foram alinhados para os caminhos finais com barra: `/manifesto/`, `/atualizacoes/`, `/privacidade/`, `/seguranca/`, `/termos/` e Editorial.

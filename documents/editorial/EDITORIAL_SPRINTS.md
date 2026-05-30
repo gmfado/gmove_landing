@@ -65,6 +65,48 @@ Cada sprint editorial deve conter:
 
 ## SPRINT ATUAL
 
+### ED-011 - Semana de treino repetivel
+
+**status**
+Publicada em producao.
+
+**objetivo**
+Expandir o cluster de consistencia com um ensaio sobre montar uma semana de treino repetivel, conectando agenda real, treinos ancora, margem e revisao.
+
+**arquivos envolvidos**
+- `conteudo/como-montar-uma-semana-de-treino-que-voce-consegue-repetir/index.html`
+- `conteudo/como-montar-uma-semana-de-treino-que-voce-consegue-repetir/preset-imagem-conteudo-11.jpg`
+- `conteudo/como-montar-uma-semana-de-treino-que-voce-consegue-repetir/preset-imagem-conteudo-11.webp`
+- `conteudo/como-montar-uma-semana-de-treino-que-voce-consegue-repetir/preset-imagem-conteudo-11.avif`
+- `conteudo/index.html`
+- `conteudo/consistencia/index.html`
+- `conteudo/treino-com-criterio/index.html`
+- `css/editorial.css`
+- `js/main.js`
+- `sitemap.xml`
+- `atualizacoes.html`
+
+**alteracoes**
+- artigo 11 recebeu SEO completo, Open Graph, Twitter Card, JSON-LD `Article`, breadcrumb estruturado, leitura rapida, nota editorial, capa em `picture`, referencia visual do app e CTA;
+- capa editorial nova foi gerada como cena documental de academia com caderno e celular, depois convertida para JPG, WebP e AVIF em 2048x1152;
+- `/conteudo/` passou a listar o Ensaio 11, com card, `ItemList`, destaque rotativo e indicador adicional;
+- hubs `consistencia/` e `treino-com-criterio/` passaram a recomendar o novo ensaio;
+- `sitemap.xml` passou a incluir a URL do artigo 11, elevando o sitemap para 22 URLs;
+- `main.js` recebeu tracking leve para cliques de CTA, formulario de acesso antecipado e leitura editorial quando houver provedor de analytics disponivel;
+- changelog publico recebeu `v0.3.10`.
+
+**validacao**
+- `node --check js/main.js` passou;
+- `tools/verify-public-copy.ps1` passou com 23 HTML files;
+- `tools/verify-docs.ps1` passou com 36 Markdown files e 22 URLs no sitemap;
+- auditoria local confirmou 23 HTML files, 31 blocos JSON-LD parseaveis, 22 URLs no sitemap, 11 indicadores no destaque editorial e assets JPG/WebP/AVIF do artigo 11;
+- `git diff --check` passou sem erro real; apenas avisos LF/CRLF do Windows;
+- Browser local desktop 1280 x 900 e mobile 390 x 844 validou artigo 11, `/conteudo/` e `atualizacoes.html` sem overflow horizontal e sem erros de console;
+- deploy Firebase Hosting concluido no projeto `gmove-landing`;
+- producao validada com HTTP 200 em artigo 11, `/conteudo/`, `/atualizacoes/`, `/sitemap.xml` e AVIF do artigo 11;
+- Browser em producao confirmou artigo 11 mobile com capa carregada em 2048x1152, JSON-LD `Article`/`BreadcrumbList`, `/conteudo/` com 11 indicadores e console sem erros;
+- pendente operacional: reenviar sitemap de 22 URLs no Search Console e solicitar URL Inspection do artigo 11.
+
 ### ED-010 - Paineis visuais no Editorial
 
 **status**

@@ -33,9 +33,9 @@ Não há CMS implementado nesta fase.
 
 ## ARTIGOS PUBLICADOS
 
-Total atual: **10 artigos publicados** e **4 hubs editoriais**.
+Total atual: **11 artigos publicados** e **4 hubs editoriais**.
 
-Observacao: o artigo 10 foi publicado em producao em 2026-05-28 via Firebase Hosting e validado no dominio canonico.
+Observacao: o artigo 11 foi publicado em producao em 2026-05-30 e aguarda apenas follow-up no Search Console.
 
 1. `conteudo/como-evoluir-no-treino-sem-motivacao/`
 2. `conteudo/por-que-voce-comeca-e-para-no-treino/`
@@ -47,6 +47,7 @@ Observacao: o artigo 10 foi publicado em producao em 2026-05-28 via Firebase Hos
 8. `conteudo/o-treino-que-voce-consegue-repetir-vale-mais-do-que-o-treino-que-parece-perfeito/`
 9. `conteudo/a-semana-e-a-menor-unidade-real-de-evolucao-no-treino/`
 10. `conteudo/o-que-anotar-no-treino-para-saber-se-voce-esta-evoluindo/`
+11. `conteudo/como-montar-uma-semana-de-treino-que-voce-consegue-repetir/`
 
 Hubs publicados:
 
@@ -84,7 +85,8 @@ Cada artigo possui:
 - `conteudo/o-treino-que-voce-consegue-repetir-vale-mais-do-que-o-treino-que-parece-perfeito/preset-imagem-conteudo-8.jpg` → imagem social/editorial do artigo 08;
 - `conteudo/a-semana-e-a-menor-unidade-real-de-evolucao-no-treino/preset-imagem-conteudo-9.jpg` → imagem social/editorial do artigo 09;
 - `conteudo/o-que-anotar-no-treino-para-saber-se-voce-esta-evoluindo/preset-imagem-conteudo-10.jpg` → imagem social/editorial do artigo 10;
-- `sitemap.xml` → inclui `/conteudo/`, os quatro hubs e os dez artigos publicados, totalizando 21 URLs no sitemap publico.
+- `conteudo/como-montar-uma-semana-de-treino-que-voce-consegue-repetir/preset-imagem-conteudo-11.jpg` → imagem social/editorial do artigo 11;
+- `sitemap.xml` → inclui `/conteudo/`, os quatro hubs e os onze artigos publicados, totalizando 22 URLs no sitemap publico.
 
 ### Documentação editorial
 
@@ -101,10 +103,10 @@ Cada artigo possui:
 
 ## STATUS DE SEO
 
-Status atual: **SEO estrutural completo nas páginas públicas principais, nos dez artigos publicados e nos quatro hubs editoriais**.
+Status atual: **SEO estrutural completo nas páginas públicas principais, nos onze artigos publicados e nos quatro hubs editoriais**.
 
 Verificado:
-- `<title>` e meta description próprios na home, manifesto, listagem `/conteudo/`, dez artigos e quatro hubs;
+- `<title>` e meta description próprios na home, manifesto, listagem `/conteudo/`, onze artigos e quatro hubs;
 - canonical correto nas páginas públicas principais, artigos e hubs;
 - Open Graph e Twitter Card coerentes na home, manifesto, listagem `/conteudo/`, artigos e hubs;
 - JSON-LD global `Organization`, `WebSite` e `SoftwareApplication` na home;
@@ -114,9 +116,9 @@ Verificado:
 - Open Graph;
 - Twitter Card;
 - `og:image` apontando para asset real do slug;
-- JSON-LD `Article` nos dez artigos publicados;
+- JSON-LD `Article` nos onze artigos publicados;
 - JSON-LD `CollectionPage` na listagem `/conteudo/` e nos hubs;
-- `datePublished` e `dateModified` normalizados nos dez artigos publicados;
+- `datePublished` e `dateModified` normalizados nos onze artigos publicados;
 - H1 único por artigo;
 - `lang="pt-BR"`, `charset UTF-8` e viewport nas páginas públicas principais;
 - alt em imagens relevantes;
@@ -125,25 +127,39 @@ Verificado:
 - listagem `/conteudo/` com metadados próprios.
 - `robots.txt` presente, permitindo indexação e apontando para o sitemap público.
 - `css/style.css` esta versionado com `?v=20260528-mobile-text`.
-- `js/main.js` esta versionado com `?v=20260528-editorial-research` e o CSS editorial especifico com `?v=20260529-editorial-photo-panels`.
+- `js/main.js` esta versionado com `?v=20260530-editorial-week-plan` e o CSS editorial especifico com `?v=20260530-editorial-week-plan`.
 - Artigos publicados possuem imagem editorial visivel em `<picture>` com AVIF, WebP, JPG fallback, `alt`, dimensoes e legenda.
-- Dez artigos publicados possuem bloco `article-reference` com screenshot real do app, AVIF/WebP/PNG fallback, `alt`, dimensoes e legenda para tornar a tese editorial mais concreta.
+- Onze artigos publicados possuem bloco `article-reference` com screenshot real do app, AVIF/WebP/PNG fallback, `alt`, dimensoes e legenda para tornar a tese editorial mais concreta.
 - Imagens editoriais dos oito artigos foram humanizadas em 2026-05-28 com cenas documentais mais variadas de treino e rotina, alternando casa, trabalho, academia e parque enquanto mantem os caminhos publicos existentes.
 - Artigos publicados possuem bloco de "Leitura rapida" para escaneabilidade e JSON-LD `BreadcrumbList`.
 - `sitemap.xml` possui `lastmod` para as URLs editoriais revisadas em 2026-05-28.
 - QA local e producao de 2026-05-28 validaram links, JSON-LD, sitemap, assets AVIF/WebP e Browser desktop/mobile sem overflow horizontal.
 - QA local e producao de 2026-05-29 validaram `/conteudo/` desktop/mobile e artigo 10 mobile com paineis visuais maiores, CSS novo ativo, console sem erros e sem overflow horizontal.
 - ED-008 publicou o artigo 10, validou `/conteudo/` com 10 indicadores e confirmou AVIF com cache longo em producao.
+- ED-011 publicou o artigo 11, validou `/conteudo/` com 11 indicadores, confirmou AVIF do artigo 11 em producao e Browser mobile sem overflow horizontal.
 
 Ainda não registrado como concluído:
-- reenvio do sitemap de 21 URLs no Google Search Console;
-- URL Inspection dos artigos 09 e 10;
+- reenvio do sitemap de 22 URLs no Google Search Console apos deploy do artigo 11;
+- URL Inspection do artigo 11;
 - monitoramento de performance orgânica;
 - rotina formal de atualização de artigos antigos.
 
 ---
 
 ## ÚLTIMA SPRINT EDITORIAL
+
+### ED-011 — Semana de treino repetivel
+
+Resultado:
+- artigo 11 `como-montar-uma-semana-de-treino-que-voce-consegue-repetir/` foi implementado com capa editorial propria em JPG/WebP/AVIF;
+- `/conteudo/`, destaque rotativo, hubs `consistencia/` e `treino-com-criterio/`, `sitemap.xml` e `atualizacoes.html` foram atualizados;
+- `js/main.js` recebeu eventos leves para cliques de CTA e leitura editorial, sem alterar a experiencia visual;
+- `atualizacoes.html` registra `v0.3.10` como update publicado;
+- deploy Firebase Hosting e validacao de producao passaram em artigo 11, `/conteudo/`, `/atualizacoes/`, `/sitemap.xml` e AVIF do artigo 11.
+
+Registro completo:
+
+`documents/editorial/EDITORIAL_SPRINTS.md`
 
 ### ED-010 — Paineis visuais no Editorial
 

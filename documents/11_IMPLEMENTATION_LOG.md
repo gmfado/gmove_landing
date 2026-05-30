@@ -1,5 +1,35 @@
 ﻿# 11 - Implementation Log
 
+## 2026-05-30 - Ensaio 11 e instrumentacao editorial
+
+### Estado
+
+- Criado o artigo `conteudo/como-montar-uma-semana-de-treino-que-voce-consegue-repetir/` como Ensaio 11 do Editorial.
+- Capa editorial gerada e normalizada em `preset-imagem-conteudo-11.jpg`, `.webp` e `.avif` com 2048 x 1152.
+- `/conteudo/`, destaque rotativo de `js/main.js`, hubs `consistencia/` e `treino-com-criterio/`, `sitemap.xml` e `atualizacoes.html` foram atualizados.
+- `atualizacoes.html` recebeu a entrada publica `v0.3.10` com status `Publicado`.
+- `main.js` recebeu tracking leve para cliques de CTA, formulario de acesso antecipado e leitura editorial quando houver provedor de analytics disponivel.
+
+### Validacao local
+
+- `node --check js/main.js` passou.
+- `tools/verify-public-copy.ps1` passou com 23 HTML files.
+- `tools/verify-docs.ps1` passou com 36 Markdown files e 22 URLs no sitemap.
+- Auditoria local de JSON-LD, H1, links e assets passou em 23 HTML files, 31 blocos JSON-LD e 22 URLs no sitemap.
+- `git diff --check` passou sem erro real; apenas avisos LF/CRLF do Windows.
+- Browser local validou artigo 11 em desktop 1280 x 900 e mobile 390 x 844 sem overflow horizontal, com capa carregada em 2048 x 1152 e JSON-LD `Article`/`BreadcrumbList`.
+- Browser local validou `/conteudo/` com 11 indicadores, link para o novo ensaio e console sem erros.
+- Browser local validou `atualizacoes.html` exibindo `v0.3.10`.
+
+### Deploy e producao
+
+- Deploy Firebase Hosting concluido no projeto `gmove-landing`.
+- Producao validada com HTTP 200 em `/conteudo/`, artigo 11, `/atualizacoes/`, `/sitemap.xml` e AVIF do artigo 11.
+- `/sitemap.xml` em producao possui 22 URLs e inclui o artigo 11.
+- `https://gmove.app/tools/verify-docs.ps1` respondeu 404, confirmando que a pasta interna continua fora do deploy publico.
+- Browser em producao confirmou artigo 11 mobile sem overflow horizontal, capa carregada, JSON-LD `Article`/`BreadcrumbList`, `/conteudo/` com 11 indicadores e console sem erros.
+- Proximo passo: reenviar sitemap de 22 URLs no Search Console e solicitar URL Inspection do artigo 11.
+
 ## 2026-05-29 - Paineis visuais do Editorial e dominios ativos
 
 ### Estado

@@ -13,7 +13,7 @@ Pesquisa consultada:
 
 ## Estado Atual
 
-O Editorial existe em `/conteudo/` e possui dez artigos publicados mais quatro hubs editoriais.
+O Editorial existe em `/conteudo/` e possui onze artigos publicados mais quatro hubs editoriais.
 
 Pontos positivos:
 
@@ -23,7 +23,7 @@ Pontos positivos:
 - Open Graph;
 - Twitter Card;
 - JSON-LD `Article`;
-- JSON-LD `BreadcrumbList` nos dez artigos publicados;
+- JSON-LD `BreadcrumbList` nos onze artigos publicados;
 - JSON-LD `CollectionPage` com `ItemList` na listagem editorial;
 - hubs editoriais para treino com critério, progressão, consistência e recuperação;
 - datas estruturadas nos artigos;
@@ -64,8 +64,8 @@ Antes de solicitar AdSense:
 
 ## Próximos Passos
 
-1. QA mobile periódico dos dez artigos e dos quatro hubs.
-2. Validar Search Console após deploy.
+1. QA mobile periódico dos onze artigos e dos quatro hubs.
+2. Reenviar sitemap de 22 URLs no Search Console e solicitar URL Inspection do artigo 11.
 3. Criar rotina de revisão de artigos antigos.
 4. Planejar próximos ensaios a partir de `documents/editorial/CONTENT_IDEAS.md`.
 5. Só adicionar snippets de anúncios depois de aprovação e nova revisão de política.
@@ -103,3 +103,11 @@ Antes de solicitar AdSense:
 - Artigo 06 recebeu ponte interna para o novo ensaio como resposta pratica sobre o que registrar.
 - Hub `progressao/`, `/conteudo/`, destaque rotativo, `sitemap.xml` e `atualizacoes.html` foram atualizados para o Ensaio 10.
 - Producao validada em `https://gmove.app/` com HTTP 200 no artigo, listagem, changelog, sitemap e imagens da capa.
+
+## Ajuste ED-011 - 2026-05-30
+
+- Criado o artigo `conteudo/como-montar-uma-semana-de-treino-que-voce-consegue-repetir/`.
+- O novo artigo aprofunda o cluster de consistencia com foco em semana de treino repetivel, prioridade, margem, revisao e decisao pratica.
+- Capa editorial nova foi gerada e normalizada em JPG, WebP e AVIF.
+- Hubs `consistencia/` e `treino-com-criterio/`, `/conteudo/`, destaque rotativo, `sitemap.xml` e `atualizacoes.html` foram atualizados para o Ensaio 11.
+- `main.js` recebeu tracking leve para cliques de CTA, formulario de acesso antecipado e leitura editorial quando houver provedor de analytics disponivel.
