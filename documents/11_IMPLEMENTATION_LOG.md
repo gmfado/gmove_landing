@@ -28,7 +28,9 @@
 - `/sitemap.xml` em producao possui 22 URLs e inclui o artigo 11.
 - `https://gmove.app/tools/verify-docs.ps1` respondeu 404, confirmando que a pasta interna continua fora do deploy publico.
 - Browser em producao confirmou artigo 11 mobile sem overflow horizontal, capa carregada, JSON-LD `Article`/`BreadcrumbList`, `/conteudo/` com 11 indicadores e console sem erros.
-- Proximo passo: reenviar sitemap de 22 URLs no Search Console e solicitar URL Inspection do artigo 11.
+- Search Console recebeu novamente `https://gmove.app/sitemap.xml` apos `v0.3.10`; a tabela confirmou envio e ultima leitura em 2026-05-30, status `Processado`, 22 paginas encontradas e notificacao `Sitemap enviado`.
+- URL Inspection do artigo 11 confirmou `O URL nao esta no Google`, motivo `Detectada, mas nao indexada no momento`; indexacao solicitada em 2026-05-30. A URL aparece associada ao sitemap `https://gmove.app/sitemap.xml`.
+- Proximo passo: acompanhar cobertura das 22 URLs e revalidar o artigo 11 em alguns dias.
 
 ## 2026-05-29 - Paineis visuais do Editorial e dominios ativos
 

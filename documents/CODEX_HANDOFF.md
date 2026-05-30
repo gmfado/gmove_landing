@@ -24,11 +24,12 @@
 - Para decidir onde registrar cada tipo de trabalho, usar `documents/17_REGISTRO_OPERACIONAL.md`.
 - Batch de Search Console pronto em `documents/qa/search-console-batch-2026-05-28.md`.
 - Search Console URL-prefix `https://gmove.app/` verificado via `google6e48a74231fe8281.html`; nao remover esse arquivo do deploy.
-- Sitemap `/sitemap.xml` reenviado no Search Console apos `v0.3.9` em 2026-05-29; a tabela confirmou ultima leitura em 2026-05-29, status `Processado` e 21 paginas encontradas.
+- Sitemap `/sitemap.xml` reenviado no Search Console apos `v0.3.10` em 2026-05-30; a tabela confirmou ultima leitura em 2026-05-30, status `Processado` e 22 paginas encontradas.
 - Indexacao solicitada no Search Console para `/conteudo/` e os 4 hubs editoriais em 2026-05-28.
 - Indexacao do artigo 09 solicitada em 2026-05-29; artigo 10 ja aparece como URL no Google, com HTTPS e breadcrumb validos.
 - Indexacao solicitada no Search Console para `/manifesto/`, `/seguranca/` e `/atualizacoes/` em 2026-05-29; as tres estavam detectadas pelo sitemap, mas ainda nao indexadas.
 - URL Inspection confirmou `https://gmove.app/conteudo/o-que-anotar-no-treino-para-saber-se-voce-esta-evoluindo/` como URL no Google, com HTTPS e breadcrumb validos.
+- URL Inspection do artigo 11 confirmou `O URL nao esta no Google`, motivo `Detectada, mas nao indexada no momento`; indexacao solicitada em 2026-05-30.
 - Sitemap atual em producao tem 22 URLs, sem entradas `.html`, e usa caminhos finais com barra para paginas raiz.
 
 ## Arquivos-Chave
@@ -53,7 +54,7 @@
 
 ## Próximo Passo Provável
 
-Reenviar o sitemap de 22 URLs no Search Console e solicitar URL Inspection do artigo 11.
+Acompanhar cobertura das 22 URLs no Search Console, revalidar o artigo 11 em alguns dias e preparar o proximo ensaio editorial.
 
 ## Cuidado
 

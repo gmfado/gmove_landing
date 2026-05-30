@@ -65,10 +65,28 @@ Antes de solicitar AdSense:
 ## Próximos Passos
 
 1. QA mobile periódico dos onze artigos e dos quatro hubs.
-2. Reenviar sitemap de 22 URLs no Search Console e solicitar URL Inspection do artigo 11.
+2. Acompanhar cobertura das 22 URLs no Search Console e revalidar o artigo 11 em alguns dias.
 3. Criar rotina de revisão de artigos antigos.
 4. Planejar próximos ensaios a partir de `documents/editorial/CONTENT_IDEAS.md`.
 5. Só adicionar snippets de anúncios depois de aprovação e nova revisão de política.
+
+## Proxima Pauta Recomendada
+
+Pauta escolhida para o proximo ensaio editorial: `O que muda de uma semana para outra?`.
+
+Motivo:
+
+- continua a trilha dos artigos 09, 10 e 11 sobre semana, registro e repeticao;
+- reforca a tese de evolucao legivel sem depender de promessa de resultado;
+- cria ponte natural para produto, porque o GMOVE organiza plano, execucao e historico;
+- ajuda SEO sem abrir uma frente generica de dicas de musculacao.
+
+Direcao de conteudo:
+
+- mostrar que progresso real aparece na comparacao entre semanas;
+- separar sensacao de esforco de evidencias simples de evolucao;
+- apontar o que observar: repeticao, carga, execucao, recuperacao, prioridade e constancia;
+- linkar internamente para os ensaios 09, 10 e 11.
 
 ## Ajuste ED-005 - 2026-05-26
 

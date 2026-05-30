@@ -234,7 +234,11 @@ Antes de abrir uma nova conversa, escolher uma frente:
 - Browser local validou artigo 11 desktop/mobile, `/conteudo/` com 11 indicadores e `atualizacoes.html` com `v0.3.10`, sem overflow horizontal e sem erros de console.
 - Deploy Firebase Hosting concluido no projeto `gmove-landing`.
 - Producao validada com HTTP 200 no artigo 11, `/conteudo/`, `/atualizacoes/`, `/sitemap.xml` e AVIF do artigo 11; sitemap publico tem 22 URLs e inclui o artigo 11.
-- Proximo passo operacional: reenviar o sitemap de 22 URLs no Search Console e solicitar URL Inspection do artigo 11.
+- Search Console recebeu novamente `https://gmove.app/sitemap.xml` apos `v0.3.10`; a tabela confirmou envio e ultima leitura em 2026-05-30, status `Processado`, 22 paginas encontradas e notificacao `Sitemap enviado`.
+- URL Inspection do artigo 11 confirmou `O URL nao esta no Google`, motivo `Detectada, mas nao indexada no momento`; indexacao solicitada em 2026-05-30. A URL aparece associada ao sitemap `https://gmove.app/sitemap.xml`.
+- Proximo passo operacional: acompanhar cobertura das 22 URLs e revalidar o artigo 11 em alguns dias.
+- Proxima pauta editorial escolhida: `O que muda de uma semana para outra?`, conectando os ensaios sobre semana, registro e progressao sem criar dica generica de treino.
+- Direcao da proxima pauta: mostrar que progresso real aparece na diferenca entre semanas, nao apenas na sensacao de treino pesado ou em uma sessao isolada.
 
 ### Regra permanente - updates publicos
 

@@ -36,7 +36,9 @@ Antes de deploy:
 - Producao validada com HTTP 200 em `/conteudo/`, artigo 11, `/atualizacoes/`, `/sitemap.xml` e asset AVIF do artigo 11.
 - `/sitemap.xml` em producao possui 22 URLs e inclui o artigo 11; `tools/verify-docs.ps1` em producao respondeu 404, confirmando que a pasta interna nao foi publicada.
 - Browser em producao confirmou artigo 11 mobile sem overflow horizontal, capa carregada, JSON-LD `Article`/`BreadcrumbList`, `/conteudo/` com 11 indicadores e console sem erros.
-- Pendente operacional: reenviar o sitemap de 22 URLs no Search Console e solicitar URL Inspection do artigo 11.
+- Search Console recebeu novamente `https://gmove.app/sitemap.xml` apos `v0.3.10`; a tabela confirmou `/sitemap.xml`, envio e ultima leitura em 2026-05-30, status `Processado`, 22 paginas encontradas e notificacao `Sitemap enviado`.
+- Search Console URL Inspection do artigo 11 confirmou `O URL nao esta no Google`, motivo `Detectada, mas nao indexada no momento`; indexacao solicitada em 2026-05-30. A URL aparece associada ao sitemap `https://gmove.app/sitemap.xml`.
+- Proximo passo operacional: acompanhar cobertura das 22 URLs e revalidar o artigo 11 em alguns dias.
 
 ## Validacao URLs Limpas v0.3.9 - 2026-05-29
 

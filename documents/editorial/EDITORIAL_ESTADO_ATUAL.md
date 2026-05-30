@@ -35,7 +35,7 @@ Não há CMS implementado nesta fase.
 
 Total atual: **11 artigos publicados** e **4 hubs editoriais**.
 
-Observacao: o artigo 11 foi publicado em producao em 2026-05-30 e aguarda apenas follow-up no Search Console.
+Observacao: o artigo 11 foi publicado em producao em 2026-05-30; sitemap reenviado no Search Console e indexacao solicitada para a URL no mesmo dia.
 
 1. `conteudo/como-evoluir-no-treino-sem-motivacao/`
 2. `conteudo/por-que-voce-comeca-e-para-no-treino/`
@@ -139,8 +139,6 @@ Verificado:
 - ED-011 publicou o artigo 11, validou `/conteudo/` com 11 indicadores, confirmou AVIF do artigo 11 em producao e Browser mobile sem overflow horizontal.
 
 Ainda não registrado como concluído:
-- reenvio do sitemap de 22 URLs no Google Search Console apos deploy do artigo 11;
-- URL Inspection do artigo 11;
 - monitoramento de performance orgânica;
 - rotina formal de atualização de artigos antigos.
 
@@ -155,7 +153,8 @@ Resultado:
 - `/conteudo/`, destaque rotativo, hubs `consistencia/` e `treino-com-criterio/`, `sitemap.xml` e `atualizacoes.html` foram atualizados;
 - `js/main.js` recebeu eventos leves para cliques de CTA e leitura editorial, sem alterar a experiencia visual;
 - `atualizacoes.html` registra `v0.3.10` como update publicado;
-- deploy Firebase Hosting e validacao de producao passaram em artigo 11, `/conteudo/`, `/atualizacoes/`, `/sitemap.xml` e AVIF do artigo 11.
+- deploy Firebase Hosting e validacao de producao passaram em artigo 11, `/conteudo/`, `/atualizacoes/`, `/sitemap.xml` e AVIF do artigo 11;
+- Search Console confirmou sitemap processado com 22 paginas e indexacao solicitada para o artigo 11, ainda como `Detectada, mas nao indexada no momento`.
 
 Registro completo:
 
